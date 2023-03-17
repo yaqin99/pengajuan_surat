@@ -1,4 +1,4 @@
-<div class="modal fade" id="domisili" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="domisili" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -33,7 +33,7 @@
         </div>
         <div class="modal-footer">
           {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-          <button type="button" class="btn btn-success">Ajukan</button>
+          <button type="button" class="btn btn-success">Konfirmasi</button>
         </div>
       </div>
     </div>

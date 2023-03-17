@@ -728,35 +728,35 @@ section {
 
 /* Features Section
 --------------------------------*/
-#features {
+#daftarSurat {
   display: inline-block;
   height: 100%;
   width: 100%;
 }
 
-#features .feature-block {
+#daftarSurat .feature-block {
   background: #fff none repeat scroll 0 0;
   padding: 30px 20px;
   margin-bottom: 30px;
   transition: all 0.5s ease-in-out 0s;
 }
 
-#features .feature-block img {
+#daftarSurat .feature-block img {
   height: 60px;
   margin-bottom: 30px;
   width: 60px;
 }
 
-#features .feature-block:hover {
+#daftarSurat .feature-block:hover {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out 0s;
 }
 
-#features .feature-block h4 {
+#daftarSurat .feature-block h4 {
   margin-bottom: 20px;
 }
 
-#features .feature-block p {
+#daftarSurat .feature-block p {
   margin-bottom: 0;
 }
 

@@ -66,7 +66,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#about-us">Struktur Desa</a></li>
-          <li><a class="nav-link scrollto" href="#screenshots">Panduan</a></li>
+          <li><a class="nav-link scrollto" href="#Panduan">Panduan</a></li>
           {{-- <li><a class="nav-link scrollto" href="#screenshots">Screenshots</a></li> --}}
           {{-- <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> --}}
@@ -84,12 +84,12 @@
       <h1>Selamat Datang di E - Certif</h1>
       <h2>Ajukan Surat Penting anda dengan E - Certif</h2>
       <img src="/assets/img/hero-img.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
-      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-      <div class="btns">
+      <a href="#daftarSurat" class="btn-get-started scrollto">List Surat</a>
+      {{-- <div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
         <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
         <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>
+      </div> --}}
     </div>
   </section><!-- End Hero Section -->
 
@@ -148,63 +148,37 @@
 
     </section><!-- End Get Started Section -->
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us padd-section">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-
-          <div class="col-md-5 col-lg-3">
-            <img src="/assets/img/about-img.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
-          </div>
-
-          <div class="col-md-7 col-lg-5">
-            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-
-              <h2><span>eStartup</span>UI Design Mobile </h2>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-              </p>
-
-              <ul class="list-unstyled">
-                <li><i class="vi bi-chevron-right"></i>Creative Design</li>
-                <li><i class="vi bi-chevron-right"></i>Retina Ready</li>
-                <li><i class="vi bi-chevron-right"></i>Easy to Use</li>
-                <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-                <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-              </ul>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End About Us Section -->
+   
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="padd-section text-center">
+    <section id="daftarSurat" class="padd-section text-center">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
-          <h2>Amazing Features.</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+          <h2>Daftar Surat</h2>
+          {{-- <p class="separator">Integer cursus bibendum augue ac cursus .</p> --}}
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-md-6 col-lg-3">
             <div class="feature-block">
-              <img src="/assets/img/svg/paint-palette.svg" alt="img">
-              <h4>creative design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <img src="/assets/img/svg/document.svg" alt="img">
+              <h4 id="sktmSend">Surat Keterangan Tidak Mampu</h4>
+              <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="sktmButton()" id="sktmButton">Selengkapnya</a>
+              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="/assets/img/svg/document.svg" alt="img">
+              <h4 id="domisiliSend">Surat Keterangan Domisili</h4>
+              <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="domisiliButton()" id="domisiliButton">Selengkapnya</a>
+              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="/assets/img/svg/vector.svg" alt="img">
-              <h4>Retina Ready</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
+         
 
           <div class="col-md-6 col-lg-3">
             <div class="feature-block">
@@ -259,12 +233,12 @@
     </section><!-- End Features Section -->
 
     <!-- ======= Screenshots Section ======= -->
-    <section id="screenshots" class="padd-section text-center">
+    <section id="Panduan" class="padd-section text-center">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
-          <h2>App Gallery</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+          <h2>Panduan</h2>
+          <p class="separator">Panduan penggunaan Aplikasi E - Certif</p>
         </div>
 
         <div class="screens-slider swiper">
@@ -285,17 +259,7 @@
     </section><!-- End Screenshots Section -->
 
     <!-- ======= Video Section ======= -->
-    <section id="video" class="text-center">
-      <div class="overlay">
-        <div class="container-fluid container-full" data-aos="zoom-in">
-
-          <div class="row">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q&feature=emb_title" class="glightbox play-btn"></a>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Video Section -->
+   <!-- End Video Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="padd-section text-center">
@@ -438,96 +402,7 @@
       </div>
     </section><!-- End Testimonials Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="padd-section text-cente">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-
-          <h2>Meet With Price</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>basic</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>PERSONAL</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>BUSINESS</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>profeesional</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Pricing Section -->
+   
 
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="padd-sectio">
@@ -676,6 +551,8 @@
     @include('component.modals.modalSktm')
     @include('component.modals.modalDomisili')
     @include('component.modals.modalIzinUsaha')
+    @include('component.modals.modalKeterangan')
+
   </div>
   <!-- ======= Footer ======= -->
   <footer class="footer">
@@ -785,7 +662,113 @@
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
   
+  <script>
 
+    const fileValidation = () => {
+      let pengantar  = document.getElementById('pengantar').files[0].name ; 
+      let cek = pengantar.match(/.jpg|.png|.pdf|.jpeg/);
+      if(!cek){
+        document.getElementById('pengantar').value = '';
+        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+        document.getElementById('fileAlert').innerHTML = 'Format file salah' ; 
+        document.getElementById('fileAlert').style.color = 'red' ; 
+      }else {
+        document.getElementById('fileAlert').innerHTML = '' ; 
+        document.getElementById('fileAlert').style.color = 'none' ; 
+      }
+  
+    }
+    const kkValidation = () => {
+      let pengantar  = document.getElementById('kk').files[0].name ; 
+      let cek = pengantar.match(/.jpg|.png|.pdf|.jpeg/);
+      if(!cek){
+        document.getElementById('kk').value = '';
+        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+        document.getElementById('fileKk').innerHTML = 'Format file salah' ; 
+        document.getElementById('fileKk').style.color = 'red' ; 
+      }else {
+        document.getElementById('fileKk').innerHTML = '' ; 
+        document.getElementById('fileKk').style.color = 'none' ; 
+      }
+  
+    }
+
+// const sktm = () => {
+    //   document.getElementById('tidakMampu').style.display = 'block';
+    // }
+
+    const sktmButton = () => {
+      document.getElementById('judulModal').innerHTML =  document.getElementById('sktmSend').innerHTML ; 
+      document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan'
+      document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#tidakMampu');
+      
+    }
+    const domisiliButton = () => {
+      document.getElementById('judulModal').innerHTML =  document.getElementById('domisiliSend').innerHTML ; 
+      document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Domisili Usaha adalah sebuah surat yang menyatakan domisili seseorang atau suatu badan usaha. Surat keterangan domisili dibutuhkan untuk mengurus berbagai dokumen legal lainnya seperti SIUP, Tanda Daftar Perusahaan, NPWP, dan untuk mengurus usaha perdagangan lainnya.'
+      document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#domisili');
+      
+    }
+
+    function dismiss(){
+    document.getElementById("pengantar").value = "";
+    document.getElementById("kk").value = "";
+    document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+
+  }
+
+    const keterangan  = () => {
+      if (document.getElementById('pengantar').files.length === 0) {
+      document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+
+    }
+      let file = document.getElementById('pengantar').files[0];
+    
+      if (file.size > 3000000) {
+        document.getElementById('pengantar').value = '' ; 
+        document.getElementById('fileAlert').innerHTML = 'Ukuran File Terlalu Besar' ; 
+        document.getElementById('fileAlert').style.color = 'red' ; 
+        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+
+      } else {
+        document.getElementById('fileAlert').innerHTML = '' ; 
+        document.getElementById('fileAlert').style.color = 'none' ; 
+        if (file.value != '' && document.getElementById('kk').value != '') {
+          document.getElementById("ajuSktm").removeAttribute("disabled");      
+          }
+      }
+
+      
+    }
+
+    const kartuKk  = () => {
+      if (document.getElementById('kk').files.length === 0) {
+      document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+
+      
+    }
+      let file = document.getElementById('kk').files[0];
+      if (file.size > 3000000) {
+        document.getElementById('kk').value = '' ; 
+        document.getElementById('fileKk').innerHTML = 'Ukuran File Terlalu Besar' ; 
+        document.getElementById('fileKk').style.color = 'red' ; 
+        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+      } else {
+        document.getElementById('fileKk').innerHTML = '' ; 
+        document.getElementById('fileKk').style.color = 'none' ; 
+
+        if (file.value != '' && document.getElementById('pengantar').value != '') {
+          document.getElementById("ajuSktm").removeAttribute("disabled");      
+        }     
+      }
+      
+  }
+
+    if (document.getElementById('kk').files.length === 0 || document.getElementById('pengantar').files.length === 0 ) {
+      document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
+
+    }
+  </script>
 </body>
 
 </html>

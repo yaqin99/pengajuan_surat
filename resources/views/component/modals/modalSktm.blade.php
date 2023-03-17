@@ -1,9 +1,9 @@
-<div class="modal fade" id="tidakMampu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="tidakMampu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Surat Keterangan Tidak Mampu</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="dismiss()" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           {{-- <div class="btn-group" role="group" aria-label="Basic example">
@@ -18,11 +18,15 @@
             </div> --}}
             <div class="mb-3">
               <label for="pengantar" class="form-label">Surat Pengantar RT</label>
-              <input type="file" class="form-control" id="pengantar">
+              <input type="file" class="form-control" id="pengantar" oninput="keterangan()" onchange="fileValidation()">
+              <p><small id="fileAlert"></small></p>
+
             </div>
             <div class="mb-3">
               <label for="kk" class="form-label">Foto Copy KK</label>
-              <input type="file" class="form-control" id="kk">
+              <input type="file" class="form-control" id="kk" oninput="kartuKk()" onchange="kkValidation()">
+              <p><small id="fileKk"></small></p>
+
             </div>
             <div class="mb-3">
               <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
@@ -33,7 +37,7 @@
         </div>
         <div class="modal-footer">
           {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-          <button type="button" class="btn btn-success">Ajukan</button>
+          <button type="submit" id="ajuSktm" class="btn btn-success">Konfirmasi</button>
         </div>
       </div>
     </div>
