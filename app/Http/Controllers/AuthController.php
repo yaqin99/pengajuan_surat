@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth ;
 class AuthController extends Controller
 {
     public function loginView(){
-        return view('auth.login');
+        return view('auth.loginAdmin');
     }
     
     public function loginMethod(Request $req){
@@ -18,13 +18,32 @@ class AuthController extends Controller
             'password' => 'required' , 
         ]); 
        
-        dd(Auth::guard('admin')->attempt(['username' => $req->username , 'password' => $req->password]));
         
-        // if () {
-        //     request()->session()->regenerate();
+        if (Auth::guard('admin')->attempt($req->only(['username' => $req->username , 'password' => $req->password]))) {
+            request()->session()->regenerate();
  
-        //     return redirect()->intended('/');
-        // }
+            return redirect()->intended('/');
+        }
+
+        dd('gagal');
+    }
+
+    public function userView(){
+        return view('auth.loginUser');
+    } 
+    public function userLogin (Request $req){
+
+        $req->validate([
+            'username' => 'required' , 
+            'password' => 'required' , 
+        ]); 
+       
+        
+        if (Auth::guard('web')->attempt(['username' => $req->username , 'password' => $req->password])) {
+            request()->session()->regenerate();
+ 
+            return redirect()->intended('/');
+        }
 
         dd('gagal');
     }

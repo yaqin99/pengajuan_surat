@@ -20,5 +20,7 @@ Route::get('/', function () {
 
 
 //   AUTHENTICATION 
-Route::get('/login',[AuthController::class , 'loginView']);
-Route::post('/login',[AuthController::class , 'loginMethod']);
+Route::get('/loginAdmin',[AuthController::class , 'loginView']);
+Route::post('/loginAdmin',[AuthController::class , 'loginMethod']);
+Route::get('/login',[AuthController::class , 'userView']);
+Route::post('/loginUser',[AuthController::class , 'userLogin']);
