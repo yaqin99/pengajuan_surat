@@ -16,11 +16,15 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('layout');
-});
+})->middleware('auth');
 
 
 //   AUTHENTICATION 
 Route::get('/loginAdmin',[AuthController::class , 'loginView']);
+Route::get('/register',[AuthController::class , 'register']);
 Route::post('/loginAdmin',[AuthController::class , 'loginMethod']);
-Route::get('/login',[AuthController::class , 'userView']);
+Route::get('/login',[AuthController::class , 'userView'])->name('login')->middleware('guest');
+Route::get('/registerUser',[AuthController::class , 'registerUser'])->middleware('guest');
+Route::post('/registerUser',[AuthController::class , 'registerUserMethod']);
 Route::post('/loginUser',[AuthController::class , 'userLogin']);
+Route::post('/logout',[AuthController::class , 'logout']);

@@ -10,6 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="/assets/img/pamekasan.png" rel="icon">
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -42,7 +43,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div id="logo">
-        <h1><a href="index.html"><span>e - </span>Certif</a></h1>
+        <h1><a href="/"><span>e - </span>Certif</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="/assets/img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -67,10 +68,21 @@
           </li>
           <li><a class="nav-link scrollto" href="#about-us">Struktur Desa</a></li>
           <li><a class="nav-link scrollto" href="#Panduan">Panduan</a></li>
-          {{-- <li><a class="nav-link scrollto" href="#screenshots">Screenshots</a></li> --}}
-          {{-- <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> --}}
-          {{-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> --}}
+          <li class="nav-item dropdown">
+            <a  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profil <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <form action="/logout" method="post">
+                  @csrf
+                  <button onclick="return confirm('Apakah Anda Yakin ingin keluar halaman?')" class="dropdown-item" type="submit">Keluar</button>
+                </form>
+              </li>
+             
+            </ul>
+          </li>
+        
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -80,6 +92,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+    
     <div class="hero-container" data-aos="fade-in">
       <h1>Selamat Datang di E - Certif</h1>
       <h2>Ajukan Surat Penting anda dengan E - Certif</h2>
@@ -552,8 +565,13 @@
     @include('component.modals.modalDomisili')
     @include('component.modals.modalIzinUsaha')
     @include('component.modals.modalKeterangan')
+    
 
   </div>
+  {{-- @if(Session::get('berhasil'))
+  @dd('Ada')
+  @include('component.modals.modalLogin')
+	@endif --}}
   <!-- ======= Footer ======= -->
   <footer class="footer">
     <div class="container">
@@ -658,6 +676,8 @@
   <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
@@ -768,6 +788,10 @@
       document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
 
     }
+
+    $(window).on('load', function() {
+        $('#modalLogin').modal('show');
+    });
   </script>
 </body>
 
