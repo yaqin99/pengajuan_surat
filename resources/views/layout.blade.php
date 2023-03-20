@@ -63,15 +63,14 @@
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="yoNdakMampu()" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="umum()" id="suratUmum">Surat Keterangan Umum</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Usaha</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="usaha()" id="suratUsaha">Surat Keterangan Usaha</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Berkelakuan Baik</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kehilangan</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kelahiran</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kematian</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#domisili">Surat Keterangan Domisili Penduduk</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#domisili">Surat Keterangan Domisili Usaha</a></li>
-
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#tidakMampu">Surat Keterangan Ahli Waris</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li>
               
               {{-- <li><a href="#">Surat </a></li> --}}
             </ul>

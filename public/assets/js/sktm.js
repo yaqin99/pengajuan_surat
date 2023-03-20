@@ -65,6 +65,21 @@ const fileValidation = () => {
     document.getElementById("form_input").setAttribute('action' , '/suratBelumNikah');
  
   }
+  const usaha = () => {
+    document.getElementById('judulModal').innerHTML =  document.getElementById('suratUsaha').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/suratUsaha');
+ 
+  }
+  const domisiliPenduduk = () => {
+    document.getElementById('judulModal').innerHTML =  document.getElementById('skdp').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/domisiliPenduduk');
+ 
+  }
+  const domisiliUsaha = () => {
+    document.getElementById('judulModal').innerHTML =  document.getElementById('skdu').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/domisiliUsaha');
+ 
+  }
 
 
   function dismiss(){
