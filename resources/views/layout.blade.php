@@ -66,7 +66,7 @@
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="usaha()" id="suratUsaha">Surat Keterangan Usaha</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Berkelakuan Baik</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kehilangan</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kelahiran</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kelahiran()" id="kelahiran">Surat Keterangan Kelahiran</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kematian</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li>

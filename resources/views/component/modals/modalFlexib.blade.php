@@ -12,23 +12,20 @@
           </div> --}}
           <form method="POST" id="form_input" enctype="multipart/form-data">
             @csrf
-            {{-- <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div> --}}
-            <div class="mb-3">
-              <label for="pengantar" class="form-label">Foto Copy KTP</label>
+            
+            <div class="mb-3" id="divKtp">
+              <label for="pengantar" id="ktpAyah" class="form-label">Foto Copy KTP</label>
               <input type="file" name="ktp" class="form-control" id="pengantar" oninput="keterangan()" onchange="fileValidation()">
               <p><small id="fileAlert"></small></p>
 
             </div>
-            <div class="mb-3">
-              <label for="kk" class="form-label">Foto Copy KK</label>
+            <div class="mb-3" id="divKk">
+              <label for="kk" id="labelKk" class="form-label">Foto Copy KK</label>
               <input type="file" class="form-control" name="kk" id="kk" oninput="kartuKk()" onchange="kkValidation()">
               <p><small id="fileKk"></small></p>
 
             </div>
-            <div class="mb-3">
+            <div class="mb-3" id="divKeterangan">
               <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
               <textarea class="form-control" name="keterangan"  id="floatingTextarea2" ></textarea>
             </div>

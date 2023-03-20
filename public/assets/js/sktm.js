@@ -46,6 +46,204 @@ const fileValidation = () => {
   }
 
 
+  const makeBidanElement = () => {
+    if (document.getElementById('kelahiranBidan') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKeterangan');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','kelahiranBidan');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_kelahiran');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'kelahiranBidan');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_kelahiran');
+    small.setAttribute('id' , 'fileBidan');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_kelahiran').innerHTML = 'Bukti Asli Kelahiran dari Bidan';
+    
+    form.insertBefore(div , target);
+  }
+
+
+
+  const makeSuratNikahElement = () => {
+    if (document.getElementById('divSuratNikah') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKeterangan');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divSuratNikah');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_nikah');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'suratNikah');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_nikah');
+    small.setAttribute('id' , 'fileNikah');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_nikah').innerHTML = 'Foto Copy Surat Nikah';
+    
+    form.insertBefore(div , target);
+  }
+
+  
+  const makeKtpPelaporElement = () => {
+    if (document.getElementById('divKtpPelapor') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKk');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divKtpPelapor');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_pelapor');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'suratNikah');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_pelapor');
+    small.setAttribute('id' , 'filePelapor');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_pelapor').innerHTML = 'Foto Copy Ktp Pelapor';
+    
+    form.insertBefore(div , target);
+  }
+
+
+  const makeKtpSaksi1Element = () => {
+    if (document.getElementById('divKtpSaksi1') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKk');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divKtpSaksi1');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_saksi1');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'saksi1');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_saksi1');
+    small.setAttribute('id' , 'fileSaksi1');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_saksi1').innerHTML = 'Foto Copy Ktp Saksi 1';
+    
+    form.insertBefore(div , target);
+  }
+  const makeKtpSaksi2Element = () => {
+    if (document.getElementById('divKtpSaksi2') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKk');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divKtpSaksi2');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_saksi2');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'saksi2');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_saksi2');
+    small.setAttribute('id' , 'fileSaksi2');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_saksi2').innerHTML = 'Foto Copy Ktp Saksi 2';
+    
+    form.insertBefore(div , target);
+  }
+
+  const makeKtpIbuElement = () => {
+    if (document.getElementById('divKtpIbu') !== null) {
+      return ;
+    }
+    document.getElementById('ktpAyah').innerHTML = 'Foto Copy Ktp Bapak' ;
+    document.getElementById('labelKk').innerHTML = 'KK Asli' ;
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKtpPelapor');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divKtpIbu');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_ktpIbu');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'ktpIbu');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_ktpIbu');
+    small.setAttribute('id' , 'fileKtpIbu');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    // input.setAttribute('onclick' , 'input_kelahiran');
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_ktpIbu').innerHTML = 'Foto Copy Ktp Ibu';
+    
+    form.insertBefore(div , target);
+  }
+
+
   //          MODAL FORM INPUT
 
   const umum = () => {
@@ -78,6 +276,19 @@ const fileValidation = () => {
   const domisiliUsaha = () => {
     document.getElementById('judulModal').innerHTML =  document.getElementById('skdu').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/domisiliUsaha');
+ 
+  }
+
+
+  const kelahiran = () => {
+    makeBidanElement();
+    makeSuratNikahElement();
+    makeKtpPelaporElement();
+    makeKtpIbuElement();
+    makeKtpSaksi1Element();
+    makeKtpSaksi2Element();
+    document.getElementById('judulModal').innerHTML =  document.getElementById('kelahiran').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/suratKelahiran');
  
   }
 
