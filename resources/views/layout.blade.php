@@ -60,9 +60,19 @@
              
                 </ul>
               </li> --}}
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#tidakMampu">Surat Keterangan Tidak Mampu</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#domisili">Surat Keterangan Domisili</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#tidakMampu">Surat Izin Usaha</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="yoNdakMampu()" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="umum()" id="suratUmum">Surat Keterangan Umum</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Usaha</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Berkelakuan Baik</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kehilangan</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kelahiran</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kematian</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#domisili">Surat Keterangan Domisili Penduduk</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#domisili">Surat Keterangan Domisili Usaha</a></li>
+
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#tidakMampu">Surat Keterangan Ahli Waris</a></li>
+              
               {{-- <li><a href="#">Surat </a></li> --}}
             </ul>
           </li>
@@ -561,9 +571,7 @@
   </main><!-- End #main -->
 
   <div id="modal">
-    @include('component.modals.modalSktm')
-    @include('component.modals.modalDomisili')
-    @include('component.modals.modalIzinUsaha')
+    @include('component.modals.modalFlexib')
     @include('component.modals.modalKeterangan')
     
 
@@ -681,117 +689,9 @@
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
-  
+  <script src="/assets/js/sktm.js"></script>
   <script>
 
-    const fileValidation = () => {
-      let pengantar  = document.getElementById('pengantar').files[0].name ; 
-      let cek = pengantar.match(/.jpg|.png|.pdf|.jpeg/);
-      if(!cek){
-        document.getElementById('pengantar').value = '';
-        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-        document.getElementById('fileAlert').innerHTML = 'Format file salah' ; 
-        document.getElementById('fileAlert').style.color = 'red' ; 
-      }else {
-        document.getElementById('fileAlert').innerHTML = '' ; 
-        document.getElementById('fileAlert').style.color = 'none' ; 
-      }
-  
-    }
-    const kkValidation = () => {
-      let pengantar  = document.getElementById('kk').files[0].name ; 
-      let cek = pengantar.match(/.jpg|.png|.pdf|.jpeg/);
-      if(!cek){
-        document.getElementById('kk').value = '';
-        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-        document.getElementById('fileKk').innerHTML = 'Format file salah' ; 
-        document.getElementById('fileKk').style.color = 'red' ; 
-      }else {
-        document.getElementById('fileKk').innerHTML = '' ; 
-        document.getElementById('fileKk').style.color = 'none' ; 
-      }
-  
-    }
-
-// const sktm = () => {
-    //   document.getElementById('tidakMampu').style.display = 'block';
-    // }
-
-    const sktmButton = () => {
-      document.getElementById('judulModal').innerHTML =  document.getElementById('sktmSend').innerHTML ; 
-      document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan'
-      document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#tidakMampu');
-      
-    }
-    const domisiliButton = () => {
-      document.getElementById('judulModal').innerHTML =  document.getElementById('domisiliSend').innerHTML ; 
-      document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Domisili Usaha adalah sebuah surat yang menyatakan domisili seseorang atau suatu badan usaha. Surat keterangan domisili dibutuhkan untuk mengurus berbagai dokumen legal lainnya seperti SIUP, Tanda Daftar Perusahaan, NPWP, dan untuk mengurus usaha perdagangan lainnya.'
-      document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#domisili');
-      
-    }
-
-    function dismiss(){
-    document.getElementById("pengantar").value = "";
-    document.getElementById("kk").value = "";
-    document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-
-  }
-
-    const keterangan  = () => {
-      if (document.getElementById('pengantar').files.length === 0) {
-      document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-
-    }
-      let file = document.getElementById('pengantar').files[0];
-    
-      if (file.size > 3000000) {
-        document.getElementById('pengantar').value = '' ; 
-        document.getElementById('fileAlert').innerHTML = 'Ukuran File Terlalu Besar' ; 
-        document.getElementById('fileAlert').style.color = 'red' ; 
-        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-
-      } else {
-        document.getElementById('fileAlert').innerHTML = '' ; 
-        document.getElementById('fileAlert').style.color = 'none' ; 
-        if (file.value != '' && document.getElementById('kk').value != '') {
-          document.getElementById("ajuSktm").removeAttribute("disabled");      
-          }
-      }
-
-      
-    }
-
-    const kartuKk  = () => {
-      if (document.getElementById('kk').files.length === 0) {
-      document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-
-      
-    }
-      let file = document.getElementById('kk').files[0];
-      if (file.size > 3000000) {
-        document.getElementById('kk').value = '' ; 
-        document.getElementById('fileKk').innerHTML = 'Ukuran File Terlalu Besar' ; 
-        document.getElementById('fileKk').style.color = 'red' ; 
-        document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-      } else {
-        document.getElementById('fileKk').innerHTML = '' ; 
-        document.getElementById('fileKk').style.color = 'none' ; 
-
-        if (file.value != '' && document.getElementById('pengantar').value != '') {
-          document.getElementById("ajuSktm").removeAttribute("disabled");      
-        }     
-      }
-      
-  }
-
-    if (document.getElementById('kk').files.length === 0 || document.getElementById('pengantar').files.length === 0 ) {
-      document.getElementById("ajuSktm").setAttribute('disabled' , 'true');
-
-    }
-
-    $(window).on('load', function() {
-        $('#modalLogin').modal('show');
-    });
   </script>
 </body>
 
