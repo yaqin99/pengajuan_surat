@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Gladak Anyar</title>
+  <title>Pesona </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div id="logo">
-        <h1><a href="/"><span>e - </span>Certif</a></h1>
+        <h1><a href="/"><span>PESONA</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="/assets/img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -67,7 +67,7 @@
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Berkelakuan Baik</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kehilangan</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kelahiran()" id="kelahiran">Surat Keterangan Kelahiran</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Kematian</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kematian()" id="kematian">Surat Keterangan Kematian</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li>
@@ -103,8 +103,8 @@
   <section id="hero">
     
     <div class="hero-container" data-aos="fade-in">
-      <h1>Selamat Datang di E - Certif</h1>
-      <h2>Ajukan Surat Penting anda dengan E - Certif</h2>
+      <h1>Selamat Datang di Pesona</h1>
+      <h2>Ajukan Surat Penting anda dengan Pesan Online Pelayanan</h2>
       <img src="/assets/img/hero-img.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
       <a href="#daftarSurat" class="btn-get-started scrollto">List Surat</a>
       {{-- <div class="btns">
@@ -687,9 +687,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/sktm.js"></script>
-  <script>
+  <script  src="/assets/js/main.js"></script>
+  <script  src="/assets/js/sktm.js"></script>
+  <script >
+  
+ 
 
   </script>
 </body>

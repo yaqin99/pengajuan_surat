@@ -10,18 +10,18 @@
             <button type="button" class="btn btn-outline-secondary ">Persyaratan</button>
             <button type="button" class="btn btn-outline-secondary ">Formulir</button>
           </div> --}}
-          <form method="POST" id="form_input" enctype="multipart/form-data">
+          <form method="POST" id="form_input" name="form" enctype="multipart/form-data">
             @csrf
             
             <div class="mb-3" id="divKtp">
               <label for="pengantar" id="ktpAyah" class="form-label">Foto Copy KTP</label>
-              <input type="file" name="ktp" class="form-control" id="pengantar" oninput="keterangan()" onchange="fileValidation()">
+              <input type="file"  class="form-control" name="ktp" id="ktp" oninput="cekBatas(this.id , 'fileAlert')"  onchange="fileValidation(this.id , 'fileAlert')">
               <p><small id="fileAlert"></small></p>
 
             </div>
             <div class="mb-3" id="divKk">
               <label for="kk" id="labelKk" class="form-label">Foto Copy KK</label>
-              <input type="file" class="form-control" name="kk" id="kk" oninput="kartuKk()" onchange="kkValidation()">
+              <input type="file" class="form-control" name="kk" id="kk" oninput="cekBatas(this.id , 'fileKk')" onchange="fileValidation(this.id , 'fileKk')">
               <p><small id="fileKk"></small></p>
 
             </div>
