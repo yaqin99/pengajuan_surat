@@ -77,7 +77,7 @@ const fileValidation = (targetId , alertId) => {
   //   document.getElementById('tidakMampu').style.display = 'block';
   // }
 
-
+ 
   //          MODAL DESKRIPSI
   const sktmButton = () => {
     document.getElementById('judulModal').innerHTML =  document.getElementById('sktmSend').innerHTML ; 
@@ -125,6 +125,108 @@ const fileValidation = (targetId , alertId) => {
     // input.addEventListener('input' , cekBatasKelahiran('input_kelahiran' , 'fileBidan' ));
     // input.addEventListener('change' , fileValidation('input_kelahiran' , 'fileBidan' ));
   }
+
+  const makeSuratPolsek = () => {
+    if (document.getElementById('divPolsek') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKeterangan');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divPolsek');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_polsek');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'suratPolsek');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_polsek');
+    input.setAttribute('required' , 'true');
+    small.setAttribute('id' , 'filePolsek');
+    
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_polsek').innerHTML = 'Surat Keterangan Kehilangan Dari Polsek / Polres';
+    
+    form.insertBefore(div , target);
+    // input.addEventListener('input' , cekBatasKelahiran('input_kelahiran' , 'fileBidan' ));
+    // input.addEventListener('change' , fileValidation('input_kelahiran' , 'fileBidan' ));
+  }
+  const makePindahElement = () => {
+    if (document.getElementById('divPindah') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKtp');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divPindah');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_pindah');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'pindah');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_pindah');
+    input.setAttribute('required' , 'true');
+    small.setAttribute('id' , 'filePindah');
+    
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_pindah').innerHTML = 'Surat Pindah Dari Kelurahan/Desa/Kota Sebelumnya';
+    
+    form.insertBefore(div , target);
+    // input.addEventListener('input' , cekBatasKelahiran('input_kelahiran' , 'fileBidan' ));
+    // input.addEventListener('change' , fileValidation('input_kelahiran' , 'fileBidan' ));
+  }
+  const makePindahKuasaElement = () => {
+    if (document.getElementById('divPindahKuasa') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKtp');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divPindahKuasa');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_kuasa');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'kuasa');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_kuasa');
+    input.setAttribute('required' , 'true');
+    small.setAttribute('id' , 'fileKuasa');
+    
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_kuasa').innerHTML = 'Surat Kuasa Apabila Bukan yang Bersangkutan';
+    
+    form.insertBefore(div , target);
+    // input.addEventListener('input' , cekBatasKelahiran('input_kelahiran' , 'fileBidan' ));
+    // input.addEventListener('change' , fileValidation('input_kelahiran' , 'fileBidan' ));
+  }
+
+
   const makeKeteranganRsElement = () => {
     if (document.getElementById('divKeteranganRs') !== null) {
       return ;
@@ -444,9 +546,21 @@ const fileValidation = (targetId , alertId) => {
 
   //          MODAL FORM INPUT
 
+  const skck = () => {
+    dismissKelahiran();
+    dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
+
+    document.getElementById('judulModal').innerHTML =  document.getElementById('skck').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/skck');
+ 
+  }
   const umum = () => {
     dismissKelahiran();
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('suratUmum').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratUmum');
@@ -456,6 +570,8 @@ const fileValidation = (targetId , alertId) => {
   const yoNdakMampu = () => {
     dismissKelahiran();
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('sktm').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratTidakMampu');
@@ -465,6 +581,8 @@ const fileValidation = (targetId , alertId) => {
   const jomblo = () => {
     dismissKelahiran();
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('belumMenikah').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratBelumNikah');
@@ -473,6 +591,8 @@ const fileValidation = (targetId , alertId) => {
   const usaha = () => {
     dismissKelahiran();
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('suratUsaha').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratUsaha');
@@ -481,6 +601,8 @@ const fileValidation = (targetId , alertId) => {
   const domisiliPenduduk = () => {
     dismissKelahiran();
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('skdp').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/domisiliPenduduk');
@@ -488,6 +610,8 @@ const fileValidation = (targetId , alertId) => {
   }
   const domisiliUsaha = () => {
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
 
     dismissKelahiran();
     document.getElementById('judulModal').innerHTML =  document.getElementById('skdu').innerHTML ;
@@ -496,8 +620,32 @@ const fileValidation = (targetId , alertId) => {
   }
 
 
+  const kehilangan = () => {
+    dismissKematian();
+    dismissKelahiran();
+    makeSuratPolsek();
+    dismissPindah();
+    
+    document.getElementById('judulModal').innerHTML =  document.getElementById('kehilangan').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/suratKehilangan');
+ 
+  }
+  const pindah = () => {
+    dismissKematian();
+    dismissKelahiran();
+    dismissKehilangan();
+    dismissPindah();
+    makePindahElement();
+    makePindahKuasaElement();
+
+    document.getElementById('judulModal').innerHTML =  document.getElementById('pindah').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/suratPindah');
+ 
+  }
   const kelahiran = () => {
     dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
     makeBidanElement();
     makeSuratNikahElement();
     makeKtpPelaporElement();
@@ -511,6 +659,18 @@ const fileValidation = (targetId , alertId) => {
  
   }
 
+
+
+  const dismissPindah = () => {
+    if (document.getElementById("divPindah") != null) {
+      document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("divPindah").remove();
+      document.getElementById("divPindahKuasa").remove();
+     
+    } 
+   
+  }
   const dismissKelahiran = () => {
     if (document.getElementById("divKtpIbu") != null) {
       document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
@@ -539,9 +699,21 @@ const fileValidation = (targetId , alertId) => {
     } 
    
   }
+  const dismissKehilangan = () => {
+    if (document.getElementById("divPolsek") != null) {
+      document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("divPolsek").remove();
+     
+    } 
+   
+  }
 
   const kematian = () => {
     dismissKelahiran();
+    dismissKehilangan();
+    dismissPindah();
+    
     makeKeteranganRsElement();
     makeKtpAsliElement();
     makeKtpOrtuElement();
