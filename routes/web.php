@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PengajuanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::get('/registerUser',[AuthController::class , 'registerUser'])->middleware
 Route::post('/registerUser',[AuthController::class , 'registerUserMethod']);
 Route::post('/loginUser',[AuthController::class , 'userLogin']);
 Route::post('/logout',[AuthController::class , 'logout']);
+
+
+//  SKTM
+
+Route::post('/suratTidakMampu',[PengajuanController::class , 'sktm']);

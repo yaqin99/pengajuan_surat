@@ -23,6 +23,15 @@ h6 {
   margin: 0;
 }
 
+#modalNotif {
+ 
+  position:fixed;
+  top:auto;
+  right:auto;
+  left:auto;
+  bottom:0;
+} 
+
 h2 {
   color: #000;
   font-weight: 600;

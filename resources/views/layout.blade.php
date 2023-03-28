@@ -65,14 +65,13 @@
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="usaha()" id="suratUsaha">Surat Keterangan Usaha</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="skck()" id="skck">Surat Keterangan Berkelakuan Baik</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Pecah KK</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang / Keluar</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kehilangan()" id="kehilangan">Surat Keterangan Kehilangan / Rusak</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kehilangan()" id="kehilangan">Surat Keterangan Kehilangan</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kelahiran()" id="kelahiran">Surat Keterangan Kelahiran</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kematian()" id="kematian">Surat Keterangan Kematian</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Pecah KK</a></li>
               
               {{-- <li><a href="#">Surat </a></li> --}}
             </ul>
@@ -85,12 +84,18 @@
             </a>
             <ul class="dropdown-menu">
               <li>
+                <p class="dropdown-item">
+                  {{ Auth::user()->name }}
+                </p>
                 <form action="/logout" method="post">
                   @csrf
                   <button onclick="return confirm('Apakah Anda Yakin ingin keluar halaman?')" class="dropdown-item" type="submit">Keluar</button>
                 </form>
+
               </li>
              
+
+              
             </ul>
           </li>
         
@@ -574,7 +579,24 @@
   <div id="modal">
     @include('component.modals.modalFlexib')
     @include('component.modals.modalKeterangan')
+    @if(Session::get('berhasil'))
     
+    <div class="modal" tabindex="-1" id="modalNotif" >
+      <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light fw-bolder "><strong>Notifikasi</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="disNotif()" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="fw-bolder"><strong>{{ Session::get('berhasil') }}</strong></p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+				  @endif
 
   </div>
   {{-- @if(Session::get('berhasil'))
@@ -693,6 +715,23 @@
   <script  src="/assets/js/sktm.js"></script>
   <script >
   
+  const disNotif = () => {
+    document.getElementById('modalNotif').style.display = 'none' ; 
+
+  }
+
+  let berhasil = '{{ Session::get('berhasil');}}';
+  console.log(berhasil);
+  if (berhasil == 'Pengajuan Anda Berhasil') {
+    console.log('called');
+    document.getElementById('modalNotif').style.display = 'block' ; 
+    setTimeout(() => {
+      disNotif()
+    }, 1000);
+  }
+
+  
+  // return \Session::get('timestamp');
  
 
   </script>
