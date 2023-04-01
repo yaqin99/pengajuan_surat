@@ -209,6 +209,60 @@ class PengajuanController extends Controller
         }
 
 
+        if ($judul == 'Surat Keterangan Pindah Datang atau Pindah Keluar') {
+            request()->validate(
+               [
+                'pindah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'kuasa' => 'max:30000|mimes:pdf,png,jpg,jpeg' , 
+                
+                'ktp' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'kk' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+               
+                'keterangan' => 'string|max:200|nullable' , 
+               ]
+            );
+
+        $uniqPindah = uniqid().'.'.request()->file('pindah')->extension() ; 
+        $uniqKuasa = uniqid().'.'.request()->file('kuasa')->extension() ; 
+        $uniqKtp = uniqid().'.'.request()->file('ktp')->extension()  ; 
+        $uniqKk = uniqid().'.'.request()->file('kk')->extension() ; 
+
+        $suratPindah = request()->file('pindah')->storeAs('pindah' , $uniqPindah , ['disk' => 'public']);
+        $suratKuasa = request()->file('kuasa')->storeAs('kuasa' , $uniqKuasa , ['disk' => 'public']);
+        $ktp = request()->file('ktp')->storeAs('ktp' , $uniqKtp, ['disk' => 'public']);
+        $kk = request()->file('kk')->storeAs('kk' , $uniqKk , ['disk' => 'public']);
+       
+       
+       
+        $input =  Jenis::create([
+            'nama_surat' => $judul , 
+            'ktp' => $uniqKtp , 
+            
+            'kk' =>  $uniqKk , 
+          
+            'surat_keterangan' => $uniqPindah , 
+
+            //ini karena databasenya error entah knp
+            'surat_nikah3' => $uniqKuasa , 
+             
+            'keterangan' => request()->keterangan ,
+        ]);
+
+        $pengajuan = Pengajuan::create([
+            'jenis_id' => $input->id , 
+            'user_id' => Auth::user()->id , 
+            'tanggal' => Carbon::now(),
+        ]);   
+
+        if ($input && $pengajuan) {
+           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+          } else {
+              dd('gagal');
+          }
+
+        }
+
+
          
         request()->validate(
             [
@@ -280,6 +334,15 @@ class PengajuanController extends Controller
             Storage::delete('/public/kk/'.$no->kk);
           
             Storage::delete('/public/suratPolsek/'.$no->surat_keterangan);
+        }
+
+        if ($no->nama_surat  == 'Surat Keterangan Pindah Datang atau Pindah Keluar') {
+            Storage::delete('/public/ktp/'.$no->ktp);
+            
+            Storage::delete('/public/kk/'.$no->kk);
+          
+            Storage::delete('/public/pindah/'.$no->surat_keterangan);
+            Storage::delete('/public/kuasa/'.$no->surat_nikah3);
         }
                  
         Storage::delete('/public/ktp/'.$no->ktp);

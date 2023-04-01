@@ -44,6 +44,7 @@ Route::post('/domisiliUsaha/{judul}',[PengajuanController::class , 'sktm']);
 Route::post('/suratKelahiran/{judul}',[PengajuanController::class , 'sktm']);
 Route::post('/suratKematian/{judul}',[PengajuanController::class , 'sktm']);
 Route::post('/suratKehilangan/{judul}',[PengajuanController::class , 'sktm']);
+Route::post('/suratPindah/{judul}',[PengajuanController::class , 'sktm']);
 
 
 //   DELETE PENGAJUAN

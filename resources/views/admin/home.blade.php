@@ -839,6 +839,82 @@ function checkSemua(){
      
     }
 
+      const makePindah = () => {
+      if (document.getElementById('divPindah') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divPindah');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_pindah');
+      label.setAttribute('for' , 'modalPindah'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_pindah');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'pindahButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_pindah').innerHTML = 'Surat Pindah Dari Kelurahan/Desa/Kota Sebelumny';
+      
+     
+    }
+
+      const makeKuasa = () => {
+      if (document.getElementById('divKuasa') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divKuasa');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_kuasa');
+      label.setAttribute('for' , 'modalKuasa'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_kuasa');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'kuasaButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_kuasa').innerHTML = 'Surat Kuasa Apabila Bukan yang Bersangkutan';
+      
+     
+    }
+
     const dismissKelahiran = () => {
       if (document.getElementById("divKtpIbu") != null) {
         document.getElementById('labelKtp').innerHTML = 'KTP ' ;
@@ -863,6 +939,17 @@ function checkSemua(){
      
     }
 
+    const dismissPindah = () => {
+      if (document.getElementById("divPindah") != null) {
+        document.getElementById('labelKtp').innerHTML = 'KTP ' ;
+        document.getElementById('labelKk').innerHTML = 'KK' ;
+        document.getElementById("divPindah").remove();
+        document.getElementById("divKuasa").remove();
+       
+      } 
+     
+    }
+
     const dismissKematian = () => {
       if (document.getElementById("keteranganRs") != null) {
         document.getElementById('labelKtp').innerHTML = 'KTP ' ;
@@ -878,10 +965,13 @@ function checkSemua(){
      
     }
 
+
+
     $(".jenis").click(function () {
       dismissKelahiran();
       dismissKematian();
       dismissKelahilangan();
+      dismissPindah();
       let ktp =  $(this).data('ktp');
       let ktp2 =  $(this).data('ktp2');
       let ktp_pelapor =  $(this).data('ktp_pelapor');
@@ -977,6 +1067,21 @@ function checkSemua(){
 
         $("#input_polres").val(surat_keterangan);
         $("#polresButton").attr("href" , `{{ asset('/storage/suratPolsek/${surat_keterangan}') }}` );
+
+       
+       
+
+      }
+
+      if (nama === 'Surat Keterangan Pindah Datang atau Pindah Keluar') {
+        
+       makePindah();
+       makeKuasa();
+
+        $("#input_pindah").val(surat_keterangan);
+        $("#pindahButton").attr("href" , `{{ asset('/storage/pindah/${surat_keterangan}') }}` );
+        $("#input_kuasa").val(surat_nikah3);
+        $("#kuasaButton").attr("href" , `{{ asset('/storage/kuasa/${surat_nikah3}') }}` );
 
        
        

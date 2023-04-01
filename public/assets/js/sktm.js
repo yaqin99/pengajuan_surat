@@ -297,6 +297,74 @@ const fileValidation = (targetId , alertId) => {
     form.insertBefore(div , target);
   }
 
+  const makeSuratNikahOrangTuaElement = () => {
+    if (document.getElementById('divSuratNikahOrtu') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKeterangan');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divSuratNikahOrtu');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_nikahOrtu');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'suratNikahOrtu');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_nikahOrtu');
+    small.setAttribute('id' , 'fileNikahOrtu');
+    input.setAttribute('required' , 'true');
+
+    // input.addEventListener('input' , cekBatasKelahiran(this.id , 'fileNikah' ));
+    // input.addEventListener('change' , fileValidation(this.id , 'fileNikah' ));
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_nikahOrtu').innerHTML = 'Foto Copy Surat Nikah Orang Tua';
+    
+    form.insertBefore(div , target);
+  }
+
+  const makeSuratNikahMertuaElement = () => {
+    if (document.getElementById('divSuratNikahMertua') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKeterangan');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divSuratNikahMertua');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_nikahMertua');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'suratNikahMertua');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_nikahMertua');
+    small.setAttribute('id' , 'fileNikahMertua');
+    input.setAttribute('required' , 'true');
+
+    // input.addEventListener('input' , cekBatasKelahiran(this.id , 'fileNikah' ));
+    // input.addEventListener('change' , fileValidation(this.id , 'fileNikah' ));
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_nikahMertua').innerHTML = 'Foto Copy Surat Nikah Mertua';
+    
+    form.insertBefore(div , target);
+  }
+
 
   const makeKtpAsliElement = () => {
     if (document.getElementById('divKtpAsli') !== null) {
@@ -363,6 +431,40 @@ const fileValidation = (targetId , alertId) => {
     const form = document.getElementById('form_input');
     form.appendChild(div);
     document.getElementById('label_pelapor').innerHTML = 'Foto Copy Ktp Pelapor';
+    
+    form.insertBefore(div , target);
+  }
+
+  const makeKkMertuaElement = () => {
+    if (document.getElementById('divKkMertua') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divSuratNikah');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divKkMertua');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_mertua');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'kkMertua');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('id' , 'input_Mertua');
+    input.setAttribute('required' , 'true');
+
+    small.setAttribute('id' , 'fileKkMertua');
+    // input.addEventListener('input' , cekBatasKelahiran(this.id , 'filePelapor' ));
+    // input.addEventListener('change' , fileValidation(this.id , 'filePelapor' ));
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_mertua').innerHTML = 'KK Asli Mertua';
     
     form.insertBefore(div , target);
   }
@@ -436,6 +538,42 @@ const fileValidation = (targetId , alertId) => {
   }
 
 
+  const makeKtpPengantinWanitaElement = () => {
+    if (document.getElementById('divKtpWanita') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKk');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divKtpWanita');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'labelKtpWanita');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'input_ktpWanita');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('required' , 'true');
+
+    input.setAttribute('id' , 'input_ktpWanita');
+    small.setAttribute('id' , 'fileKtpWanita');
+    // input.addEventListener('input' , cekBatasKelahiran(this.id , 'fileSaksi2' ));
+    // input.addEventListener('change' , fileValidation(this.id , 'fileSaksi2' ));
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('labelKtpWanita').innerHTML = 'KTP Pengantin Wanita';
+    
+    form.insertBefore(div , target);
+  }
+
+
+
   const makeKtpOrtuElement = () => {
     if (document.getElementById('divKtpOrtu') !== null) {
       return ;
@@ -470,6 +608,74 @@ const fileValidation = (targetId , alertId) => {
     form.insertBefore(div , target);
   }
 
+
+
+  const makeIjazahPerempuanElement = () => {
+    if (document.getElementById('divIjazahPerempuan') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKtp');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divIjazahPerempuan');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_ijazahPerempuan');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'ijazahPerempuan');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('required' , 'true');
+
+    input.setAttribute('id' , 'input_ijazahPerempuan');
+    small.setAttribute('id' , 'fileIjazahPerempuan');
+    // input.addEventListener('input' , cekBatasKelahiran(this.id , 'fileKtpIbu' ));
+    // input.addEventListener('change' , fileValidation(this.id , 'fileKtpIbu' ));
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_ijazahPerempuan').innerHTML = 'Foto Copy Ijazah Pengantin Perempuan';
+    
+    form.insertBefore(div , target);
+  }
+  const makeIjazahLakiElement = () => {
+    if (document.getElementById('divIjazah') !== null) {
+      return ;
+    }
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const small = document.createElement("small");
+    const target = document.getElementById('divKtp');
+    div.setAttribute('class','mb-3');
+    div.setAttribute('id','divIjazah');
+    label.setAttribute('class' , 'form-label');
+    label.setAttribute('id' , 'label_ijazah');
+    input.setAttribute('type' , 'file');
+    input.setAttribute('name' , 'ijazah');
+    input.setAttribute('class' , 'form-control');
+    input.setAttribute('required' , 'true');
+
+    input.setAttribute('id' , 'input_ijazah');
+    small.setAttribute('id' , 'fileIjazah');
+    // input.addEventListener('input' , cekBatasKelahiran(this.id , 'fileKtpIbu' ));
+    // input.addEventListener('change' , fileValidation(this.id , 'fileKtpIbu' ));
+    p.appendChild(small);
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(p);
+    const form = document.getElementById('form_input');
+    form.appendChild(div);
+    document.getElementById('label_ijazah').innerHTML = 'Foto Copy Ijazah Pengantin Laki - laki';
+    
+    form.insertBefore(div , target);
+  }
 
 
   const makeKtpIbuElement = () => {
@@ -551,6 +757,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('skck').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/skck/' + document.getElementById('skck').innerHTML);
@@ -561,6 +768,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('suratUmum').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratUmum/' + document.getElementById('suratUmum').innerHTML);
@@ -572,6 +780,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
 
     let judul = document.getElementById('sktm').innerHTML ; 
     document.getElementById('judulModal').innerHTML = judul   ;
@@ -584,6 +793,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('belumMenikah').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratBelumNikah/' + document.getElementById('belumMenikah').innerHTML);
@@ -594,6 +804,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('suratUsaha').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratUsaha/' +  document.getElementById('suratUsaha').innerHTML);
@@ -604,6 +815,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('skdp').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/domisiliPenduduk/' + document.getElementById('skdp').innerHTML);
@@ -613,20 +825,42 @@ const fileValidation = (targetId , alertId) => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
-
     dismissKelahiran();
+    dismissPecah();
+
     document.getElementById('judulModal').innerHTML =  document.getElementById('skdu').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/domisiliUsaha/'+ document.getElementById('skdu').innerHTML);
  
   }
 
+  const pecahKk = () => {
+    dismissKematian();
+    dismissKehilangan();
+    dismissPindah();
+    dismissKelahiran();
+
+    makeIjazahLakiElement();
+    makeIjazahPerempuanElement();
+    makeKtpPengantinWanitaElement()
+    makeSuratNikahElement(); 
+    makeSuratNikahOrangTuaElement();
+    makeSuratNikahMertuaElement();
+    makeKkMertuaElement();
+    makeNoHpElement();
+    document.getElementById('ktpAyah').innerHTML = 'KTP Pengantin Laki - laki ' ;
+    document.getElementById('labelKk').innerHTML = 'KK Asli Orang Tua' ;
+    document.getElementById('judulModal').innerHTML =  document.getElementById('pecah').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/suratPecah/' + document.getElementById('pecah').innerHTML);
+  } 
+
 
   const kehilangan = () => {
     dismissKematian();
     dismissKelahiran();
-    makeSuratPolsek();
     dismissPindah();
+    dismissPecah();
     
+    makeSuratPolsek();
     document.getElementById('judulModal').innerHTML =  document.getElementById('kehilangan').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratKehilangan/' + document.getElementById('kehilangan').innerHTML);
  
@@ -636,17 +870,21 @@ const fileValidation = (targetId , alertId) => {
     dismissKelahiran();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
+
     makePindahElement();
     makePindahKuasaElement();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('pindah').innerHTML ;
-    document.getElementById("form_input").setAttribute('action' , '/suratPindah');
+    document.getElementById("form_input").setAttribute('action' , '/suratPindah/' + document.getElementById('pindah').innerHTML);
  
   }
   const kelahiran = () => {
     dismissKematian();
     dismissKehilangan();
     dismissPindah();
+    dismissPecah();
+
     makeBidanElement();
     makeSuratNikahElement();
     makeKtpPelaporElement();
@@ -686,6 +924,21 @@ const fileValidation = (targetId , alertId) => {
     } 
    
   }
+  const dismissPecah = () => {
+    if (document.getElementById("divIjazah") != null) {
+      document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("divIjazah").remove();
+      document.getElementById("divIjazahPerempuan").remove();
+      document.getElementById("divKtpWanita").remove();
+      document.getElementById("divKkMertua").remove();
+      document.getElementById("divSuratNikah").remove();
+      document.getElementById("divSuratNikahOrtu").remove();
+      document.getElementById("divSuratNikahMertua").remove();
+      document.getElementById("divNohp").remove();
+    } 
+   
+  }
 
   const dismissKematian = () => {
     if (document.getElementById("divKeteranganRs") != null) {
@@ -712,7 +965,7 @@ const fileValidation = (targetId , alertId) => {
     dismissKelahiran();
     dismissKehilangan();
     dismissPindah();
-    
+    dismissPecah();
     makeKeteranganRsElement();
     makeKtpAsliElement();
     makeKtpOrtuElement();
