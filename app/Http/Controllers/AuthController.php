@@ -56,6 +56,8 @@ class AuthController extends Controller
         return view('auth.loginAdmin');
     }
     
+
+
     public function loginMethod(Request $req){
 
         $req->validate([
@@ -64,13 +66,12 @@ class AuthController extends Controller
         ]); 
        
         
-        if (Auth::guard('admin')->attempt($req->only(['username' => $req->username , 'password' => $req->password]))) {
+        if (Auth::guard('admin')->attempt(['username' => $req->username , 'password' => $req->password] , $req->remember)) {
             request()->session()->regenerate();
- 
-            return redirect()->intended('/');
+            return redirect()->intended('/admin');
+        } else {
+            return back()->with('gagal' , 'Login Gagal');
         }
-
-        dd('gagal');
     }
 
     public function userView(){
@@ -96,7 +97,6 @@ class AuthController extends Controller
         }
 
         if (Auth::viaRemember()) {
-            dd('selamat datang kembali');
 
             request()->session()->regenerate();
 
@@ -115,5 +115,15 @@ class AuthController extends Controller
     request()->session()->regenerateToken();
  
     return redirect('/login');
+     }
+
+    public function logoutAdmin(){
+        Auth::guard('admin')->logout();
+        //$request dan request() itu sama aja 
+    request()->session()->invalidate();
+ 
+    request()->session()->regenerateToken();
+ 
+    return redirect('/loginAdmin');
      }
 }

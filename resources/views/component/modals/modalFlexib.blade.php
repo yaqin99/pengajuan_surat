@@ -30,12 +30,12 @@
               <textarea class="form-control" name="keterangan"  id="floatingTextarea2" ></textarea>
             </div>
             {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
-          </form>
-        </div>
-        <div class="modal-footer">
-          {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-          <button type="submit" id="confirm_button" class="btn btn-success">Konfirmasi</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+            <button type="submit" id="confirm_button" class="btn btn-success">Konfirmasi</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

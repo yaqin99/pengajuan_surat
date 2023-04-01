@@ -20,6 +20,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'username',
+        'rt' , 
+        'rw' , 
+        'alamat' , 
+        'nik',
         'email',
         'password',
     ];
@@ -42,4 +46,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function pengajuan (){
+
+       return $this->hasMany(Pengajuan::class);
+
+    }
 }

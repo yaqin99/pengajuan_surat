@@ -23,5 +23,14 @@ class AdminSeeder extends Seeder
             ]
             );
        
+        DB::table('admins')->insert(
+            [
+                'name' => "Syifa Cantik" , 
+                'username' => "syifa" , 
+                'email' => "syifa@gmail.com" , 
+                'password' => bcrypt('syifa') , 
+            ]
+            );
+       
     }
 }
