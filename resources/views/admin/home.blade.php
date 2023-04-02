@@ -151,9 +151,26 @@
               <i class="bi bi-circle"></i><span>Pengajuan Surat</span>
             </a>
           </li>
+         
           
         </ul>
-      </li><!-- End Tables Nav -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#papparapparapparappa" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-gear"></i><span>Manajemen User</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="papparapparapparappa" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>Data User</span>
+            </a>
+          </li>
+         
+          
+        </ul>
+      </li>
+      
+      <!-- End Tables Nav -->
 
    
     
@@ -168,7 +185,7 @@
       <h1>Data Pengajuan</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="/admin">Home</a></li>
           <li class="breadcrumb-item">Pengajuan</li>
         </ol>
       </nav>
@@ -915,6 +932,231 @@ function checkSemua(){
      
     }
 
+
+      const makeIjazahLaki = () => {
+      if (document.getElementById('divIjazahLaki') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divIjazahLaki');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_ijazahLaki');
+      label.setAttribute('for' , 'modaIjazahLaki'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_ijazahLaki');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'IjazahLakiButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_ijazahLaki').innerHTML = 'Foto Copy Ijazah Pengantin Laki - laki';
+      
+     
+    }
+
+      const makeIjazahPerempuan = () => {
+      if (document.getElementById('divIjazahPerempuan') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divIjazahPerempuan');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_ijazahPerempuan');
+      label.setAttribute('for' , 'modaIjazahPerempuan'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_ijazahPerempuan');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'IjazahPerempuanButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_ijazahPerempuan').innerHTML = 'Foto Copy Ijazah Pengantin Perempuan';
+      
+     
+    }
+
+      const makeKtpWanita = () => {
+      if (document.getElementById('divKtpWanita') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKk');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divKtpWanita');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_ktpWanita');
+      label.setAttribute('for' , 'modalKtpWanita'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_ktpWanita');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'ktpWanitaButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_ktpWanita').innerHTML = 'KTP Pengantin Wanita';
+      
+     
+    }
+
+      const makeKkAsliMertua = () => {
+      if (document.getElementById('divKkMertua') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divIjazahLaki');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divKkMertua');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_kkMertua');
+      label.setAttribute('for' , 'modalKkMertua'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_kkMertua');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'kkMertuaButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_kkMertua').innerHTML = 'KK Asli Mertua';
+    }
+
+      const makeSuratNikahMertua = () => {
+      if (document.getElementById('divNikahMertua') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divNikahMertua');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_nikahMertua');
+      label.setAttribute('for' , 'modalNikahMertua'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'inputNikahMertua');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'nikahMertuaButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_nikahMertua').innerHTML = 'Foto Copy Surat Nikah Mertua';
+    }
+
+      const makeSuratNikahOrtu = () => {
+      if (document.getElementById('divNikahOrtu') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const a = document.createElement("a");
+      const input = document.createElement("input");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divNikahOrtu');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_nikahOrtu');
+      label.setAttribute('for' , 'modalNikahOrtu'); 
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'inputNikahOrtu');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'nikahOrtuButton');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_nikahOrtu').innerHTML = 'Foto Copy Surat Nikah Orang Tua';
+    }
+
+  
+
     const dismissKelahiran = () => {
       if (document.getElementById("divKtpIbu") != null) {
         document.getElementById('labelKtp').innerHTML = 'KTP ' ;
@@ -965,6 +1207,23 @@ function checkSemua(){
      
     }
 
+    const dismissPecah = () => {
+      if (document.getElementById("divIjazahLaki") != null) {
+        document.getElementById('labelKtp').innerHTML = 'KTP ' ;
+        document.getElementById('labelKk').innerHTML = 'KK' ;
+
+        document.getElementById("divIjazahLaki").remove();
+        document.getElementById("divIjazahPerempuan").remove();
+        document.getElementById("divKtpWanita").remove();
+        document.getElementById("divKkMertua").remove();
+        document.getElementById("suratNikah").remove();
+        document.getElementById("divNikahOrtu").remove();
+        document.getElementById("divNikahMertua").remove();
+        document.getElementById("divNoPelapor").remove();
+      } 
+     
+    }
+
 
 
     $(".jenis").click(function () {
@@ -972,6 +1231,7 @@ function checkSemua(){
       dismissKematian();
       dismissKelahilangan();
       dismissPindah();
+      dismissPecah();
       let ktp =  $(this).data('ktp');
       let ktp2 =  $(this).data('ktp2');
       let ktp_pelapor =  $(this).data('ktp_pelapor');
@@ -1032,6 +1292,42 @@ function checkSemua(){
       }
 
       // KEMATIAN
+      if (nama === 'Surat Keterangan Pecah KK') {
+        document.getElementById('labelKtp').innerHTML = 'KTP Pengantin Laki - laki' ;
+        document.getElementById('labelKk').innerHTML = 'KK Asli Orang Tua' ;
+        makeIjazahLaki();
+        makeIjazahPerempuan();
+        makeKtpWanita();
+        makeKkAsliMertua();
+        makeSuratNikah();
+        makeSuratNikahOrtu();
+        makeSuratNikahMertua();
+        makeNoPelapor();
+
+        $("#input_ijazahLaki").val(surat_keterangan);
+        $("#IjazahLakiButton").attr("href" , `{{ asset('/storage/ijazah/${surat_keterangan}') }}` );
+        $("#input_ijazahPerempuan").val(ktp_saksi2);
+        $("#IjazahPerempuanButton").attr("href" , `{{ asset('/storage/ijazahPerempuan/${ktp_saksi2}') }}` );
+
+        $("#input_ktpWanita").val(ktp2);
+        $("#ktpWanitaButton").attr("href" , `{{ asset('/storage/input_ktpWanita/${ktp2}') }}` );
+
+        $("#input_kkMertua").val(kk2);
+        $("#kkMertuaButton").attr("href" , `{{ asset('/storage/kkMertua/${kk2}') }}` );
+
+        $("#input_nikah").val(surat_nikah);
+        $("#nikahButton").attr("href" , `{{ asset('/storage/suratNikah/${surat_nikah}') }}` );
+        $("#inputNikahOrtu").val(surat_nikah2);
+        $("#nikahOrtuButton").attr("href" , `{{ asset('/storage/suratOrtu/${surat_nikah2}') }}` );
+        $("#inputNikahMertua").val(surat_nikah3);
+        $("#nikahMertuaButton").attr("href" , `{{ asset('/storage/suratMertua/${surat_nikah3}') }}` );
+       
+        
+        $("#input_no").val(no_pelapor);
+       
+
+      }
+
       if (nama === 'Surat Keterangan Kematian') {
         document.getElementById('labelKtp').innerHTML = 'Foto Copy KTP' ;
         document.getElementById('labelKk').innerHTML = 'KK Asli' ;

@@ -16,6 +16,72 @@ class PengajuanController extends Controller
 
     public function sktm ($judul){
 
+        if ($judul == 'Surat Keterangan Pecah KK') {
+            request()->validate(
+               [
+                'ijazah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'ijazahPerempuan' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'ktp' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'input_ktpWanita' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'kk' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'kkMertua' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'suratNikah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'suratNikahOrtu' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'suratNikahMertua' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'noHp' => 'required|string|min:10|max:13' , 
+                'keterangan' => 'string|max:200|nullable' , 
+               ]
+            );
+
+        $uniqIjazah = uniqid().'.'.request()->file('ijazah')->extension() ; 
+        $uniqIjazahPerempuan = uniqid().'.'.request()->file('ijazahPerempuan')->extension() ; 
+        $uniqKtp = uniqid().'.'.request()->file('ktp')->extension() ; 
+        $uniqKtpWanita = uniqid().'.'.request()->file('input_ktpWanita')->extension() ; 
+        $uniqKk = uniqid().'.'.request()->file('kk')->extension() ; 
+        $uniqKkMertua =  uniqid().'.'.request()->file('kkMertua')->extension() ; 
+        $uniqSuratNikah = uniqid().'.'.request()->file('suratNikah')->extension() ;    
+        $uniqSuratNikahOrtu = uniqid().'.'.request()->file('suratNikahOrtu')->extension() ; 
+        $uniqSuratNikahMertua = uniqid().'.'.request()->file('suratNikahMertua')->extension() ; 
+
+        request()->file('ijazah')->storeAs('ijazah' , $uniqIjazah , ['disk' => 'public']);
+        request()->file('ijazahPerempuan')->storeAs('ijazahPerempuan' , $uniqIjazahPerempuan , ['disk' => 'public']);
+        request()->file('ktp')->storeAs('ktp' ,  $uniqKtp, ['disk' => 'public']);
+        request()->file('input_ktpWanita')->storeAs('input_ktpWanita' , $uniqKtpWanita , ['disk' => 'public']);
+        request()->file('kk')->storeAs('kk' , $uniqKk , ['disk' => 'public']);
+        request()->file('kkMertua')->storeAs('kkMertua' , $uniqKkMertua, ['disk' => 'public']);
+        request()->file('suratNikah')->storeAs('suratNikah' , $uniqSuratNikah , ['disk' => 'public']);
+        request()->file('suratNikahOrtu')->storeAs('suratNikahOrtu' , $uniqSuratNikahOrtu , ['disk' => 'public']);
+        request()->file('suratNikahMertua')->storeAs('suratNikahMertua' , $uniqSuratNikahMertua , ['disk' => 'public']);
+     
+        $input =  Jenis::create([
+            'nama_surat' => $judul , 
+            'ktp' => $uniqKtp , 
+            'ktp2' => $uniqKtpWanita , 
+            'kk' =>  $uniqKk , 
+            'kk2' =>  $uniqKkMertua , 
+            'surat_nikah' => $uniqSuratNikah , 
+            'surat_nikah2' => $uniqSuratNikahOrtu , 
+            'surat_nikah3' => $uniqSuratNikahMertua , 
+            'surat_keterangan' => $uniqIjazah , 
+            'ktp_saksi2' => $uniqIjazahPerempuan , 
+            'no_pelapor' => request()->noHp , 
+            'keterangan' => request()->keterangan ,
+        ]);
+
+        $pengajuan = Pengajuan::create([
+            'jenis_id' => $input->id , 
+            'user_id' => Auth::user()->id , 
+            'tanggal' => Carbon::now(),
+        ]);   
+
+        if ($input && $pengajuan) {
+           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+          } else {
+              dd('gagal');
+          }
+
+        }
+
         if ($judul == 'Surat Keterangan Kelahiran') {
             request()->validate(
                [
@@ -316,6 +382,18 @@ class PengajuanController extends Controller
             Storage::delete('/public/saksi2/'.$no->ktp_saksi2);
             Storage::delete('/public/suratNikah/'.$no->surat_nikah);
             Storage::delete('/public/kelahiranBidan/'.$no->surat_keterangan);
+        }
+        if ($no->nama_surat  == 'Surat Keterangan Pecah KK') {
+            Storage::delete('/public/ktp/'.$no->ktp);
+            Storage::delete('/public/input_ktpWanita/'.$no->ktp2);
+            Storage::delete('/public/kk/'.$no->kk);
+            Storage::delete('/public/kkMertua/'.$no->kk2);
+            Storage::delete('/public/suratNikah/'.$no->surat_nikah);
+            Storage::delete('/public/suratNikahOrtu/'.$no->surat_nikah2);
+            Storage::delete('/public/suratNikahMertua/'.$no->surat_nikah3);
+            
+            Storage::delete('/public/ijazah/'.$no->surat_keterangan);
+            Storage::delete('/public/ijazahPerempuan/'.$no->ktp_saksi2);
         }
 
         if ($no->nama_surat  == 'Surat Keterangan Kematian') {
