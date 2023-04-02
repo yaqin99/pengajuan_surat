@@ -369,8 +369,11 @@ class PengajuanController extends Controller
 
     public function deletePengajuan (){
 
-       
-       $data =  DB::table('jenis')->whereIn('id', request()->ids)->get();
+        if (request()->ids == []) {
+           return back()->with('deleteFail' , 'Anda Belum Menyeleksi Surat');
+        }
+
+        $data =  DB::table('jenis')->whereIn('id', request()->ids)->get();
        foreach ($data as $no) {
         
         if ($no->nama_surat  == 'Surat Keterangan Kelahiran') {

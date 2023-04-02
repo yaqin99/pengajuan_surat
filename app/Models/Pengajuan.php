@@ -28,6 +28,9 @@ class Pengajuan extends Model
             $query->whereHas('jenis', function ($query) {
                 $query->where('nama_surat','like','%'.request('search').'%');
                 // ->orWhere('nik','like','%'.request('search').'%');
+            })->orWhereHas('user', function ($query) {
+                $query->where('name','like','%'.request('search').'%');
+                // ->orWhere('nik','like','%'.request('search').'%');
             });
           
       }
