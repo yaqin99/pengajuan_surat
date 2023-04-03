@@ -56,3 +56,4 @@ Route::post('/deletePengajuan',[PengajuanController::class , 'deletePengajuan'])
 //   ADMIN
 
 Route::get('/admin',[AdminController::class , 'index'])->middleware('isAdminLogin');
+Route::get('/user',[AdminController::class , 'userData'])->middleware('isAdminLogin');

@@ -68,7 +68,7 @@ class AuthController extends Controller
         
         if (Auth::guard('admin')->attempt(['username' => $req->username , 'password' => $req->password] , $req->remember)) {
             request()->session()->regenerate();
-            return redirect()->intended('/admin');
+            return redirect()->intended('/admin')->with('success' , 'Selamat Datang Kembali');
         } else {
             return back()->with('gagal' , 'Login Gagal');
         }
@@ -91,7 +91,7 @@ class AuthController extends Controller
         if (Auth::guard('web')->attempt(['username' => $req->username , 'password' => $req->password] , $req->remember)) {
             request()->session()->regenerate();
  
-            return redirect()->intended('/');
+            return redirect()->intended('/')->with('success' , 'Selamat Datang Kembali');;
         } else {
             return back()->with('gagal' , 'Login Gagal');
         }

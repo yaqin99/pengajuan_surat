@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class PengajuanController extends Controller
 {
@@ -75,7 +77,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
-           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
           }
@@ -116,14 +118,6 @@ class PengajuanController extends Controller
         $suratNikah = request()->file('suratNikah')->storeAs('suratNikah' , $uniqNikah , ['disk' => 'public']);
         $kk = request()->file('kk')->storeAs('kk' , $uniqKk , ['disk' => 'public']);
        
-        // $link = Storage::url($ktp);
-        // $linkIbu = Storage::url($ktpIbu);
-        // $linkPelapor = Storage::url($ktpPelapor);
-        // $linkSaksi1 = Storage::url($saksi1);
-        // $linkSaksi2 = Storage::url($saksi2);
-        // $linkBidan = Storage::url($kelahiranBidan);
-        // $linkNikah = Storage::url($suratNikah);
-        // $linkKk = Storage::url($kk);
 
         $input =  Jenis::create([
             'nama_surat' => $judul , 
@@ -146,7 +140,8 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
-           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
           }
@@ -188,13 +183,6 @@ class PengajuanController extends Controller
         $ktpPelapor = request()->file('ktpPelapor')->storeAs('ktpPelapor' , $uniqPelapor , ['disk' => 'public']);
         $saksi1 = request()->file('saksi1')->storeAs('saksi1' , $uniqSaksi1 , ['disk' => 'public']);
        
-        // $link = Storage::url($ktp);
-        // $linkAsli = Storage::url($ktpAsli);
-        // $linkPelapor = Storage::url($ktpPelapor);
-        // $linkSaksi1 = Storage::url($saksi1);
-        // $linkKk = Storage::url($kk);
-        // $linkOrtu = Storage::url($kkOrtu);
-        // $linkRs = Storage::url($keteranganRs);
 
         $input =  Jenis::create([
             'nama_surat' => $judul , 
@@ -216,7 +204,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
-           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
           }
@@ -267,7 +255,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
-           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
           }
@@ -321,7 +309,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
-           return  redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
           }
@@ -359,7 +347,8 @@ class PengajuanController extends Controller
             'tanggal' => Carbon::now(),
         ]);
         if ($input && $pengajuan) {
-          return redirect()->to('/')->send()->with('berhasil' , 'Pengajuan Anda Berhasil');
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
+        //   return redirect()->to('/')->send()->with('success' , 'Pengajuan Anda Berhasil');
         } else {
             dd('gagal');
         }
@@ -370,7 +359,7 @@ class PengajuanController extends Controller
     public function deletePengajuan (){
 
         if (request()->ids == []) {
-           return back()->with('deleteFail' , 'Anda Belum Menyeleksi Surat');
+           return redirect('/admin')->with('warning', 'Anda Belum Menyeleksi Surat');
         }
 
         $data =  DB::table('jenis')->whereIn('id', request()->ids)->get();
@@ -435,7 +424,7 @@ class PengajuanController extends Controller
        $delete =  DB::table('jenis')->whereIn('id', request()->ids)->delete();
        
        if ($hapus && $delete) {
-           return redirect('/admin')->with('delete' , 'Berhasil Menghapus Data');
+        return redirect('/admin')->with('success', 'Surat Sudah Selesai');
        } else {
         dd('gagal');
        }

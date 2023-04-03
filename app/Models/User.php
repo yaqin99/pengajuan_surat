@@ -52,4 +52,13 @@ class User extends Authenticatable
        return $this->hasMany(Pengajuan::class);
 
     }
+
+    public function scopeSearchUser($query ){
+        if (request('search')) {
+            
+     $query->where('name','like','%'.request('search').'%');
+               
+          
+      }
+      }
 }

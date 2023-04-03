@@ -23,6 +23,7 @@
   <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
@@ -88,9 +89,9 @@
                 <p class="dropdown-item">
                   {{ Auth::user()->name }}
                 </p>
-                <form action="/logout" method="post">
+                <form action="/logout" method="post" id="logoutForm">
                   @csrf
-                  <button onclick="return confirm('Apakah Anda Yakin ingin keluar halaman?')" class="dropdown-item" type="submit">Keluar</button>
+                  <button class="dropdown-item" type="submit">Keluar</button>
                 </form>
 
               </li>
@@ -580,7 +581,8 @@
   <div id="modal">
     @include('component.modals.modalFlexib')
     @include('component.modals.modalKeterangan')
-    @if(Session::get('berhasil'))
+    @include('sweetalert::alert')
+    {{-- @if(Session::get('berhasil'))
     
     <div class="modal" tabindex="-1" id="modalNotif" >
       <div class="modal-dialog" >
@@ -597,7 +599,7 @@
       </div>
     </div>
   
-				  @endif
+				  @endif --}}
 
   </div>
   {{-- @if(Session::get('berhasil'))
@@ -710,12 +712,40 @@
   <script src="/assets/vendor/php-email-form/validate.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <!-- Template Main JS File -->
   <script  src="/assets/js/main.js"></script>
   <script  src="/assets/js/sktm.js"></script>
   <script >
-  
+   document.querySelector('#logoutForm').addEventListener('submit', function(e) {
+      var form = this;
+      
+      e.preventDefault();
+      
+      swal({
+          title: "Apakah Anda Yakin?",
+          text: "Keluar Dari Halaman!",
+          icon: "info",
+          buttons: [
+            'Batal',
+            'Keluar'
+          ],
+          dangerMode: true,
+        }).then(function(isConfirm) {
+          if (isConfirm) {
+            swal({
+              title: 'Log out!',
+              text: 'Logout Berhasil, Semoga Hari Anda Menyenangkan',
+              icon: 'success'
+            }).then(function() {
+              form.submit();
+            });
+          } else {
+            swal("Batal", "Logout di Batalkan", "error");
+          }
+        });
+    });
   const disNotif = () => {
     document.getElementById('modalNotif').style.display = 'none' ; 
 
