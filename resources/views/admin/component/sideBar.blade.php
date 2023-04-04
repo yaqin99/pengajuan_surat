@@ -38,7 +38,29 @@
           
         </ul>
       </li>
+
+      {{-- @can('superAdmin') --}}
+      {{-- @if(auth()->guard('admin')->user()->role == 'admin') --}}
+      {{-- <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#zaihanolif" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-gear"></i><span>Manajemen Admin</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="zaihanolif" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/akunAdmin">
+              <i class="bi bi-circle"></i><span>Data Admin</span>
+            </a>
+          </li>
+         
+          
+        </ul>
+      </li> --}}
       
+        
+      {{-- @endif --}}
+      
+      
+      {{-- @endcan --}}
       <!-- End Tables Nav -->
 
    

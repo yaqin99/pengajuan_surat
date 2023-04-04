@@ -23,6 +23,7 @@ class User extends Authenticatable
         'rt' , 
         'rw' , 
         'alamat' , 
+        'noHp' , 
         'nik',
         'email',
         'password',

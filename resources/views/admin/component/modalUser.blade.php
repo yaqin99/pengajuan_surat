@@ -10,7 +10,7 @@
         <div class="modal-body p-4 py-5 p-md-5">
             <h3 class="text-center mb-3" id="modalNama"></h3>
         
-            <form action="#" class="signup-form">
+            <form class="signup-form" id="modalUser">
                 <div class="form-group mb-2">
                     <label for="modalRt" class="text-dark">RT</label>
                     <input type="text"  class="form-control" id="modalRt">
@@ -31,14 +31,16 @@
                     <label for="modalNik" class="text-dark">NIK</label>
                     <input type="text"  class="form-control" id="modalNik">
                 </div>
-                <div class="form-group mb-2">
+                <div class="form-group mb-4">
                     <label for="modalEmail" class="text-dark">Email</label>
                     <input type="email"  class="form-control" id="modalEmail">
                 </div>
-         
-          
-        </form>
+                {{-- <div class="d-flex justify-content-end">
+                  <button id="buttonEdit" class="btn btn-warning">Update</button>
+                </div>   --}}
+          </form>
         </div>
+       
       </div>
     </div>
   </div>

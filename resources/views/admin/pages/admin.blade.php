@@ -1,14 +1,14 @@
 @extends('admin.home')
 @section('main')
-@include('admin.component.navbarUser')
+@include('admin.component.navbarAdmin')
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Data Ketua RT</h1>
+      <h1>Data Admin</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/user">Home</a></li>
-          <li class="breadcrumb-item">Data RT</li>
+          <li class="breadcrumb-item"><a href="/akunAdmin">Home</a></li>
+          <li class="breadcrumb-item">Data Admin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -25,9 +25,9 @@
             <div class="card-body">
                 <div class="d-flex justify-content-between">
 
-                  <h5 class="card-title d-flex justify-content-center">List Akun Ketua RT</h5>
+                  <h5 class="card-title d-flex justify-content-center">List Akun Admin</h5>
                   <div class="d-flex align-items-center" id="divCheckAll" >
-                      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambah"><i class="bi bi-plus-circle"></i> User</a>
+                      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahAdmin"><i class="bi bi-plus-circle"></i> Admin</a>
                   </div>
                 </div>
                   
@@ -37,15 +37,13 @@
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Nama Ketua RT</th>
-                    <th scope="col">RT</th>
-                    <th scope="col">RW</th>
-                    
-                    <th scope="col">Alamat</th>
-                   
-                    <th scope="col">Nomer Telepon</th>
+                    <th scope="col">Nama Admin</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Username</th>                
+                    <th scope="col">Password</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Hapus</th>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -54,21 +52,21 @@
                   <tr>
                     <th scope="row">{{ $loop->index + 1 }}</th>
                     <td> {{ $syifa->name }}</td>
-                    <td>{{$syifa->rt }}</td>
-                    <td>{{$syifa->rw }}</td>
+                    <td>{{$syifa->email }}</td>
+                    <td>{{$syifa->username }}</td>
                   
-                    <td>{{$syifa->alamat }}</td>
+                    <td>{{$syifa->password }}</td>
                  
-                    <td>{{$syifa->noHp }}</td>
-                    <td><a  href="/editUser/{{ $syifa->id }}"  class="btn btn-warning btn-flat" >
+        
+                    <td><a  href="/editAdmin/{{ $syifa->id }}"  class="btn btn-warning btn-flat" >
                       <i class="bi bi-pencil-square"></i>
                     </a> 
                     
                     <td>
                       
-                      <form method="POST" action="/deleteUser/{{ $syifa->id }}" >
+                      <form method="POST" action="/deleteAdmin/{{ $syifa->id }}" >
                         @csrf
-                        <button type="submit" class="btn btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'><i class="bi bi-trash-fill"></i></button>
+                        <button type="submit" class="btn btn-danger btn-flat adminDelete" data-toggle="tooltip" title='Delete'><i class="bi bi-trash-fill"></i></button>
                        </form>
                     
                   </td>
@@ -104,7 +102,7 @@
    
       
     @include('sweetalert::alert')
-    @include('admin.component.modalTambah')
+    @include('admin.component.modalTambahAdmin')
        
        
        
@@ -117,7 +115,7 @@
 
   <script type="text/javascript">
    
-       $('.show_confirm').click(function(event) {
+       $('.adminDelete').click(function(event) {
             var form =  $(this).closest("form");
             var name = $(this).data("name");
             event.preventDefault();
@@ -135,6 +133,7 @@
             });
         });
     
+        
         document.querySelector('#form1').addEventListener('submit', function(e) {
       var form = this;
       
@@ -163,7 +162,6 @@
           }
         });
     });
-    
   </script>
  
 

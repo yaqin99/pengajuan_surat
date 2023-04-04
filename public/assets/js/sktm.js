@@ -79,16 +79,77 @@ const fileValidation = (targetId , alertId) => {
 
  
   //          MODAL DESKRIPSI
-  const sktmButton = () => {
-    document.getElementById('judulModal').innerHTML =  document.getElementById('sktmSend').innerHTML ; 
+  const sktmButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan'
-    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#tidakMampu');
-    
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');
+    yoNdakMampu();
   }
-  const domisiliButton = () => {
-    document.getElementById('judulModal').innerHTML =  document.getElementById('domisiliSend').innerHTML ; 
+  const suratUmum = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan umum meliputi keterangan sesuai yang dibutuhkan masyarakat untuk pengajuan pelayanan. Syarat keterangan umum : Surat Pengantar dari RT/RW. Fotocopy Kartu Tanda Penduduk Elektronik (KTP-el).'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');
+    umum();
+  }
+  const domisiliButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Domisili Usaha adalah sebuah surat yang menyatakan domisili seseorang atau suatu badan usaha. Surat keterangan domisili dibutuhkan untuk mengurus berbagai dokumen legal lainnya seperti SIUP, Tanda Daftar Perusahaan, NPWP, dan untuk mengurus usaha perdagangan lainnya.'
-    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#domisili');  
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    domisiliPenduduk();
+  }
+  const domisiliUsahaButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Domisili Usaha adalah sebuah surat atau izin yang menyatakan domisili seseorang atau suatu badan usaha.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    domisiliUsaha();
+  }
+  const kehilanganButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kehilangan adalah surat keterangaan  yang menerangkaan bahwa pemohon/ masyarakat kehilangan barang maupun dokumen/ surat tertentu.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    kehilangan();
+  }
+  const belumButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Belum Pernah Menikah adalah dokumen yang fungsinya menyatakan bahwa seseorang belum pernah menikah atau berstatus masih lajang. Kalau dahulu pembuatan surat keterangan belum menikah hanya bisa dilakukan di Dinas Kependudukan dan Catatan Sipil (Disdukcapil) setempat.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    jomblo();
+  }
+  const usahaButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Usaha (SKU) adalah surat penting yang dibuat langsung oleh aparat lokasi usaha tersebut. Pada umumnya, aparat yang mengeluarkan Surat Keterangan Usaha adalah kelurahan atau kecamatan setempat.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    usaha();
+  }
+  const skckButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Berkelakuan Baik berisikan catatan perilaku baik seseorang secara hukum.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    skck();
+  }
+  const kelahiranButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kelahiran adalah suatu dokumen identitas autentik yang wajib dimiliki setiap warga negara Indonesia. Dokumen ini sebagai bukti sah terkait status dan peristiwa kelahiran seseorang dan termasuk hak setiap anak Indonesia.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    kelahiran();
+  }
+  const kematianButton = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kematian adalah dokumen dalam pembuktian administrasi bahwasanya seseorang telah dinyatakan meninggal dunia'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    kematian();
+  }
+  const pecah = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Pecah KK adalah surat yang dibuat  karena alasan perubahan status seperti pernikahan, keperluan pengurusan bantuan sosial, atau berbagai alasan lainnya'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    pecahKk();
+  }
+  const pindahDatang = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Pindah Datang digunakan sebagai dasar proses perekaman dalam data base kependudukan, perubahan KK bagi kepala/anggota keluarga yang tidak pindah dan proses Penerbitan KK/KTP di alamat baru.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    pindah();
   }
 
 

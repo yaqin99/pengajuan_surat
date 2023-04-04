@@ -9,6 +9,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script> --}}
+
   <!-- Favicons -->
   <link href="/assets/img/pamekasan.png" rel="icon">
   <link href="/assets/img/pamekasan.png" rel="apple-touch-icon">
@@ -51,6 +54,8 @@
 
   @yield('main')
   
+  @include('admin.component.modalUser')
+  @include('sweetalert::alert')
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -83,69 +88,50 @@
   <script src="/modalAssets/js/popper.js"></script>
   <script src="/modalAssets/js/bootstrap.min.js"></script>
   <script src="/modalAssets/js/main.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
   <!-- Template Main JS File -->
   <script src="/adminAssets/js/main.js"></script>
+  
   <script type="text/javascript">
+// document.querySelector('.formHapus').addEventListener('submit', function(e) {
+//       var form = this;
+      
+//       e.preventDefault();
+      
+//       swal({
+//           title: "Apakah Anda Yakin?",
+//           text: "Menghapus Akun!",
+//           icon: "info",
+//           buttons: [
+//             'Batal',
+//             'Hapus'
+//           ],
+//           dangerMode: true,
+//         }).then(function(isConfirm) {
+//           if (isConfirm) {
+//             swal({
+//               title: 'Hapus Akun!',
+//               text: 'Penghapus Berhasil, Semoga Hari Anda Menyenangkan',
+//               icon: 'success'
+//             }).then(function() {
+//               form.submit();
+//             });
+//           } else {
+//             swal("Batal", "Penghapusan Dibatalkan", "error");
+//           }
+//         });
+//     });
+  
+  
+
+ 
 
 
-  document.querySelector('#formPengajuan').addEventListener('submit', function(e) {
-      var form = this;
-      
-      e.preventDefault();
-      
-      swal({
-          title: "Apakah Anda Yakin?",
-          text: "Surat Sudah Selesai!",
-          icon: "info",
-          buttons: [
-            'Batal',
-            'Konfirmasi'
-          ],
-          dangerMode: true,
-        }).then(function(isConfirm) {
-          if (isConfirm) {
-            swal({
-              title: 'Surat Sedang Kami Kerjakan',
-              text: 'Surat Dalam Proses',
-              icon: 'success'
-            }).then(function() {
-              form.submit();
-            });
-          } else {
-            swal("Batal", "Konfirmasi di Batalkan", "error");
-          }
-        });
-    });
+ 
 
-  document.querySelector('#form1').addEventListener('submit', function(e) {
-      var form = this;
-      
-      e.preventDefault();
-      
-      swal({
-          title: "Apakah Anda Yakin?",
-          text: "Keluar Dari Halaman Admin!",
-          icon: "info",
-          buttons: [
-            'Batal',
-            'Keluar'
-          ],
-          dangerMode: true,
-        }).then(function(isConfirm) {
-          if (isConfirm) {
-            swal({
-              title: 'Log out!',
-              text: 'Logout Berhasil, Semoga Hari Anda Menyenangkan',
-              icon: 'success'
-            }).then(function() {
-              form.submit();
-            });
-          } else {
-            swal("Batal", "Logout di Batalkan", "error");
-          }
-        });
-    });
+  
+
+ 
 
 
 function check() {
@@ -186,18 +172,44 @@ function checkSemua(){
  
 }
 
+    // const buttonDis = () => {
+    //   document.getElementById('buttonEdit').style.display = 'none';
+    // }
 
 
 
     $(".user").click(function () {
       let name =  $(this).data('name');
+      let id =  $(this).data('id');
       let rt =  $(this).data('rt');
       let rw =  $(this).data('rw');
       let alamat =  $(this).data('alamat');
       let email =  $(this).data('email');
       let nik =  $(this).data('nik');
       let noHp =  $(this).data('nohp');
+      
+      $("#modalUser").attr('action' , `/editUser/${id}`);
+      $("#modalNama").html(name);
+      $("#modalAlamat").val(alamat);
+      $("#modalRt").val(rt);
+      $("#modalRw").val(rw);
+      $("#modalNik").val(nik);
+      $("#modalNoHp").val(noHp);
+      $("#modalEmail").val(email);
 
+});
+
+    $(".edit").click(function () {
+      let name =  $(this).data('name');
+      let id =  $(this).data('id');
+      let rt =  $(this).data('rt');
+      let rw =  $(this).data('rw');
+      let alamat =  $(this).data('alamat');
+      let email =  $(this).data('email');
+      let nik =  $(this).data('nik');
+      let noHp =  $(this).data('nohp');
+      
+      $("#modalEdit").attr('action' , `/editUser/${id}`);
       $("#modalNama").html(name);
       $("#modalAlamat").val(alamat);
       $("#modalRt").val(rt);
@@ -1178,9 +1190,6 @@ function checkSemua(){
       }
 
 });
-
-
-
 </script>
 </body>
 

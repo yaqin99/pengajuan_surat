@@ -9,8 +9,8 @@
     </div><!-- End Logo -->
 
     <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="GET" action="/user">
-        <input type="text" name="search" placeholder="Cari User .." title="Enter search keyword" value="{{ request('search') }}">
+      <form class="search-form d-flex align-items-center" method="GET" action="/akunAdmin">
+        <input type="text" name="search" placeholder="Cari Admin .." title="Enter search keyword" value="{{ request('search') }}">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
       </form>
     </div><!-- End Search Bar -->

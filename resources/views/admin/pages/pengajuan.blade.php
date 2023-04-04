@@ -63,8 +63,17 @@
                     
                   <tr>
                     <th scope="row">{{ $loop->index + 1 }}</th>
-                    <td><a href="#" id="change" class="user text-dark" data-bs-toggle="modal" data-bs-target="#syifaCantik" data-name="{{ $syifa->user->name }}"
-                      data-rt="{{ $syifa->user->rt }}" data-rw="{{ $syifa->user->rw }}" data-alamat="{{ $syifa->user->alamat }}" data-email="{{ $syifa->user->email }}" data-nik="{{ $syifa->user->nik }}" data-noHp="{{ $syifa->user->noHp }}"> {{ $syifa->user->name }}</a></td>
+                    <td><a href="#" id="change"  class="user text-dark" data-bs-toggle="modal" data-bs-target="#syifaCantik" 
+                      data-name="{{ $syifa->user->name }}"
+                      data-rt="{{ $syifa->user->rt }}"
+                      data-rw="{{ $syifa->user->rw }}" 
+                      data-alamat="{{ $syifa->user->alamat }}"
+                      data-email="{{ $syifa->user->email }}" 
+                      data-nik="{{ $syifa->user->nik }}" 
+                      data-id="{{ $syifa->user->id }}" 
+                      data-noHp="{{ $syifa->user->noHp }}">
+                      
+                      {{ $syifa->user->name }}</a></td>
                     <td><a href="#" id="jenisSurat" class="jenis text-dark" data-bs-toggle="modal" data-bs-target="#modalJenis" 
                       data-nama="{{ $syifa->jenis->nama_surat }}"
                       data-ktp="{{ $syifa->jenis->ktp }}" 
@@ -131,7 +140,6 @@
     </section>
    
       
-  	@include('admin.component.modalUser')
   	@include('admin.component.modalJenis')
     @include('sweetalert::alert')
 
@@ -142,4 +150,68 @@
       
     
   </main>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+  <script>
+     document.querySelector('#formPengajuan').addEventListener('submit', function(e) {
+      var form = this;
+      
+      e.preventDefault();
+      
+      swal({
+          title: "Apakah Anda Yakin?",
+          text: "Surat Sudah Selesai!",
+          icon: "info",
+          buttons: [
+            'Batal',
+            'Konfirmasi'
+          ],
+          dangerMode: true,
+        }).then(function(isConfirm) {
+          if (isConfirm) {
+            swal({
+              title: 'Surat Sedang Kami Kerjakan',
+              text: 'Surat Dalam Proses',
+              icon: 'success'
+            }).then(function() {
+              form.submit();
+            });
+          } else {
+            swal("Batal", "Konfirmasi di Batalkan", "error");
+          }
+        });
+    });
+
+
+    document.querySelector('#form1').addEventListener('submit', function(e) {
+      var form = this;
+      
+      e.preventDefault();
+      
+      swal({
+          title: "Apakah Anda Yakin?",
+          text: "Keluar Dari Halaman Admin!",
+          icon: "info",
+          buttons: [
+            'Batal',
+            'Keluar'
+          ],
+          dangerMode: true,
+        }).then(function(isConfirm) {
+          if (isConfirm) {
+            swal({
+              title: 'Log out!',
+              text: 'Logout Berhasil, Semoga Hari Anda Menyenangkan',
+              icon: 'success'
+            }).then(function() {
+              form.submit();
+            });
+          } else {
+            swal("Batal", "Logout di Batalkan", "error");
+          }
+        });
+    });
+
+  </script>
 @endsection
