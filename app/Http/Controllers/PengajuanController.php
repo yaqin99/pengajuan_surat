@@ -360,7 +360,7 @@ class PengajuanController extends Controller
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
         //   return redirect()->to('/')->send()->with('success' , 'Pengajuan Anda Berhasil');
         } else {
-            dd('gagal');
+            
         }
     }
 
@@ -438,7 +438,7 @@ class PengajuanController extends Controller
 
         return redirect('/admin')->with('success', 'Surat Sudah Selesai');
        } else {
-        dd('gagal');
+        
        }
 
     }
