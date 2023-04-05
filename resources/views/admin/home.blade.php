@@ -12,6 +12,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
   {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script> --}}
 
+  <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('202fd5e3645191f0a99b', {
+      cluster: 'ap1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      console.log(data);
+      swal({
+              title: `Ada Pengajuan Surat Baru`,
+              text: 'Harap Segera di Proses',
+              icon: 'info'
+            }).then(() => {
+              window.location.reload();
+            })
+      // alert(JSON.stringify(data));
+    });
+  </script>
+
   <!-- Favicons -->
   <link href="/assets/img/pamekasan.png" rel="icon">
   <link href="/assets/img/pamekasan.png" rel="apple-touch-icon">
@@ -75,6 +100,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="/js/app.js"></script>
   <script src="/adminAssets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="/adminAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/adminAssets/vendor/chart.js/chart.umd.js"></script>

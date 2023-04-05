@@ -13,7 +13,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="/assets/img/pamekasan.png" rel="icon">
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
 
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('202fd5e3645191f0a99b', {
+      cluster: 'ap1'
+    });
+
+    var channel = pusher.subscribe('my-channel2');
+    channel.bind('my-event2', function(data) {
+      console.log(data);
+      swal({
+              title: `Surat Anda Sudah Selesai`,
+              text: 'Mohon Untuk Segera Diambil',
+              icon: 'success'
+            }).then(() => {
+              window.location.reload();
+            })
+      // alert(JSON.stringify(data));
+    });
+  </script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">

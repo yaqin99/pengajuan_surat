@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PengajuanSurat;
+use App\Events\SuratDone;
 use App\Models\Pengajuan;
 use App\Models\Jenis;
 use App\Http\Requests\StorePengajuanRequest;
@@ -77,6 +79,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
@@ -140,7 +143,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
-
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
@@ -204,6 +207,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
@@ -255,6 +259,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
@@ -309,6 +314,7 @@ class PengajuanController extends Controller
         ]);   
 
         if ($input && $pengajuan) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
               dd('gagal');
@@ -347,6 +353,10 @@ class PengajuanController extends Controller
             'tanggal' => Carbon::now(),
         ]);
         if ($input && $pengajuan) {
+
+            
+            
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
         //   return redirect()->to('/')->send()->with('success' , 'Pengajuan Anda Berhasil');
         } else {
@@ -424,6 +434,8 @@ class PengajuanController extends Controller
        $delete =  DB::table('jenis')->whereIn('id', request()->ids)->delete();
        
        if ($hapus && $delete) {
+        event(new SuratDone('Surat Sudah Selesai'));
+
         return redirect('/admin')->with('success', 'Surat Sudah Selesai');
        } else {
         dd('gagal');
