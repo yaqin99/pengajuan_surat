@@ -21,6 +21,9 @@ class PengajuanController extends Controller
     public function sktm ($judul){
 
         if ($judul == 'Surat Keterangan Pecah KK') {
+            if (request()->file('ijazah')->getSize() > 3000000 || request()->file('ijazahPerempuan')->getSize() > 3000000  || request()->file('input_ktpWanita')->getSize() > 3000000 || request()->file('kkMertua')->getSize() > 3000000 || request()->file('suratNikah')->getSize() > 3000000 || request()->file('suratNikahOrtu')->getSize() > 3000000 || request()->file('suratNikahMertua')->getSize() > 3000000) {
+                return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+            }
             request()->validate(
                [
                 'ijazah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
@@ -82,12 +85,15 @@ class PengajuanController extends Controller
             event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
-              dd('gagal');
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
           }
 
         }
 
         if ($judul == 'Surat Keterangan Kelahiran') {
+            if (request()->file('ktpIbu')->getSize() > 3000000 || request()->file('ktpPelapor')->getSize() > 3000000  || request()->file('saksi1')->getSize() > 3000000 || request()->file('saksi2')->getSize() > 3000000 || request()->file('kelahiranBidan')->getSize() > 3000000 || request()->file('suratNikah')->getSize() > 3000000) {
+                return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+            }
             request()->validate(
                [
                 'ktp' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
@@ -146,7 +152,7 @@ class PengajuanController extends Controller
             event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
-              dd('gagal');
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
           }
 
         }
@@ -154,6 +160,9 @@ class PengajuanController extends Controller
 
 
         if ($judul == 'Surat Keterangan Kematian') {
+            if (request()->file('keteranganRs')->getSize() > 3000000 || request()->file('ktpAsli')->getSize() > 3000000  || request()->file('kkOrtu')->getSize() > 3000000 || request()->file('ktpPelapor')->getSize() > 3000000 || request()->file('saksi1')->getSize() > 3000000) {
+                return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+            }
             request()->validate(
                [
                 'keteranganRs' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
@@ -210,13 +219,16 @@ class PengajuanController extends Controller
             event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
-              dd('gagal');
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
           }
 
         }
 
 
         if ($judul == 'Surat Keterangan Kehilangan') {
+            if (request()->file('suratPolsek')->getSize() > 3000000  ) {
+                return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+            }
             request()->validate(
                [
                 'suratPolsek' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
@@ -261,14 +273,20 @@ class PengajuanController extends Controller
         if ($input && $pengajuan) {
             event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
-          } else {
-              dd('gagal');
-          }
+          } 
+        if (!$input || !$pengajuan) {
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+          } 
 
         }
 
 
         if ($judul == 'Surat Keterangan Pindah Datang atau Pindah Keluar') {
+            
+                    if (request()->file('pindah')->getSize() > 3000000 || request()->file('kuasa')->getSize() > 3000000  ) {
+                        return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+                    }
+                    
             request()->validate(
                [
                 'pindah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
@@ -280,7 +298,6 @@ class PengajuanController extends Controller
                 'keterangan' => 'string|max:200|nullable' , 
                ]
             );
-
         $uniqPindah = uniqid().'.'.request()->file('pindah')->extension() ; 
         $uniqKuasa = uniqid().'.'.request()->file('kuasa')->extension() ; 
         $uniqKtp = uniqid().'.'.request()->file('ktp')->extension()  ; 
@@ -317,7 +334,7 @@ class PengajuanController extends Controller
             event(new PengajuanSurat('Pengajuan Surat Baru!'));
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
           } else {
-              dd('gagal');
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
           }
 
         }
@@ -360,7 +377,7 @@ class PengajuanController extends Controller
             return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
         //   return redirect()->to('/')->send()->with('success' , 'Pengajuan Anda Berhasil');
         } else {
-            
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
         }
     }
 

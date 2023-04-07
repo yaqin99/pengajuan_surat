@@ -7,7 +7,7 @@ use App\Models\Admin;
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
 use App\Models\Pengajuan;
-use App\Models\Jenis;
+use App\Models\Kritik;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -34,6 +34,13 @@ class AdminController extends Controller
     public function userData (){
         $data = User::SearchUser()->paginate(30);
         return view('admin.pages.user' , [
+            'data' => $data ,
+        ]);
+    }
+
+    public function kritikData (){
+        $data = Kritik::paginate(30);
+        return view('admin.pages.saran' , [
             'data' => $data ,
         ]);
     }

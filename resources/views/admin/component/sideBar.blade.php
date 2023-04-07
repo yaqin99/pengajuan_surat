@@ -38,6 +38,20 @@
           
         </ul>
       </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#doddoroddoro" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-gear"></i><span>Kritik dan Saran</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="doddoroddoro" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/saran">
+              <i class="bi bi-circle"></i><span>Data Kritik dan Saran</span>
+            </a>
+          </li>
+         
+          
+        </ul>
+      </li>
 
       {{-- @can('superAdmin') --}}
       {{-- @if(auth()->guard('admin')->user()->role == 'admin') --}}

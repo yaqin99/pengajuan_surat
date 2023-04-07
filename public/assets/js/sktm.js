@@ -2,7 +2,7 @@ if (document.getElementById('kk').files.length === 0 || document.getElementById(
   document.getElementById("confirm_button").setAttribute('disabled' , 'true');
   
   }
-const batas = 3000000 ; 
+const batas = 10000000 ; 
 
 
 

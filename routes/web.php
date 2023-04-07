@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PengajuanController;
+use App\Http\Controllers\KritikController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,6 +54,7 @@ Route::post('/suratPecah/{judul}',[PengajuanController::class , 'sktm']);
 Route::post('/deletePengajuan',[PengajuanController::class , 'deletePengajuan']);
 Route::post('/deleteUser/{id}',[UserController::class , 'destroy']);
 Route::post('/deleteAdmin/{id}',[AdminController::class , 'destroy']);
+Route::post('/deleteKritik/{id}',[KritikController::class , 'destroy']);
 
 
 
@@ -61,6 +63,7 @@ Route::post('/deleteAdmin/{id}',[AdminController::class , 'destroy']);
 Route::get('/admin',[AdminController::class , 'index'])->middleware('isAdminLogin');
 Route::get('/akunAdmin',[AdminController::class , 'adminData']);
 Route::get('/user',[AdminController::class , 'userData'])->middleware('isAdminLogin');
+Route::get('/saran',[AdminController::class , 'kritikData'])->middleware('isAdminLogin');
 
 
 //   EDIT 
@@ -74,3 +77,7 @@ Route::put('/editDataAdmin/{id}',[AdminController::class , 'edit']);
 //  USER 
 Route::post('/tambahUser',[UserController::class , 'addUser']);
 Route::post('/tambahAdmin',[AdminController::class , 'addAdmin']);
+
+// KRITIK DAN SARAN 
+
+Route::post('/addKritik',[KritikController::class , 'addKritik']);

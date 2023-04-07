@@ -362,7 +362,7 @@
               </div>
             </div>
 
-            <div class="social-links">
+            <div class="social-links mb-5">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -373,25 +373,26 @@
 
           <div class="col-lg-5 col-md-8">
             <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nama Lengkap" required>
+              <form action="/addKritik" method="POST" class="php-email-form">
+                @csrf
+                {{-- <div class="form-group">
+                  <input type="text" name="nama" class="form-control" id="name" placeholder="Nama Lengkap" required>
                 </div>
                 <div class="form-group mt-3">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div> --}}
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="topik" id="subject" placeholder="Topik" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Topik" required>
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Kritik dan Saran" required></textarea>
+                  <textarea class="form-control" name="saran" rows="5" placeholder="Kritik dan Saran" required></textarea>
                 </div>
                 <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                  </div>
                 </div>
-                <div class="text-center"><button type="submit">Kirim</button></div>
               </form>
             </div>
           </div>
@@ -519,7 +520,7 @@
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  {{-- <script src="/assets/vendor/php-email-form/validate.js"></script> --}}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
