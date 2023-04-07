@@ -69,9 +69,9 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<div class="w-50 text-md-right">
+								{{-- <div class="w-50 text-md-right">
 									<p> <small>Belum Punya Akun?</small><a href="/register"> daftar</a></p>
-								</div>
+								</div> --}}
 	           			 	</div>
 	          			</form>
 	        </div>

@@ -74,7 +74,7 @@
   <!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  @include('admin.component.sidebar')
+  @include('admin.component.sideBar')
   <!-- End Sidebar-->
 
   @yield('main')
@@ -1084,8 +1084,8 @@ function checkSemua(){
       $("#modalKK").val(kk);
       $("#modalKeterangan").val(keterangan);
       
-      $("#ktpButton").attr("href" , `{{ asset('/storage/ktp/${ktp}') }} ` );
-      $("#kkButton").attr("href" , `{{ asset('/storage/kk/${kk}') }} ` );
+      $("#ktpButton").attr("href" , `{{ asset('/storage/app/public/ktp/${ktp}') }} ` );
+      $("#kkButton").attr("href" , `{{ asset('/storage/app/public/kk/${kk}') }} ` );
       
 
       //   KELAHIRAN 
@@ -1100,22 +1100,22 @@ function checkSemua(){
         makeNoPelapor();
         makeKtpIbu();
         $("#input_ktpIbu").val(ktp2);
-        $("#ktpIbuButton").attr("href" , `{{ asset('/storage/ktpIbu/${ktp2}') }}` );
+        $("#ktpIbuButton").attr("href" , `{{ asset('/storage/app/public/ktpIbu/${ktp2}') }}` );
 
         $("#input_pelapor").val(ktp_pelapor);
-        $("#pelaporButton").attr("href" , `{{ asset('/storage/ktpPelapor/${ktp_pelapor}') }}` );
+        $("#pelaporButton").attr("href" , `{{ asset('/storage/app/public/ktpPelapor/${ktp_pelapor}') }}` );
 
         $("#input_saksi1").val(ktp_saksi1);
-        $("#saksiButton1").attr("href" , `{{ asset('/storage/saksi1/${ktp_saksi1}') }}` );
+        $("#saksiButton1").attr("href" , `{{ asset('/storage/app/public/saksi1/${ktp_saksi1}') }}` );
 
         $("#input_saksi2").val(ktp_saksi2);
-        $("#saksiButton2").attr("href" , `{{ asset('/storage/saksi2/${ktp_saksi2}') }}` );
+        $("#saksiButton2").attr("href" , `{{ asset('/storage/app/public/saksi2/${ktp_saksi2}') }}` );
 
         $("#input_kelahiran").val(surat_keterangan);
-        $("#kelahiranButton").attr("href" , `{{ asset('/storage/kelahiranBidan/${surat_keterangan}') }}` );
+        $("#kelahiranButton").attr("href" , `{{ asset('/storage/app/public/kelahiranBidan/${surat_keterangan}') }}` );
 
         $("#input_nikah").val(surat_nikah);
-        $("#nikahButton").attr("href" , `{{ asset('/storage/suratNikah/${surat_nikah}') }}` );
+        $("#nikahButton").attr("href" , `{{ asset('/storage/app/public/suratNikah/${surat_nikah}') }}` );
 
         $("#input_no").val(no_pelapor);
        
@@ -1136,22 +1136,22 @@ function checkSemua(){
         makeNoPelapor();
 
         $("#input_ijazahLaki").val(surat_keterangan);
-        $("#IjazahLakiButton").attr("href" , `{{ asset('/storage/ijazah/${surat_keterangan}') }}` );
+        $("#IjazahLakiButton").attr("href" , `{{ asset('/storage/app/public/ijazah/${surat_keterangan}') }}` );
         $("#input_ijazahPerempuan").val(ktp_saksi2);
-        $("#IjazahPerempuanButton").attr("href" , `{{ asset('/storage/ijazahPerempuan/${ktp_saksi2}') }}` );
+        $("#IjazahPerempuanButton").attr("href" , `{{ asset('/storage/app/public/ijazahPerempuan/${ktp_saksi2}') }}` );
 
         $("#input_ktpWanita").val(ktp2);
-        $("#ktpWanitaButton").attr("href" , `{{ asset('/storage/input_ktpWanita/${ktp2}') }}` );
+        $("#ktpWanitaButton").attr("href" , `{{ asset('/storage/app/public/input_ktpWanita/${ktp2}') }}` );
 
         $("#input_kkMertua").val(kk2);
-        $("#kkMertuaButton").attr("href" , `{{ asset('/storage/kkMertua/${kk2}') }}` );
+        $("#kkMertuaButton").attr("href" , `{{ asset('/storage/app/public/kkMertua/${kk2}') }}` );
 
         $("#input_nikah").val(surat_nikah);
-        $("#nikahButton").attr("href" , `{{ asset('/storage/suratNikah/${surat_nikah}') }}` );
+        $("#nikahButton").attr("href" , `{{ asset('/storage/app/public/suratNikah/${surat_nikah}') }}` );
         $("#inputNikahOrtu").val(surat_nikah2);
-        $("#nikahOrtuButton").attr("href" , `{{ asset('/storage/suratOrtu/${surat_nikah2}') }}` );
+        $("#nikahOrtuButton").attr("href" , `{{ asset('/storage/app/public/suratOrtu/${surat_nikah2}') }}` );
         $("#inputNikahMertua").val(surat_nikah3);
-        $("#nikahMertuaButton").attr("href" , `{{ asset('/storage/suratMertua/${surat_nikah3}') }}` );
+        $("#nikahMertuaButton").attr("href" , `{{ asset('/storage/app/public/suratMertua/${surat_nikah3}') }}` );
        
         
         $("#input_no").val(no_pelapor);
@@ -1170,18 +1170,18 @@ function checkSemua(){
         makeNoPelapor();
 
         $("#input_Rs").val(surat_keterangan);
-        $("#suratRsButton").attr("href" , `{{ asset('/storage/keteranganRs/${surat_keterangan}') }}` );
+        $("#suratRsButton").attr("href" , `{{ asset('/storage/app/public/keteranganRs/${surat_keterangan}') }}` );
 
         $("#input_ktpAsli").val(ktp2);
-        $("#ktpAsliButton").attr("href" , `{{ asset('/storage/ktpAsli/${ktp2}') }}` );
+        $("#ktpAsliButton").attr("href" , `{{ asset('/storage/app/public/ktpAsli/${ktp2}') }}` );
 
         $("#input_kkOrtu").val(kk2);
-        $("#kkOrtuButton").attr("href" , `{{ asset('/storage/kkOrtu/${kk2}') }}` );
+        $("#kkOrtuButton").attr("href" , `{{ asset('/storage/app/public/kkOrtu/${kk2}') }}` );
 
         $("#input_pelapor").val(ktp_pelapor);
-        $("#pelaporButton").attr("href" , `{{ asset('/storage/ktpPelapor/${ktp_pelapor}') }}` );
+        $("#pelaporButton").attr("href" , `{{ asset('/storage/app/public/ktpPelapor/${ktp_pelapor}') }}` );
         $("#input_saksi1").val(ktp_saksi1);
-        $("#saksiButton1").attr("href" , `{{ asset('/storage/saksi1/${ktp_saksi1}') }}` );
+        $("#saksiButton1").attr("href" , `{{ asset('/storage/app/public/saksi1/${ktp_saksi1}') }}` );
         
         $("#input_no").val(no_pelapor);
        
@@ -1193,7 +1193,7 @@ function checkSemua(){
        makePolres();
 
         $("#input_polres").val(surat_keterangan);
-        $("#polresButton").attr("href" , `{{ asset('/storage/suratPolsek/${surat_keterangan}') }}` );
+        $("#polresButton").attr("href" , `{{ asset('/storage/app/public/suratPolsek/${surat_keterangan}') }}` );
 
        
        
@@ -1206,9 +1206,9 @@ function checkSemua(){
        makeKuasa();
 
         $("#input_pindah").val(surat_keterangan);
-        $("#pindahButton").attr("href" , `{{ asset('/storage/pindah/${surat_keterangan}') }}` );
+        $("#pindahButton").attr("href" , `{{ asset('/storage/app/public/pindah/${surat_keterangan}') }}` );
         $("#input_kuasa").val(surat_nikah3);
-        $("#kuasaButton").attr("href" , `{{ asset('/storage/kuasa/${surat_nikah3}') }}` );
+        $("#kuasaButton").attr("href" , `{{ asset('/storage/app/public/kuasa/${surat_nikah3}') }}` );
 
        
        
