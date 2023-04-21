@@ -111,7 +111,7 @@
             event.preventDefault();
             swal({
                 title: `Apakah Anda Yakin?`,
-                text: "Menghapus Akun ",
+                text: "Menghapus Saran ",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,

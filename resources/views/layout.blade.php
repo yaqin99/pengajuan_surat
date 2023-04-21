@@ -96,8 +96,9 @@
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pecahKk()" id="pecah">Surat Keterangan Pecah KK</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang atau Pindah Keluar</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="keluar()" id="keluar">Surat Keterangan Pindah Keluar</a></li>
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li> --}}
               
               {{-- <li><a href="#">Surat </a></li> --}}
             </ul>
@@ -286,8 +287,16 @@
           <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
-              <h4 id="umumSend">Surat Keterangan Pindah Datang atau Pindah Keluar</h4>
-              <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="pindahDatang('Surat Keterangan Pindah Datang atau Pindah Keluar')" id="pindahDatangButton">Selengkapnya</a>
+              <h4 id="umumSend">Surat Keterangan Pindah Datang </h4>
+              <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="pindahDatang('Surat Keterangan Pindah Datang')" id="pindahDatangButton">Selengkapnya</a>
+              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="/assets/img/svg/document.svg" alt="img">
+              <h4 id="umumSend">Surat Keterangan Pindah Keluar</h4>
+              <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="pindahKeluar('Surat Keterangan Pindah Keluar')" id="pindahKeluarButton">Selengkapnya</a>
               {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
             </div>
           </div>
@@ -358,7 +367,7 @@
 
               <div>
                 <i class="bi bi-phone"></i>
-                <p>+62 08++++++</p>
+                <p>+62 87859979032</p>
               </div>
             </div>
 
@@ -504,7 +513,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
         -->
-          Programed by <a href="https://bootstrapmade.com/">Moh. Ainul Yaqin</a>
+          Programed by <a href="#">Moh. Ainul Yaqin</a>
         </div>
       </div>
     </div>

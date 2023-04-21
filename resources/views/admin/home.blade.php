@@ -22,16 +22,31 @@
     var pusher = new Pusher('202fd5e3645191f0a99b', {
       cluster: 'ap1'
     });
+    
+    const playSound = () => {
+      var audio =  new Audio('/sounds/bell.mp3');
+      audio.play();
 
+    }
+    const stopSound = () => {
+      var audio =  new Audio('/sounds/bell.mp3');
+      audio.pause();
+
+    }
+   
+    // audio.muted = true ; 
+    // audio.autoplay = true ; 
     var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function(data) {
-      console.log(data);
+    channel.bind('my-event', function(data)  {
+      playSound();
       swal({
               title: `Ada Pengajuan Surat Baru`,
               text: 'Harap Segera di Proses',
               icon: 'info'
             }).then(() => {
-              window.location.reload();
+              stopSound();
+              window.location.href = "/admin";
+              // window.location.reload();
             })
       // alert(JSON.stringify(data));
     });
@@ -48,17 +63,17 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
   <!-- Vendor CSS Files -->
-  <link href="/adminAssets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/adminAssets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/adminAssets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/adminAssets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="/adminAssets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="/adminAssets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="/adminAssets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/AdminAssets/vendor/simple-datatables/style.css" rel="stylesheet">
   <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
 
   <!-- Template Main CSS File -->
-  <link href="/adminAssets/css/style.css" rel="stylesheet">
+  <link href="/AdminAssets/css/style.css" rel="stylesheet">
 
   <style>
     .swal-button--confirm {
@@ -101,14 +116,14 @@
 
   <!-- Vendor JS Files -->
   <script src="/js/app.js"></script>
-  <script src="/adminAssets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="/adminAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/adminAssets/vendor/chart.js/chart.umd.js"></script>
-  <script src="/adminAssets/vendor/echarts/echarts.min.js"></script>
-  <script src="/adminAssets/vendor/quill/quill.min.js"></script>
-  <script src="/adminAssets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="/adminAssets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="/adminAssets/vendor/php-email-form/validate.js"></script>
+  <script src="/AdminAssets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/AdminAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/AdminAssets/vendor/chart.js/chart.umd.js"></script>
+  <script src="/AdminAssets/vendor/echarts/echarts.min.js"></script>
+  <script src="/AdminAssets/vendor/quill/quill.min.js"></script>
+  <script src="/AdminAssets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/AdminAssets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/AdminAssets/vendor/php-email-form/validate.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="/modalAssets/js/jquery.min.js"></script>
   <script src="/modalAssets/js/popper.js"></script>
@@ -116,7 +131,7 @@
   <script src="/modalAssets/js/main.js"></script>
  
   <!-- Template Main JS File -->
-  <script src="/adminAssets/js/main.js"></script>
+  <script src="/AdminAssets/js/main.js"></script>
   
   <script type="text/javascript">
 // document.querySelector('.formHapus').addEventListener('submit', function(e) {
@@ -426,6 +441,42 @@ function checkSemua(){
       form.appendChild(div);
       form.insertBefore(div , target);
       document.getElementById('label_saksi1').innerHTML = 'Foto Copy KTP Saksi 1';
+      
+     
+    }
+      const makeKtpSaksi1Kematian2 = () => {
+      if (document.getElementById('divSaksi2') !== null) {
+        return ;
+      }
+      const div = document.createElement("div");
+      const div2 = document.createElement("div");
+      const label = document.createElement("label");
+      const input = document.createElement("input");
+      const a = document.createElement("a");
+      const target = document.getElementById('divKeterangan');
+      div.setAttribute('class','form-group mb-2');
+      div.setAttribute('id','divSaksi2');
+      label.setAttribute('class' , 'text-dark');
+      label.setAttribute('id' , 'label_saksi2');
+      label.setAttribute('for' , 'modalSaksi2');
+      div2.setAttribute('class','input-group');
+      input.setAttribute('type' , 'text');
+      input.setAttribute('class' , 'form-control');
+      input.setAttribute('id' , 'input_saksi2');
+      input.setAttribute('aria-describedby' , 'button-addon2');
+      a.setAttribute('target' , 'blank');
+      a.setAttribute('class' , 'btn btn-outline-secondary');
+      a.setAttribute('id' , 'saksiButton2');
+      a.innerHTML = 'View';
+      
+      div.appendChild(label);
+      div.appendChild(div2);
+      div2.appendChild(input);
+      div2.appendChild(a);
+      const form = document.getElementById('form_input');
+      form.appendChild(div);
+      form.insertBefore(div , target);
+      document.getElementById('label_saksi2').innerHTML = 'Foto Copy KTP Saksi 2';
       
      
     }
@@ -1166,6 +1217,7 @@ function checkSemua(){
         makeKtpAsli();
         makeKkOrtu();
         makeKtpSaksi1Kematian();
+        makeKtpSaksi1Kematian2();
         makeKtpPelapor();
         makeNoPelapor();
 
@@ -1182,6 +1234,9 @@ function checkSemua(){
         $("#pelaporButton").attr("href" , `{{ asset('/storage/app/public/ktpPelapor/${ktp_pelapor}') }}` );
         $("#input_saksi1").val(ktp_saksi1);
         $("#saksiButton1").attr("href" , `{{ asset('/storage/app/public/saksi1/${ktp_saksi1}') }}` );
+        
+        $("#input_saksi2").val(ktp_saksi2);
+        $("#saksiButton2").attr("href" , `{{ asset('/storage/app/public/saksi2/${ktp_saksi2}') }}` );
         
         $("#input_no").val(no_pelapor);
        
@@ -1200,10 +1255,10 @@ function checkSemua(){
 
       }
 
-      if (nama === 'Surat Keterangan Pindah Datang atau Pindah Keluar') {
+      if (nama === 'Surat Keterangan Pindah Datang') {
         
        makePindah();
-       makeKuasa();
+      //  makeKuasa();
 
         $("#input_pindah").val(surat_keterangan);
         $("#pindahButton").attr("href" , `{{ asset('/storage/app/public/pindah/${surat_keterangan}') }}` );

@@ -58,7 +58,7 @@ if (file.size > batas) {
 const fileValidation = (targetId , alertId) => {
    
     let pengantar  = document.getElementById(targetId).files[0].name ; 
-    let cek = pengantar.match(/.jpg|.png|.pdf|.jpeg/);
+    let cek = pengantar.match(/.jpg|.png|.pdf|.jpeg|.JPG/);
     if(!cek){
       document.getElementById(targetId).value = '';
       document.getElementById("confirm_button").setAttribute('disabled' , 'true');
@@ -77,30 +77,274 @@ const fileValidation = (targetId , alertId) => {
   //   document.getElementById('tidakMampu').style.display = 'block';
   // }
 
+  const makePersyaratanKehilangan = () => {
+    if (document.getElementById('ketPolsek') !== null) {
+      return ;
+    }
+    const li = document.createElement("li");
+    li.innerHTML = 'Surat Keterangan Kehilangan Dari Polsek / Polres' ; 
+    li.setAttribute('id' , 'ketPolsek');
+    const parent = document.getElementById('list');
+    parent.appendChild(li);
+    const target = document.getElementById('fcKeterangan');
+    parent.insertBefore(li , target);
+  }
+
+  const makePersyaratanPindah = () => {
+    if (document.getElementById('pindahDatang') !== null) {
+      return ;
+    }
+    const li = document.createElement("li");
+    li.innerHTML = 'Surat Pindah Dari Kelurahan/Desa/Kota Sebelumnya' ; 
+    li.setAttribute('id' , 'pindahDatang');
+    const parent = document.getElementById('list');
+    parent.appendChild(li);
+    const target = document.getElementById('fcKeterangan');
+    parent.insertBefore(li , target);
+  }
+
+
+  const makePersyaratanPecah = () => {
+    if (document.getElementById('fcIjazahLaki') !== null) {
+      return ;
+    }
+    document.getElementById('fcKtp').innerHTML = 'KTP Pengantin Laki - laki';
+    document.getElementById('fcKk').innerHTML = 'KK Asli Orang Tua';
+    const li = document.createElement("li");
+    li.innerHTML = 'Foto Copy Ijazah Pengantin laki - laki' ; 
+    li.setAttribute('id' , 'fcIjazahLaki');
+    const li2 = document.createElement("li");
+    li2.innerHTML = 'Foto Copy Ijazah Pengantin Perempuan' ; 
+    li2.setAttribute('id' , 'fcIjazahPerempuan');
+    const li3 = document.createElement("li");
+    li3.innerHTML = 'KTP Pengantin Perempuan ' ; 
+    li3.setAttribute('id' , 'fcKtpPerempuan');
+    const li4 = document.createElement("li");
+    
+    li4.innerHTML = 'KK Asli Mertua ' ; 
+    li4.setAttribute('id' , 'kkMertua');
+    const li5 = document.createElement("li");
+    li5.innerHTML = 'Foto Copy Surat Nikah ' ; 
+    li5.setAttribute('id' , 'fcSuratNikah');
+    const li6 = document.createElement("li");
+    li6.innerHTML = 'Foto Copy Surat Nikah Orang Tua' ; 
+    li6.setAttribute('id' , 'fcSuratNikahOrtu');
+    const li8 = document.createElement("li");
+    li8.innerHTML = 'Foto Copy Surat Nikah Mertua' ; 
+    li8.setAttribute('id' , 'fcSuratNikahMertua');
+    const li7 = document.createElement("li");
+    li7.innerHTML = 'Nomor Telepon Pelapor' ; 
+    li7.setAttribute('id' , 'noPel');
+    const parent = document.getElementById('list');
+    parent.appendChild(li);
+    parent.appendChild(li2);
+    parent.appendChild(li3);
+    parent.appendChild(li4);
+    parent.appendChild(li5);
+    parent.appendChild(li6);
+    parent.appendChild(li7);
+    parent.appendChild(li8);
+    // const target = document.getElementById('fcKtp');
+    // parent.insertBefore(li , target);
+  }
+  const makePersyaratanKelahiran = () => {
+    if (document.getElementById('fcKtpIbu') !== null) {
+      return ;
+    }
+    document.getElementById('fcKtp').innerHTML = 'Foto Copy KTP Bapak';
+    document.getElementById('fcKk').innerHTML = 'KK Asli';
+    const li = document.createElement("li");
+    li.innerHTML = 'Foto Copy KTP Ibu' ; 
+    li.setAttribute('id' , 'fcKtpIbu');
+    const li2 = document.createElement("li");
+    li2.innerHTML = 'Foto Copy KTP Pelapor' ; 
+    li2.setAttribute('id' , 'fcKtpPelapor');
+    const li3 = document.createElement("li");
+    li3.innerHTML = 'Foto Copy KTP Saksi 1 ' ; 
+    li3.setAttribute('id' , 'fcKtpSaksi1');
+    const li4 = document.createElement("li");
+    li4.innerHTML = 'Foto Copy KTP Saksi 2 ' ; 
+    li4.setAttribute('id' , 'fcKtpSaksi2');
+    const li5 = document.createElement("li");
+    li5.innerHTML = 'Bukti Asli Kelahiran dari Bidan ' ; 
+    li5.setAttribute('id' , 'kelahiranDariBidan');
+    const li6 = document.createElement("li");
+    li6.innerHTML = 'Foto Copy Surat Nikah ' ; 
+    li6.setAttribute('id' , 'fcSuratNikah');
+    const li7 = document.createElement("li");
+    li7.innerHTML = 'Nomor Telepon Pelapor' ; 
+    li7.setAttribute('id' , 'noPel');
+    const parent = document.getElementById('list');
+    parent.appendChild(li);
+    parent.appendChild(li2);
+    parent.appendChild(li3);
+    parent.appendChild(li4);
+    parent.appendChild(li5);
+    parent.appendChild(li6);
+    parent.appendChild(li7);
+    const target = document.getElementById('fcKtp');
+    parent.insertBefore(li , target);
+  }
+
+  const makePersyaratanKematian = () => {
+    if (document.getElementById('ketRs') !== null) {
+      return ;
+    }
+    document.getElementById('fcKk').innerHTML = 'KK Asli';
+    const li = document.createElement("li");
+    li.innerHTML = 'Surat Keterangan Dari Rumah Sakit' ; 
+    li.setAttribute('id' , 'ketRs');
+    const li2 = document.createElement("li");
+    li2.innerHTML = 'Foto Copy KTP Pelapor' ; 
+    li2.setAttribute('id' , 'fcKtpPelapor');
+    const li3 = document.createElement("li");
+    li3.innerHTML = 'Foto Copy KTP Saksi 1 ' ; 
+    li3.setAttribute('id' , 'fcKtpSaksi1');
+    const li4 = document.createElement("li");
+    li4.innerHTML = 'Foto Copy KTP Saksi 2 ' ; 
+    li4.setAttribute('id' , 'fcKtpSaksi2');
+    
+    const li6 = document.createElement("li");
+    li6.innerHTML = 'Foto Copy / KK Asli Orang Tua ' ; 
+    li6.setAttribute('id' , 'fcKkOrtu');
+    const li7 = document.createElement("li");
+    li7.innerHTML = 'Nomor Telepon Pelapor' ; 
+    li7.setAttribute('id' , 'noPel');
+    const li8 = document.createElement("li");
+    li8.innerHTML = 'KTP Asli' ; 
+    li8.setAttribute('id' , 'ktpAsli');
+    const parent = document.getElementById('list');
+    parent.appendChild(li);
+    parent.appendChild(li2);
+    parent.appendChild(li3);
+    parent.appendChild(li4);
+    parent.appendChild(li6);
+    parent.appendChild(li7);
+    parent.appendChild(li8);
+    const target = document.getElementById('ktpAsli');
+    parent.insertBefore(li , target);
+    const target2 = document.getElementById('fcKtp');
+    parent.insertBefore(li8 , target2);
+  }
+ 
+  const dismissPersyaratanPindah = () => {
+    if (document.getElementById("pindahDatang") != null) {
+      // document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      // document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("pindahDatang").remove();
+      
+    } 
+  }
+  const dismissPersyaratanKehilangan = () => {
+    if (document.getElementById("ketPolsek") != null) {
+      // document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      // document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("ketPolsek").remove();
+      
+    } 
+  }
+  const dismissPersyaratanKelahiran = () => {
+    if (document.getElementById("fcKtpIbu") != null) {
+      document.getElementById('fcKtp').innerHTML = 'Foto Copy KTP';
+      document.getElementById('fcKk').innerHTML = 'Foto Copy KK';
+      // document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      // document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("fcKtpIbu").remove();
+      document.getElementById("fcKtpPelapor").remove();
+      document.getElementById("fcKtpSaksi1").remove();
+      document.getElementById("fcKtpSaksi2").remove();
+      document.getElementById("kelahiranDariBidan").remove();
+      document.getElementById("fcSuratNikah").remove();
+      document.getElementById("noPel").remove();
+      
+    } 
+  }
+  const dismissPersyaratanKematian = () => {
+    if (document.getElementById("ketRs") != null) {
+      document.getElementById('fcKtp').innerHTML = 'Foto Copy KTP';
+      document.getElementById('fcKk').innerHTML = 'Foto Copy KK';
+      // document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      // document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("ketRs").remove();
+      document.getElementById("fcKtpPelapor").remove();
+      document.getElementById("fcKtpSaksi1").remove();
+      document.getElementById("fcKtpSaksi2").remove();
+      document.getElementById("fcKkOrtu").remove();
+      document.getElementById("ktpAsli").remove();
+      document.getElementById("noPel").remove();
+      
+    } 
+  }
+  const dismissPersyaratanPecah = () => {
+    if (document.getElementById("fcIjazahLaki") != null) {
+      document.getElementById('fcKtp').innerHTML = 'Foto Copy KTP';
+      document.getElementById('fcKk').innerHTML = 'Foto Copy KK';
+      // document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP ' ;
+      // document.getElementById('labelKk').innerHTML = 'Foto Copy KK' ;
+      document.getElementById("fcIjazahLaki").remove();
+      document.getElementById("fcIjazahPerempuan").remove();
+      document.getElementById("fcKtpPerempuan").remove();
+      document.getElementById("kkMertua").remove();
+      document.getElementById("fcSuratNikah").remove();
+      document.getElementById("fcSuratNikahOrtu").remove();
+      document.getElementById("fcSuratNikahMertua").remove();
+      document.getElementById("noPel").remove();
+      
+    } 
+  }
+
+  
+  
+  
+  
+  
  
   //          MODAL DESKRIPSI
   const sktmButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
     yoNdakMampu();
   }
   const suratUmum = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan umum meliputi keterangan sesuai yang dibutuhkan masyarakat untuk pengajuan pelayanan. Syarat keterangan umum : Surat Pengantar dari RT/RW. Fotocopy Kartu Tanda Penduduk Elektronik (KTP-el).'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
     umum();
   }
   const domisiliButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Domisili Usaha adalah sebuah surat yang menyatakan domisili seseorang atau suatu badan usaha. Surat keterangan domisili dibutuhkan untuk mengurus berbagai dokumen legal lainnya seperti SIUP, Tanda Daftar Perusahaan, NPWP, dan untuk mengurus usaha perdagangan lainnya.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
     domisiliPenduduk();
   }
   const domisiliUsahaButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Domisili Usaha adalah sebuah surat atau izin yang menyatakan domisili seseorang atau suatu badan usaha.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
     domisiliUsaha();
   }
   const kehilanganButton = (judul) => {
@@ -108,48 +352,107 @@ const fileValidation = (targetId , alertId) => {
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kehilangan adalah surat keterangaan  yang menerangkaan bahwa pemohon/ masyarakat kehilangan barang maupun dokumen/ surat tertentu.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
     kehilangan();
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
+    makePersyaratanKehilangan();
   }
   const belumButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Belum Pernah Menikah adalah dokumen yang fungsinya menyatakan bahwa seseorang belum pernah menikah atau berstatus masih lajang. Kalau dahulu pembuatan surat keterangan belum menikah hanya bisa dilakukan di Dinas Kependudukan dan Catatan Sipil (Disdukcapil) setempat.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
     jomblo();
   }
   const usahaButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Usaha (SKU) adalah surat penting yang dibuat langsung oleh aparat lokasi usaha tersebut. Pada umumnya, aparat yang mengeluarkan Surat Keterangan Usaha adalah kelurahan atau kecamatan setempat.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
     usaha();
   }
   const skckButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Berkelakuan Baik berisikan catatan perilaku baik seseorang secara hukum.'
-    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib'); 
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
     skck();
   }
   const kelahiranButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kelahiran adalah suatu dokumen identitas autentik yang wajib dimiliki setiap warga negara Indonesia. Dokumen ini sebagai bukti sah terkait status dan peristiwa kelahiran seseorang dan termasuk hak setiap anak Indonesia.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
+    makePersyaratanKelahiran();
     kelahiran();
   }
   const kematianButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kematian adalah dokumen dalam pembuktian administrasi bahwasanya seseorang telah dinyatakan meninggal dunia'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
+    makePersyaratanKematian();
     kematian();
   }
   const pecah = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Pecah KK adalah surat yang dibuat  karena alasan perubahan status seperti pernikahan, keperluan pengurusan bantuan sosial, atau berbagai alasan lainnya'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPindah();
+
+    makePersyaratanPecah();
     pecahKk();
   }
   const pindahDatang = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Pindah Datang digunakan sebagai dasar proses perekaman dalam data base kependudukan, perubahan KK bagi kepala/anggota keluarga yang tidak pindah dan proses Penerbitan KK/KTP di alamat baru.'
     document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    makePersyaratanPindah();
     pindah();
+  }
+  const pindahKeluar = (judul) => {
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Pindah Keluar adalah surat yang digunakan sebagai dasar proses perekaman dalam data base kependudukan, perubahan KK bagi kepala/anggota keluarga yang tidak pindah dan proses Penerbitan KK/KTP di alamat baru.'
+    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
+    dismissPersyaratanKehilangan();     
+    dismissPersyaratanKelahiran();
+    dismissPersyaratanKematian();
+    dismissPersyaratanPecah();
+    dismissPersyaratanPindah();
+
+    keluar();
   }
 
 
@@ -934,10 +1237,25 @@ const fileValidation = (targetId , alertId) => {
     dismissPecah();
 
     makePindahElement();
-    makePindahKuasaElement();
+    // makePindahKuasaElement();
 
     document.getElementById('judulModal').innerHTML =  document.getElementById('pindah').innerHTML ;
     document.getElementById("form_input").setAttribute('action' , '/suratPindah/' + document.getElementById('pindah').innerHTML);
+ 
+  }
+
+  const keluar = () => {
+    dismissKematian();
+    dismissKelahiran();
+    dismissKehilangan();
+    dismissPindah();
+    dismissPecah();
+
+    // makePindahElement();
+    // makePindahKuasaElement();
+
+    document.getElementById('judulModal').innerHTML =  document.getElementById('keluar').innerHTML ;
+    document.getElementById("form_input").setAttribute('action' , '/suratKeluar/' + document.getElementById('keluar').innerHTML);
  
   }
   const kelahiran = () => {
@@ -1032,6 +1350,7 @@ const fileValidation = (targetId , alertId) => {
     makeKtpOrtuElement();
     makeKtpPelaporElement();
     makeKtpSaksi1Element();
+    makeKtpSaksi2Element();
     makeNoHpElement();
 
     document.getElementById('ktpAyah').innerHTML = 'Foto Copy KTP' ;

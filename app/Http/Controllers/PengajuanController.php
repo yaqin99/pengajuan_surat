@@ -20,7 +20,7 @@ class PengajuanController extends Controller
 
     public function sktm ($judul){
 
-        $batas = 8000000 ; 
+        $batas = 10000000 ; 
         if ($judul == 'Surat Keterangan Pecah KK') {
             if (request()->file('ijazah')->getSize() > $batas || request()->file('ijazahPerempuan')->getSize() > $batas  || request()->file('input_ktpWanita')->getSize() > $batas || request()->file('kkMertua')->getSize() > $batas || request()->file('suratNikah')->getSize() > $batas || request()->file('suratNikahOrtu')->getSize() > $batas || request()->file('suratNikahMertua')->getSize() > $batas) {
                 return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
@@ -161,7 +161,7 @@ class PengajuanController extends Controller
 
 
         if ($judul == 'Surat Keterangan Kematian') {
-            if (request()->file('keteranganRs')->getSize() > $batas || request()->file('ktpAsli')->getSize() > $batas  || request()->file('kkOrtu')->getSize() > $batas || request()->file('ktpPelapor')->getSize() > $batas || request()->file('saksi1')->getSize() > $batas) {
+            if (request()->file('keteranganRs')->getSize() > $batas || request()->file('ktpAsli')->getSize() > $batas  || request()->file('kkOrtu')->getSize() > $batas || request()->file('ktpPelapor')->getSize() > $batas || request()->file('saksi1')->getSize() > $batas || request()->file('saksi2')->getSize() > $batas) {
                 return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
             }
             request()->validate(
@@ -173,6 +173,7 @@ class PengajuanController extends Controller
                 'kkOrtu' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
                 'ktpPelapor' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
                 'saksi1' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+                'saksi2' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
                 'noHp' => 'required|string|min:10|max:13' , 
                 'keterangan' => 'string|max:200|nullable' , 
                ]
@@ -186,6 +187,7 @@ class PengajuanController extends Controller
         $uniqKkOrtu =  uniqid().'.'.request()->file('kkOrtu')->extension() ; 
         $uniqPelapor = uniqid().'.'.request()->file('ktpPelapor')->extension() ; 
         $uniqSaksi1 = uniqid().'.'.request()->file('saksi1')->extension() ; 
+        $uniqSaksi2 = uniqid().'.'.request()->file('saksi2')->extension() ; 
 
 
         $keteranganRs = request()->file('keteranganRs')->storeAs('keteranganRs' , $uniqRs , ['disk' => 'public']);
@@ -195,6 +197,7 @@ class PengajuanController extends Controller
         $kkOrtu = request()->file('kkOrtu')->storeAs('kkOrtu' , $uniqKkOrtu , ['disk' => 'public']);
         $ktpPelapor = request()->file('ktpPelapor')->storeAs('ktpPelapor' , $uniqPelapor , ['disk' => 'public']);
         $saksi1 = request()->file('saksi1')->storeAs('saksi1' , $uniqSaksi1 , ['disk' => 'public']);
+        $saksi2 = request()->file('saksi2')->storeAs('saksi2' , $uniqSaksi2 , ['disk' => 'public']);
        
 
         $input =  Jenis::create([
@@ -205,6 +208,7 @@ class PengajuanController extends Controller
             'kk2' =>  $uniqKkOrtu , 
             'ktp_pelapor' => $uniqPelapor , 
             'ktp_saksi1' => $uniqSaksi1 , 
+            'ktp_saksi2' => $uniqSaksi2 , 
             'surat_keterangan' => $uniqRs , 
             'no_pelapor' => request()->noHp , 
             'keterangan' => request()->keterangan ,
@@ -282,16 +286,16 @@ class PengajuanController extends Controller
         }
 
 
-        if ($judul == 'Surat Keterangan Pindah Datang atau Pindah Keluar') {
+        if ($judul == 'Surat Keterangan Pindah Datang') {
             
-                    if (request()->file('pindah')->getSize() > $batas || request()->file('kuasa')->getSize() > $batas  ) {
+                    if (request()->file('pindah')->getSize() > $batas  ) {
                         return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
                     }
                     
             request()->validate(
                [
                 'pindah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
-                'kuasa' => 'max:30000|mimes:pdf,png,jpg,jpeg' , 
+                // 'kuasa' => 'max:30000|mimes:pdf,png,jpg,jpeg' , 
                 
                 'ktp' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
                 'kk' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
@@ -300,12 +304,12 @@ class PengajuanController extends Controller
                ]
             );
         $uniqPindah = uniqid().'.'.request()->file('pindah')->extension() ; 
-        $uniqKuasa = uniqid().'.'.request()->file('kuasa')->extension() ; 
+        // $uniqKuasa = uniqid().'.'.request()->file('kuasa')->extension() ; 
         $uniqKtp = uniqid().'.'.request()->file('ktp')->extension()  ; 
         $uniqKk = uniqid().'.'.request()->file('kk')->extension() ; 
 
         $suratPindah = request()->file('pindah')->storeAs('pindah' , $uniqPindah , ['disk' => 'public']);
-        $suratKuasa = request()->file('kuasa')->storeAs('kuasa' , $uniqKuasa , ['disk' => 'public']);
+        // $suratKuasa = request()->file('kuasa')->storeAs('kuasa' , $uniqKuasa , ['disk' => 'public']);
         $ktp = request()->file('ktp')->storeAs('ktp' , $uniqKtp, ['disk' => 'public']);
         $kk = request()->file('kk')->storeAs('kk' , $uniqKk , ['disk' => 'public']);
        
@@ -320,7 +324,7 @@ class PengajuanController extends Controller
             'surat_keterangan' => $uniqPindah , 
 
             //ini karena databasenya error entah knp
-            'surat_nikah3' => $uniqKuasa , 
+            // 'surat_nikah3' => $uniqKuasa , 
              
             'keterangan' => request()->keterangan ,
         ]);
@@ -339,6 +343,63 @@ class PengajuanController extends Controller
           }
 
         }
+        // if ($judul == 'Surat Keterangan Pindah Keluar') {
+            
+        //             if (request()->file('pindah')->getSize() > $batas || request()->file('kuasa')->getSize() > $batas  ) {
+        //                 return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+        //             }
+                    
+        //     request()->validate(
+        //        [
+        //         'pindah' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+        //         // 'kuasa' => 'max:30000|mimes:pdf,png,jpg,jpeg' , 
+                
+        //         'ktp' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+        //         'kk' => 'required|max:30000|mimes:pdf,png,jpg,jpeg' , 
+               
+        //         'keterangan' => 'string|max:200|nullable' , 
+        //        ]
+        //     );
+        // $uniqPindah = uniqid().'.'.request()->file('pindah')->extension() ; 
+        // $uniqKuasa = uniqid().'.'.request()->file('kuasa')->extension() ; 
+        // $uniqKtp = uniqid().'.'.request()->file('ktp')->extension()  ; 
+        // $uniqKk = uniqid().'.'.request()->file('kk')->extension() ; 
+
+        // $suratPindah = request()->file('pindah')->storeAs('pindah' , $uniqPindah , ['disk' => 'public']);
+        // $suratKuasa = request()->file('kuasa')->storeAs('kuasa' , $uniqKuasa , ['disk' => 'public']);
+        // $ktp = request()->file('ktp')->storeAs('ktp' , $uniqKtp, ['disk' => 'public']);
+        // $kk = request()->file('kk')->storeAs('kk' , $uniqKk , ['disk' => 'public']);
+       
+       
+       
+        // $input =  Jenis::create([
+        //     'nama_surat' => $judul , 
+        //     'ktp' => $uniqKtp , 
+            
+        //     'kk' =>  $uniqKk , 
+          
+        //     'surat_keterangan' => $uniqPindah , 
+
+        //     //ini karena databasenya error entah knp
+        //     'surat_nikah3' => $uniqKuasa , 
+             
+        //     'keterangan' => request()->keterangan ,
+        // ]);
+
+        // $pengajuan = Pengajuan::create([
+        //     'jenis_id' => $input->id , 
+        //     'user_id' => Auth::user()->id , 
+        //     'tanggal' => Carbon::now(),
+        // ]);   
+
+        // if ($input && $pengajuan) {
+        //     event(new PengajuanSurat('Pengajuan Surat Baru!'));
+        //     return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
+        //   } else {
+        //     return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+        //   }
+
+        // }
 
 
          

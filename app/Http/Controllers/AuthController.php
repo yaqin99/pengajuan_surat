@@ -68,10 +68,8 @@ class AuthController extends Controller
         
         if (Auth::guard('admin')->attempt(['username' => $req->username , 'password' => $req->password] , $req->remember)) {
             request()->session()->regenerate();
-            return redirect()->intended('/admin')->with('success' , 'Selamat Datang Kembali');
-        } else {
-            return back()->with('gagal' , 'Login Gagal');
-        }
+            return redirect()->intended('/admin')->with('success' , 'Login Berhasil');
+        } 
     }
 
     public function userView(){
