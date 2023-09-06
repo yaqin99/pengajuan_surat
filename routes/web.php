@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\KritikController;
+use App\Models\Pengajuan;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +20,12 @@ use App\Http\Controllers\KritikController;
 */
 
 Route::get('/', function () {
-    return view('layout');
+
+    $data = Pengajuan::with(['user' , 'jenis'])->where('user_id',Auth::user()->id)->paginate(10);
+    // dd($data);
+    return view('layout' , [
+        'data' => $data
+    ]);
 })->middleware('auth');
 
 

@@ -103,6 +103,7 @@
               {{-- <li><a href="#">Surat </a></li> --}}
             </ul>
           </li>
+          <li><a class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modalPengajuan" href="#" >List Permohonan</a></li>
           <li><a class="nav-link scrollto" href="#Panduan">Panduan</a></li>
           <li><a class="nav-link scrollto" href="#masukan">Kritik & Saran</a></li>
           <li class="nav-item dropdown">
@@ -160,6 +161,9 @@
 
 
     <!-- ======= Screenshots Section ======= -->
+   
+
+
     <section id="Panduan" class="padd-section text-center">
 
       <div class="container" data-aos="fade-up">
@@ -414,6 +418,7 @@
   <div id="modal">
     @include('component.modals.modalFlexib')
     @include('component.modals.modalKeterangan')
+    @include('component.modals.modalPengajuan')
     @include('sweetalert::alert')
     {{-- @if(Session::get('berhasil'))
     
