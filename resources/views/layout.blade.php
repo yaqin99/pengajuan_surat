@@ -87,17 +87,17 @@
               </li> --}}
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="yoNdakMampu()" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="umum()" id="suratUmum">Surat Keterangan Umum</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li>
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li> --}}
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="usaha()" id="suratUsaha">Surat Keterangan Usaha</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="skck()" id="skck">Surat Keterangan Berkelakuan Baik</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kehilangan()" id="kehilangan">Surat Keterangan Kehilangan</a></li>
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="skck()" id="skck">Surat Keterangan Berkelakuan Baik</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kehilangan()" id="kehilangan">Surat Keterangan Kehilangan</a></li> --}}
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kelahiran()" id="kelahiran">Surat Keterangan Kelahiran</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kematian()" id="kematian">Surat Keterangan Kematian</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pecahKk()" id="pecah">Surat Keterangan Pecah KK</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang</a></li>
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="keluar()" id="keluar">Surat Keterangan Pindah Keluar</a></li>
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pecahKk()" id="pecah">Surat Keterangan Pecah KK</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="keluar()" id="keluar">Surat Keterangan Pindah Keluar</a></li> --}}
               {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li> --}}
               
               {{-- <li><a href="#">Surat </a></li> --}}
@@ -208,22 +208,22 @@
               {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="domisiliSend">Surat Keterangan Domisili Penduduk</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="domisiliButton('Surat Keterangan Domisili Penduduk')" id="domisiliButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
+          </div> --}}
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="domisiliSend">Surat Keterangan Domisili Usaha</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="domisiliUsahaButton('Surat Keterangan Domisili Usaha')" id="domisiliUsahaButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
+          </div> --}}
           <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
@@ -232,22 +232,22 @@
               {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="umumSend">Surat Keterangan Kehilangan</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="kehilanganButton('Surat Keterangan Kehilangan')" id="kehilanganButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
+          </div> --}}
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="umumSend">Surat Keterangan Belum Pernah Menikah</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="belumButton('Surat Keterangan Belum Pernah Menikah')" id="belumNikahButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
+          </div> --}}
           <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
@@ -256,14 +256,14 @@
               {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="umumSend">Surat Keterangan Berkelakuan Baik</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="skckButton('Surat Keterangan Berkelakuan Baik')" id="skckButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
+          </div> --}}
           <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
@@ -280,30 +280,30 @@
               {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="umumSend">Surat Keterangan Pecah KK</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="pecah('Surat Keterangan Pecah KK')" id="pecahButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
+          </div> --}}
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="umumSend">Surat Keterangan Pindah Datang </h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="pindahDatang('Surat Keterangan Pindah Datang')" id="pindahDatangButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
+          </div> --}}
+          {{-- <div class="col-md-6 col-lg-3">
             <div class="feature-block">
               <img src="/assets/img/svg/document.svg" alt="img">
               <h4 id="umumSend">Surat Keterangan Pindah Keluar</h4>
               <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="pindahKeluar('Surat Keterangan Pindah Keluar')" id="pindahKeluarButton">Selengkapnya</a>
-              {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+              <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
             </div>
-          </div>
+          </div> --}}
 
          
 
@@ -576,7 +576,7 @@
 
   }
 
-  let berhasil = '{{ Session::get('berhasil');}}';
+  let berhasil = '{{ Session::get('berhasil')}}';
   console.log(berhasil);
   if (berhasil == 'Pengajuan Anda Berhasil') {
     console.log('called');

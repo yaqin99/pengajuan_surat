@@ -22,7 +22,7 @@
 
        
           <div class="card">
-            <form action="/deletePengajuan" method="POST" name="formTable" id="formPengajuan">
+            <form action="/updatePengajuan" method="POST" name="formTable" id="formPengajuan">
               @csrf
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -52,9 +52,8 @@
                     <th scope="col">Jenis Surat</th>
                     <th scope="col">Tanggal</th>
                     {{-- <th scope="col">Jam</th> --}}
-                    {{-- <th scope="col">KTP</th>
-                    <th scope="col">KK</th> --}}
                     <th scope="col">Keterangan</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Opsi</th>
                   </tr>
                 </thead>
@@ -97,6 +96,7 @@
                     {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($syifa->jenis->ktp) }}">View</a></td> --}}
                     {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($syifa->jenis->kk) }}">View</a></td> --}}
                     <td>{{$syifa->jenis->keterangan }}</td>
+                    <td>{{$syifa->status }}</td>
                     <td>
                       <div class="form-check">
                       <input class="form-check-input" id="syifa" onclick="check()" name="ids[{{ $syifa->id }}]" type="checkbox" value="{{ $syifa->id }}" id="flexCheckDefault">
@@ -118,7 +118,7 @@
 
             
              
-             <button type="submit" class="btn btn-primary" >Save</button>
+             <button type="submit" class="btn btn-primary" >Konfirmasi</button>
            
               </div>
               <div class="d-flex justify-content-start">

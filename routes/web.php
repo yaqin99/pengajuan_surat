@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\KritikController;
 use App\Models\Pengajuan;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::post('/suratPecah/{judul}',[PengajuanController::class , 'sktm']);
 
 //   DELETE PENGAJUAN
 Route::post('/deletePengajuan',[PengajuanController::class , 'deletePengajuan']);
+Route::post('/updatePengajuan',[PengajuanController::class , 'updatePengajuan']);
 Route::post('/deleteUser/{id}',[UserController::class , 'destroy']);
 Route::post('/deleteAdmin/{id}',[AdminController::class , 'destroy']);
 Route::post('/deleteKritik/{id}',[KritikController::class , 'destroy']);

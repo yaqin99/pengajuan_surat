@@ -1328,6 +1328,7 @@ const fileValidation = (targetId , alertId) => {
       document.getElementById("divKtpOrtu").remove();
       document.getElementById("divKtpPelapor").remove();
       document.getElementById("divKtpSaksi1").remove();
+      document.getElementById("divKtpSaksi2").remove();
       document.getElementById("divNohp").remove();
     } 
    

@@ -23,7 +23,7 @@
                     <th scope="row">{{ $loop->index + 1 }}</th>
                     <td>{{ $syifa->jenis->nama_surat }}</td>
                     <td>{{\Carbon\Carbon::parse($syifa->tanggal)->isoFormat(' dddd, D MMMM Y').' '.\Carbon\Carbon::parse($syifa->tanggal)->format('H:i:s').' WIB' }}</td>
-                    <td><a class="btn btn-primary">Menunggu</a></td>
+                    <td><a class="btn {{ ($syifa->status === 'Menunggu') ? 'btn-primary' : 'btn-success' }} ">{{ $syifa->status }}</a></td>
                   </tr>
                   
                   @endforeach

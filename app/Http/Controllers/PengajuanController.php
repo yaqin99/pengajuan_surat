@@ -80,6 +80,7 @@ class PengajuanController extends Controller
             'jenis_id' => $input->id , 
             'user_id' => Auth::user()->id , 
             'tanggal' => Carbon::now(),
+            'status' => 'Menunggu',
         ]);   
 
         if ($input && $pengajuan) {
@@ -147,6 +148,8 @@ class PengajuanController extends Controller
             'jenis_id' => $input->id , 
             'user_id' => Auth::user()->id , 
             'tanggal' => Carbon::now(),
+            'status' => 'Menunggu',
+
         ]);   
 
         if ($input && $pengajuan) {
@@ -218,6 +221,8 @@ class PengajuanController extends Controller
             'jenis_id' => $input->id , 
             'user_id' => Auth::user()->id , 
             'tanggal' => Carbon::now(),
+            'status' => 'Menunggu',
+
         ]);   
 
         if ($input && $pengajuan) {
@@ -273,6 +278,8 @@ class PengajuanController extends Controller
             'jenis_id' => $input->id , 
             'user_id' => Auth::user()->id , 
             'tanggal' => Carbon::now(),
+            'status' => 'Menunggu',
+
         ]);   
 
         if ($input && $pengajuan) {
@@ -333,6 +340,8 @@ class PengajuanController extends Controller
             'jenis_id' => $input->id , 
             'user_id' => Auth::user()->id , 
             'tanggal' => Carbon::now(),
+            'status' => 'Menunggu',
+
         ]);   
 
         if ($input && $pengajuan) {
@@ -430,6 +439,8 @@ class PengajuanController extends Controller
             'jenis_id' => $input->id , 
             'user_id' => Auth::user()->id , 
             'tanggal' => Carbon::now(),
+            'status' => 'Menunggu',
+
         ]);
         if ($input && $pengajuan) {
 
@@ -440,6 +451,25 @@ class PengajuanController extends Controller
         //   return redirect()->to('/')->send()->with('success' , 'Pengajuan Anda Berhasil');
         } else {
             return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+        }
+    }
+
+
+    public function updatePengajuan(){
+        if (request()->ids == []) {
+            return redirect('/admin')->with('warning', 'Anda Belum Menyeleksi Surat');
+         }
+        
+        $update =  Pengajuan::whereIn('id' , request()->ids)->update([
+            'status' => 'Selesai' , 
+        ]);
+    
+    
+        if ($update) {
+            event(new SuratDone('Surat Sudah Selesai'));
+            return redirect('/admin')->with('success', 'Surat Sudah Selesai');
+        } else {
+            dd('gagal');
         }
     }
 
