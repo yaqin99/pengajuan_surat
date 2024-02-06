@@ -456,6 +456,7 @@ class PengajuanController extends Controller
 
 
     public function updatePengajuan(){
+
         if (request()->ids == []) {
             return redirect('/admin')->with('warning', 'Anda Belum Menyeleksi Surat');
          }
@@ -468,6 +469,8 @@ class PengajuanController extends Controller
         if ($update) {
             event(new SuratDone('Surat Sudah Selesai'));
             return redirect('/admin')->with('success', 'Surat Sudah Selesai');
+            
+
         } else {
             dd('gagal');
         }

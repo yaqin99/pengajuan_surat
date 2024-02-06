@@ -17,10 +17,10 @@ class Kernel extends ConsoleKernel
     {
        
         $schedule->call(function () {
-            Pengajuan::whereIn('status', 'Selesai')->destroy();
-            error_log('Anjay');
-        })->everyMinute();
-
+            Pengajuan::where('status', 'Selesai')->delete();
+        })->daily();
+        // $schedule->command('demo:cron')
+        // ->everyMinute();
     }
 
     /**
