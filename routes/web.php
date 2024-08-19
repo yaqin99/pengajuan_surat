@@ -24,7 +24,7 @@ Route::get('/', function () {
 
     $data = Pengajuan::with(['user' , 'jenis'])->where('user_id',Auth::user()->id)->paginate(10);
     // dd($data);
-    return view('layout' , [
+    return view('pages.dashboard' , [
         'data' => $data
     ]);
 })->middleware('auth');
