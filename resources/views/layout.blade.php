@@ -40,7 +40,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,14 +52,10 @@
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="/css/main.css" rel="stylesheet" media="all">
 
-  <!-- =======================================================
-  * Template Name: eStartup
-  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -85,31 +82,7 @@
     @yield('main')
   </main><!-- End #main -->
 
-  <div id="modal">
-    @include('component.modals.modalFlexib')
-    @include('component.modals.modalKeterangan')
-    @include('component.modals.modalPengajuan')
-    @include('sweetalert::alert')
-    {{-- @if(Session::get('berhasil'))
-    
-    <div class="modal" tabindex="-1" id="modalNotif" >
-      <div class="modal-dialog" >
-        <div class="modal-content">
-          <div class="modal-header bg-success">
-            <h5 class="modal-title text-light fw-bolder "><strong>Notifikasi</strong></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="disNotif()" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p class="fw-bolder"><strong>{{ Session::get('berhasil') }}</strong></p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
   
-				  @endif --}}
-
-  </div>
   {{-- @if(Session::get('berhasil'))
   @dd('Ada')
   @include('component.modals.modalLogin')
@@ -208,11 +181,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Template Main JS File -->
   <script  src="/assets/js/main.js"></script>
   <script  src="/assets/js/sktm.js"></script>
   <script >
+
+  
+    function moveToProfil(){
+      window.location.href = "/profil";
+
+    }
+
    document.querySelector('#logoutForm').addEventListener('submit', function(e) {
       var form = this;
       

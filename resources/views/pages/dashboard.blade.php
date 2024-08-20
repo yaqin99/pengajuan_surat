@@ -250,5 +250,29 @@
       </div>
     </div>
   </section><!-- End Contact Section -->
+  <div id="modal">
+    @include('component.modals.modalFlexib')
+    @include('component.modals.modalKeterangan')
+    @include('component.modals.modalPengajuan')
+    @include('sweetalert::alert')
+    {{-- @if(Session::get('berhasil'))
+    
+    <div class="modal" tabindex="-1" id="modalNotif" >
+      <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light fw-bolder "><strong>Notifikasi</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="disNotif()" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="fw-bolder"><strong>{{ Session::get('berhasil') }}</strong></p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+				  @endif --}}
 
+  </div>
 @endsection

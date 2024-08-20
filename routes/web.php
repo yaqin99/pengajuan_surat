@@ -30,6 +30,8 @@ Route::get('/', function () {
 })->middleware('auth');
 
 
+Route::get('/profil',[UserController::class , 'profil'])->middleware('auth');
+
 //   AUTHENTICATION 
 Route::get('/loginAdmin',[AuthController::class , 'loginView'])->middleware('adminDoneLogin');
 Route::get('/register',[AuthController::class , 'register'])->middleware('adminDoneLogin');

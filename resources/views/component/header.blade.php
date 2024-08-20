@@ -46,7 +46,7 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <p class="dropdown-item">
+                <p class="dropdown-item" onclick="moveToProfil()" style="cursor: pointer;">
                   {{ Auth::user()->name }}
                 </p>
                 <form action="/logout" method="post" id="logoutForm">

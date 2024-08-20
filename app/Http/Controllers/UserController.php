@@ -7,6 +7,14 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+
+
+    public function profil(){
+        return view('pages.profil',[
+
+        ]);
+    }
+
    public function addUser (){
     request()->validate(
         [
