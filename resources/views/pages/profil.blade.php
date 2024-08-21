@@ -5,32 +5,37 @@
     <div class="main-body">
     
           <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb" class="main-breadcrumb">
+          {{-- <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
               <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
               <li class="breadcrumb-item active" aria-current="page">User Profile</li>
             </ol>
-          </nav>
+          </nav> --}}
           <!-- /Breadcrumb -->
     
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
+                  <form action="/user/edit/{{Auth::user()->id}}" name="bibi" method="POST" enctype="multipart/form-data">
+
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <img id="profil" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" onclick="inputTrigger()" class="rounded-circle" width="150" style="cursor: pointer;">
+                    <input type="file" name="fotoProfil" hidden id="fotoProfil" onchange="imgChange({{request('fotoProfil')}})">
+
                     <div class="mt-3">
                       <h4>John Doe</h4>
                       <p class="text-secondary mb-1">Full Stack Developer</p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button class="btn btn-primary">Follow</button>
-                      <button class="btn btn-outline-primary">Message</button>
+                      <button type="submit" class="btn btn-outline-primary">Save</button>
                     </div>
                   </div>
+                </form>
+
                 </div>
               </div>
-              <div class="card mt-3">
+              {{-- <div class="card mt-3">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
@@ -53,17 +58,72 @@
                     <span class="text-secondary">bootdey</span>
                   </li>
                 </ul>
-              </div>
+              </div> --}}
             </div>
             <div class="col-md-8">
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Full Name</h6>
+                      <h6 class="mb-0">Nama Lengkap</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth Valdez
+                      <span id="nama_lengkap">Kenneth Valdez</span>
+                      <input type="text" id="nama_lengkap_input" name="nama_lengkap" hidden="true">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Alamat</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="alamat">Kenneth Valdez</span>
+                      <input type="text" id="alamat_input" name="alamat" hidden="true">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Nomer Handphone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="no_hp">Kenneth Valdez</span>
+                      <input type="text" id="no_hp_input" name="no_hp" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">RT</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="rt">Kenneth Valdez</span>
+                      <input type="text" id="rt_input" name="rt" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">RW</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="rw">Kenneth Valdez</span>
+                      <input type="text" id="rw_input" name="rw" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">NIK</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="nik">Kenneth Valdez</span>
+                      <input type="text" id="nik_input" name="nik" hidden="true">
+
                     </div>
                   </div>
                   <hr>
@@ -72,40 +132,15 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      (239) 816-9029
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Mobile</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      (320) 380-4539
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      <span id="email">Kenneth Valdez</span>
+                      <input type="text" id="email_input" name="email" hidden="true">
+
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                      <a class="btn btn-primary"  target="__blank" onclick="openEdit()">Edit</a>
                     </div>
                   </div>
                 </div>
@@ -115,11 +150,21 @@
                 <div class="col-sm-6 mb-3">
                   <div class="card h-100">
                     <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3">Berkas Pribadi</h6>
-                      <div class="mb-3" style="height: 5px">
-                        <p>KTP</p>
-                        <a href="" class="btn btn-primary">Lihat</a>
-                      </div>
+                      <h6 class=" mb-3 text-center">Berkas Pribadi</h6>
+                      <div class="d-flex justify-content-center mb-4">
+                        <div class="form-outline me-3" style="width: 14rem">
+                          <label class="form-label" for="form1">KTP</label>
+                        </div>
+                        <button  type="button" class="btn btn-warning">Lihat</button>
+                        <button  type="button" class="btn btn-primary">Ubah</button>
+                    </div>
+                      <div class="d-flex justify-content-center mb-4">
+                        <div class="form-outline me-3" style="width: 14rem">
+                          <label class="form-label" for="form1">KK</label>
+                        </div>
+                        <button  type="button" class="btn btn-warning">Lihat</button>
+                        <button  type="button" class="btn btn-primary">Ubah</button>
+                    </div>
                      
                     </div>
                   </div>
@@ -127,30 +172,36 @@
                 <div class="col-sm-6 mb-3">
                   <div class="card h-100">
                     <div class="card-body">
-                      <div class="btn-group d-flex justify-content-between">
-
-                        <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                        <small>Web Design</small>
-                      </div>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                      <h6 class=" mb-3 text-center">Berkas Tambahan</h6>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="form-outline me-3" style="width: 14rem">
+                          <label class="form-label" for="form1">KTP Ayah</label>
+                        </div>
+                        <button  type="button" class="btn btn-warning">Lihat</button>
+                        <button  type="button" class="btn btn-primary">Ubah</button>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="form-outline me-3" style="width: 14rem">
+                          <label class="form-label" for="form1">KTP Ibu</label>
+                        </div>
+                        <button  type="button" class="btn btn-warning">Lihat</button>
+                        <button  type="button" class="btn btn-primary">Ubah</button>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="form-outline me-3" style="width: 14rem">
+                          <label class="form-label" for="form1">KTP Saksi</label>
+                        </div>
+                        <button  type="button" class="btn btn-warning">Lihat</button>
+                        <button  type="button" class="btn btn-primary">Ubah</button>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="form-outline me-3" style="width: 14rem">
+                          <label class="form-label" for="form1">Surat NIkah</label>
+                        </div>
+                        <button  type="button" class="btn btn-warning">Lihat</button>
+                        <button  type="button" class="btn btn-primary">Ubah</button>
+                    </div>
+                     
                     </div>
                   </div>
                 </div>
@@ -163,5 +214,21 @@
 
         </div>
     </div>
+    <script>
+      function imgChange(data){
+          let file = document.forms['bibi']['fotoProfil'].files[0];
 
+          console.log(file);
+          document.getElementById('profil').src =  URL.createObjectURL(file);
+        }
+
+        function inputTrigger(){
+          document.getElementById('fotoProfil').click();
+        }
+
+        function openEdit(){
+          document.getElementById('profil').src =  URL.createObjectURL(file);
+
+        }
+    </script>
 @endsection

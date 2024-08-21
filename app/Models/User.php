@@ -54,6 +54,12 @@ class User extends Authenticatable
 
     }
 
+    public function berkas (){
+
+        return $this->hasMany(Berkas::class);
+ 
+     }
+
     public function scopeSearchUser($query ){
         if (request('search')) {
             
