@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-sm-9 text-secondary">
                       <span id="nama_lengkap">Kenneth Valdez</span>
-                      <input type="text" id="nama_lengkap_input" name="nama_lengkap" hidden="true">
+                      <input type="text" class="form-control" id="nama_lengkap_input" name="nama_lengkap" hidden="true">
                     </div>
                   </div>
                   <hr>
@@ -227,7 +227,8 @@
         }
 
         function openEdit(){
-          document.getElementById('profil').src =  URL.createObjectURL(file);
+          document.getElementById('nama_lengkap').hidden =  true;
+          document.getElementById('nama_lengkap_input').hidden =  false;
 
         }
     </script>
