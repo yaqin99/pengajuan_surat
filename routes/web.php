@@ -84,6 +84,8 @@ Route::get('/editUser/{id}',[AdminController::class , 'editUser'])->middleware('
 Route::get('/editAdmin/{id}',[AdminController::class , 'editAdmin'])->middleware('isAdminLogin');
 Route::put('/editDataUser/{id}',[UserController::class , 'edit']);
 Route::put('/editDataAdmin/{id}',[AdminController::class , 'edit']);
+Route::put('/editUserProfil/{id}',[UserController::class , 'editUserProfil']);
+Route::put('/user/editPp/{id}',[UserController::class , 'editPp']);
 
 
 //  USER 

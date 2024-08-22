@@ -10,8 +10,9 @@ class UserController extends Controller
 
 
     public function profil(){
+        $data = User::find(auth()->user()->id);
         return view('pages.profil',[
-
+            'datas' => $data , 
         ]);
     }
 
@@ -82,6 +83,65 @@ class UserController extends Controller
 
     if ($update) {
         return redirect('/user')->with('success' , 'Update Berhasil');;
+
+    } else {
+        dd('gagal');
+    }
+   }
+   public function editUserProfil ($id){
+    request()->validate(
+        [
+         'nama_lengkap' => 'required|string' , 
+         'rt' => 'required|string'  , 
+         'rw' => 'required|string'  , 
+         'nik' => 'required|string'  , 
+         'alamat' => 'required|string'  , 
+         'email' => 'required|string'  , 
+         'no_hp' => 'required|string|min:10|max:13' , 
+        ]
+     );
+
+    $update =  User::where('id' , $id)->update([
+        'name' => request()->nama_lengkap , 
+        'rt' => request()->rt , 
+        'rw' => request()->rw , 
+        'nik' => request()->nik , 
+        'alamat' => request()->alamat , 
+        'email' => request()->email , 
+        'noHp' => request()->no_hp , 
+
+    ]);
+
+
+    if ($update) {
+        return redirect('/profil')->with('success' , 'Update Berhasil');;
+
+    } else {
+        dd('gagal');
+    }
+   }
+   public function editPp ($id){
+    request()->validate(
+        [
+         'fotoProfil' => 'required|string' , 
+        
+        ]
+     );
+
+    $update =  User::where('id' , $id)->update([
+        'name' => request()->nama_lengkap , 
+        'rt' => request()->rt , 
+        'rw' => request()->rw , 
+        'nik' => request()->nik , 
+        'alamat' => request()->alamat , 
+        'email' => request()->email , 
+        'noHp' => request()->no_hp , 
+
+    ]);
+
+
+    if ($update) {
+        return redirect('/profil')->with('success' , 'Update Berhasil');;
 
     } else {
         dd('gagal');

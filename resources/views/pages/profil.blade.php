@@ -18,16 +18,15 @@
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
-                  <form action="/user/edit/{{Auth::user()->id}}" name="bibi" method="POST" enctype="multipart/form-data">
+                  <form action="/user/editPp/{{Auth::user()->id}}" name="bibi" method="POST" enctype="multipart/form-data">
 
                   <div class="d-flex flex-column align-items-center text-center">
                     <img id="profil" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" onclick="inputTrigger()" class="rounded-circle" width="150" style="cursor: pointer;">
                     <input type="file" name="fotoProfil" hidden id="fotoProfil" onchange="imgChange({{request('fotoProfil')}})">
 
                     <div class="mt-3">
-                      <h4>John Doe</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                      <h4>{{$datas->name}}</h4>
+                      <p class="text-muted font-size-sm">{{$datas->alamat}}</p>
                       <button type="submit" class="btn btn-outline-primary">Save</button>
                     </div>
                   </div>
@@ -62,14 +61,17 @@
             </div>
             <div class="col-md-8">
               <div class="card mb-3">
+              <form action="/editUserProfil/{{Auth::user()->id}}" method="POST">
+                @csrf
+                @method('put')
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Nama Lengkap</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="nama_lengkap">Kenneth Valdez</span>
-                      <input type="text" class="form-control" id="nama_lengkap_input" name="nama_lengkap" hidden="true">
+                      <span id="nama_lengkap">{{$datas->name}}</span>
+                      <input type="text" class="form-control" id="nama_lengkap_input" value="{{$datas->name}}" name="nama_lengkap" hidden="true">
                     </div>
                   </div>
                   <hr>
@@ -78,8 +80,8 @@
                       <h6 class="mb-0">Alamat</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="alamat">Kenneth Valdez</span>
-                      <input type="text" id="alamat_input" name="alamat" hidden="true">
+                      <span id="alamat">{{$datas->alamat}}</span>
+                      <input type="text" class="form-control" value="{{$datas->alamat}}" id="alamat_input" name="alamat" hidden="true">
                     </div>
                   </div>
                   <hr>
@@ -88,8 +90,8 @@
                       <h6 class="mb-0">Nomer Handphone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="no_hp">Kenneth Valdez</span>
-                      <input type="text" id="no_hp_input" name="no_hp" hidden="true">
+                      <span id="no_hp">{{$datas->noHp}}</span>
+                      <input type="text" class="form-control" value="{{$datas->noHp}}" id="no_hp_input" name="no_hp" hidden="true">
 
                     </div>
                   </div>
@@ -99,8 +101,8 @@
                       <h6 class="mb-0">RT</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="rt">Kenneth Valdez</span>
-                      <input type="text" id="rt_input" name="rt" hidden="true">
+                      <span id="rt">{{$datas->rt}}</span>
+                      <input type="text" class="form-control" value="{{$datas->rt}}" id="rt_input" name="rt" hidden="true">
 
                     </div>
                   </div>
@@ -110,8 +112,8 @@
                       <h6 class="mb-0">RW</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="rw">Kenneth Valdez</span>
-                      <input type="text" id="rw_input" name="rw" hidden="true">
+                      <span id="rw">{{$datas->rw}}</span>
+                      <input type="text" class="form-control" value="{{$datas->rw}}" id="rw_input" name="rw" hidden="true">
 
                     </div>
                   </div>
@@ -121,8 +123,8 @@
                       <h6 class="mb-0">NIK</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="nik">Kenneth Valdez</span>
-                      <input type="text" id="nik_input" name="nik" hidden="true">
+                      <span id="nik">{{$datas->nik}}</span>
+                      <input type="text" class="form-control" value="{{$datas->nik}}" id="nik_input" name="nik" hidden="true">
 
                     </div>
                   </div>
@@ -132,18 +134,21 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <span id="email">Kenneth Valdez</span>
-                      <input type="text" id="email_input" name="email" hidden="true">
+                      <span id="email">{{$datas->email}}</span>
+                      <input type="email" class="form-control" value="{{$datas->email}}" id="email_input" name="email" hidden="true">
 
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-primary"  target="__blank" onclick="openEdit()">Edit</a>
+                      <a class="btn btn-primary" id="editButton" onclick="openEdit()">Edit</a>
+                      <a class="btn btn-secondary" id="closeButton" hidden="true" onclick="closeEdit()">Batal</a>
+                      <button class="btn btn-success" id="confirmButton" type="submit" hidden>Edit</button>
                     </div>
                   </div>
                 </div>
+              </form>
               </div>
 
               <div class="row gutters-sm">
@@ -229,6 +234,41 @@
         function openEdit(){
           document.getElementById('nama_lengkap').hidden =  true;
           document.getElementById('nama_lengkap_input').hidden =  false;
+          document.getElementById('alamat').hidden =  true;
+          document.getElementById('alamat_input').hidden =  false;
+          document.getElementById('no_hp').hidden =  true;
+          document.getElementById('no_hp_input').hidden =  false;
+          document.getElementById('rt').hidden =  true;
+          document.getElementById('rt_input').hidden =  false;
+          document.getElementById('rw').hidden =  true;
+          document.getElementById('rw_input').hidden =  false;
+          document.getElementById('nik').hidden =  true;
+          document.getElementById('nik_input').hidden =  false;
+          document.getElementById('email').hidden =  true;
+          document.getElementById('email_input').hidden =  false;
+          document.getElementById('editButton').hidden =  true;
+          document.getElementById('closeButton').hidden =  false;
+          document.getElementById('confirmButton').hidden =  false;
+
+        }
+        function closeEdit(){
+          document.getElementById('nama_lengkap').hidden =  false;
+          document.getElementById('nama_lengkap_input').hidden =  true;
+          document.getElementById('alamat').hidden =  false;
+          document.getElementById('alamat_input').hidden =  true;
+          document.getElementById('no_hp').hidden =  false;
+          document.getElementById('no_hp_input').hidden =  true;
+          document.getElementById('rt').hidden =  false;
+          document.getElementById('rt_input').hidden =  true;
+          document.getElementById('rw').hidden =  false;
+          document.getElementById('rw_input').hidden =  true;
+          document.getElementById('nik').hidden =  false;
+          document.getElementById('nik_input').hidden =  true;
+          document.getElementById('email').hidden =  false;
+          document.getElementById('email_input').hidden =  true;
+          document.getElementById('editButton').hidden =  false;
+          document.getElementById('closeButton').hidden =  true;
+          document.getElementById('confirmButton').hidden =  true;
 
         }
     </script>
