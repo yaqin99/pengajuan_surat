@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert(
             [
                 'name' => "Moh. Sayadi" , 
+                'berkas_id' => 1 , 
                 'username' => "sayadi" , 
                 'alamat' => "Jl. Sersan Mesrul Gg. 3B" , 
                 'noHp' => '0852365845645' , 
@@ -31,6 +32,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert(
             [
                 'name' => "M. Harianto" , 
+                'berkas_id' => 2 , 
                 'username' => "harianto" , 
                 'alamat' => "Jl. Sersan Mesrul Gg. 2" , 
                 'noHp' => '085232324578',
@@ -44,6 +46,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert(
             [
                 'name' => "Sataji" , 
+                'berkas_id' => 3 , 
                 'username' => "sataji" , 
                 'alamat' => "Jl. Rongkarong" , 
                 'noHp' => '085232325689',

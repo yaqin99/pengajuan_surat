@@ -19,7 +19,11 @@
               <div class="card">
                 <div class="card-body">
                   <form action="/user/editPp/{{Auth::user()->id}}" name="bibi" method="POST" enctype="multipart/form-data">
-
+                    @csrf
+                    @if ($datas->)
+                      
+                    @endif
+                    @method('put')
                   <div class="d-flex flex-column align-items-center text-center">
                     <img id="profil" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" onclick="inputTrigger()" class="rounded-circle" width="150" style="cursor: pointer;">
                     <input type="file" name="fotoProfil" hidden id="fotoProfil" onchange="imgChange({{request('fotoProfil')}})">

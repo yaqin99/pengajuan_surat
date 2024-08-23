@@ -128,24 +128,21 @@ class UserController extends Controller
         ]
      );
 
-    $update =  User::where('id' , $id)->update([
-        'name' => request()->nama_lengkap , 
-        'rt' => request()->rt , 
-        'rw' => request()->rw , 
-        'nik' => request()->nik , 
-        'alamat' => request()->alamat , 
-        'email' => request()->email , 
-        'noHp' => request()->no_hp , 
-
-    ]);
-
-
-    if ($update) {
+    $getting = User::find($id);
+    if ($getting != null) {
+        $update =  User::where('id' , $id)->update([
+            'foto_profil' => request()->fotoProfil , 
+        ]);
         return redirect('/profil')->with('success' , 'Update Berhasil');;
 
     } else {
-        dd('gagal');
+        $adding = User::create([
+            "foto_profil" => request()->fotoProfil , 
+        ]);
+        return redirect('/profil')->with('success' , 'tambah Berhasil');;
+
     }
+    
    }
 
    public function destroy(Request $request)
