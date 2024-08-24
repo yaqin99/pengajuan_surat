@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Berkas;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
 
 
     public function profil(){
-        $data = User::find(auth()->user()->id);
+        $data = User::with('berkas')->find(auth()->user()->id);
         return view('pages.profil',[
             'datas' => $data , 
         ]);
@@ -120,28 +122,158 @@ class UserController extends Controller
         dd('gagal');
     }
    }
-   public function editPp ($id){
-    request()->validate(
-        [
-         'fotoProfil' => 'required|string' , 
-        
-        ]
-     );
 
-    $getting = User::find($id);
-    if ($getting != null) {
-        $update =  User::where('id' , $id)->update([
-            'foto_profil' => request()->fotoProfil , 
+   public function editBerkas($id , $ket){
+    $data = Berkas::find($id)->first();
+
+    if ($ket == 'ktp') {
+        if ($data->ktp == null) {
+
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('ktp' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'ktp' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        } else {
+            Storage::disk('public')->delete('ktp/'.$data->ktp);
+    
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('ktp' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'ktp' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        }
+    }
+    if ($ket == 'kk') {
+        if ($data->kk == null) {
+
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('kk' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'kk' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        } else {
+            Storage::disk('public')->delete('kk/'.$data->kk);
+    
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('kk' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'kk' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        }
+    }
+    if ($ket == 'ktpAyah') {
+        if ($data->ktp_ayah == null) {
+
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('ktpAyah' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'ktp_ayah' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        } else {
+            Storage::disk('public')->delete('ktpAyah/'.$data->ktp_ayah);
+    
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('ktpAyah' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'ktp_ayah' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        }
+    }
+    if ($ket == 'ktpIbu') {
+        if ($data->ktp_ibu == null) {
+
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('ktpIbu' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'ktp_ibu' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        } else {
+            Storage::disk('public')->delete('ktpIbu/'.$data->ktp_ibu);
+    
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('ktpIbu' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'ktp_ibu' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        }
+    }
+    if ($ket == 'suratNikah') {
+        if ($data->surat_nikah == null) {
+
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('suratNikah' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'surat_nikah' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        } else {
+            Storage::disk('public')->delete('suratNikah/'.$data->surat_nikah);
+    
+            $namaPp = uniqid().'.'.request()->file('berkas')->extension() ; 
+            request()->file('berkas')->storeAs('suratNikah' , $namaPp , ['disk' => 'public']);
+            $data =  Berkas::where('id' , $data->id)->update([
+                'surat_nikah' =>  $namaPp , 
+            ]);
+            return redirect('/profil')->with('success' , 'Update Berhasil');
+    
+        }
+    }
+
+    
+        
+   }
+   public function editPp ($id){
+   
+       
+       $getting = User::find($id);
+       $gambar = Berkas::find($getting->berkas_id) ; 
+       
+    if ($gambar->foto_profil != null) {
+        // Storage::disk('public')->delete('cover/'.$data->cover);
+
+        $namaPp = uniqid().'.'.request()->file('fotoProfil')->extension() ; 
+        request()->file('fotoProfil')->storeAs('fotoProfil' , $namaPp , ['disk' => 'public']);
+        $gambar =  Berkas::where('id' , $gambar->id)->update([
+            'foto_profil' =>  $namaPp , 
         ]);
         return redirect('/profil')->with('success' , 'Update Berhasil');;
 
     } else {
-        $adding = User::create([
-            "foto_profil" => request()->fotoProfil , 
+        Storage::disk('public')->delete('fotoProfil/'.$gambar->foto_profil);
+
+        $namaPp = uniqid().'.'.request()->file('fotoProfil')->extension() ; 
+        request()->file('fotoProfil')->storeAs('fotoProfil' , $namaPp , ['disk' => 'public']);
+        $gambar =  Berkas::where('id' , $gambar->id)->update([
+            'foto_profil' =>  $namaPp , 
         ]);
-        return redirect('/profil')->with('success' , 'tambah Berhasil');;
+        return redirect('/profil')->with('success' , 'Update Berhasil');;
 
     }
+    // else {
+    //     $adding = User::create([
+    //         "foto_profil" => request()->fotoProfil , 
+    //     ]);
+    //     return redirect('/profil')->with('success' , 'tambah Berhasil');;
+
+    // }
     
    }
 

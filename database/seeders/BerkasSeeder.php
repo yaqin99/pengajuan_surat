@@ -16,16 +16,29 @@ class BerkasSeeder extends Seeder
     {
         DB::table('berkas')->insert(
             [
-                'name' => "Moh. Sayadi" , 
-                'berkas_id' => 1 , 
-                'username' => "sayadi" , 
-                'alamat' => "Jl. Sersan Mesrul Gg. 3B" , 
-                'noHp' => '0852365845645' , 
-                'rt' => "02" , 
-                'rw' => "07" , 
-                'nik' => "3528040303690005" , 
-                'email' => "sayadi@gmail.com" , 
-                'password' => bcrypt('sayadi') , 
+                'ktp' => 'default' , 
+                'ktp_ayah' => 'default' , 
+                'ktp_ibu' => 'default' , 
+                'kk' => 'default' , 
+                'surat_nikah' => 'default' , 
+            ]
+            );
+        DB::table('berkas')->insert(
+            [
+                'ktp' => 'default' , 
+                'ktp_ayah' => 'default' , 
+                'ktp_ibu' => 'default' , 
+                'kk' => 'default' , 
+                'surat_nikah' => 'default' , 
+            ]
+            );
+        DB::table('berkas')->insert(
+            [
+                'ktp' => 'default' , 
+                'ktp_ayah' => 'default' , 
+                'ktp_ibu' => 'default' , 
+                'kk' => 'default' , 
+                'surat_nikah' => 'default' , 
             ]
             );
     }

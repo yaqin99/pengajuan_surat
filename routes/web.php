@@ -86,6 +86,7 @@ Route::put('/editDataUser/{id}',[UserController::class , 'edit']);
 Route::put('/editDataAdmin/{id}',[AdminController::class , 'edit']);
 Route::put('/editUserProfil/{id}',[UserController::class , 'editUserProfil']);
 Route::put('/user/editPp/{id}',[UserController::class , 'editPp']);
+Route::put('/editBerkas/{id}/{ket}',[UserController::class , 'editBerkas']);
 
 
 //  USER 

@@ -20,18 +20,16 @@
                 <div class="card-body">
                   <form action="/user/editPp/{{Auth::user()->id}}" name="bibi" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @if ($datas->)
-                      
-                    @endif
+                  
                     @method('put')
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img id="profil" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" onclick="inputTrigger()" class="rounded-circle" width="150" style="cursor: pointer;">
+                    <img id="profil" src="{{$datas->berkas->foto_profil != null ? asset('/storage/fotoProfil/'.$datas->berkas->foto_profil) : 'https://bootdey.com/img/Content/avatar/avatar7.png'}} " alt="Admin" onclick="inputTrigger()" class="rounded-circle" width="150" style="cursor: pointer;">
                     <input type="file" name="fotoProfil" hidden id="fotoProfil" onchange="imgChange({{request('fotoProfil')}})">
 
                     <div class="mt-3">
                       <h4>{{$datas->name}}</h4>
                       <p class="text-muted font-size-sm">{{$datas->alamat}}</p>
-                      <button type="submit" class="btn btn-outline-primary">Save</button>
+                      <button type="submit" id="buttonProfil" hidden class="btn btn-outline-primary">Save</button>
                     </div>
                   </div>
                 </form>
@@ -164,15 +162,17 @@
                         <div class="form-outline me-3" style="width: 14rem">
                           <label class="form-label" for="form1">KTP</label>
                         </div>
-                        <button  type="button" class="btn btn-warning">Lihat</button>
-                        <button  type="button" class="btn btn-primary">Ubah</button>
+                        
+                          <a  href="{{asset('/storage/ktp/'.$datas->berkas->ktp)}}" class="btn btn-warning">Lihat</a>
+                            <button  type="button" onclick="openModal('Edit KTP' , {{$datas->berkas_id}},'ktp')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" class="btn btn-primary">Ubah</button>
+                        
                     </div>
                       <div class="d-flex justify-content-center mb-4">
                         <div class="form-outline me-3" style="width: 14rem">
                           <label class="form-label" for="form1">KK</label>
                         </div>
-                        <button  type="button" class="btn btn-warning">Lihat</button>
-                        <button  type="button" class="btn btn-primary">Ubah</button>
+                        <a  href="{{asset('/storage/kk/'.$datas->berkas->kk)}}" class="btn btn-warning">Lihat</a>
+                        <button  type="button" onclick="openModal('Edit KK' , {{$datas->berkas_id}} , 'kk')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" class="btn btn-primary">Ubah</button>
                     </div>
                      
                     </div>
@@ -186,29 +186,23 @@
                         <div class="form-outline me-3" style="width: 14rem">
                           <label class="form-label" for="form1">KTP Ayah</label>
                         </div>
-                        <button  type="button" class="btn btn-warning">Lihat</button>
-                        <button  type="button" class="btn btn-primary">Ubah</button>
+                        <a  href="{{asset('/storage/ktpAyah/'.$datas->berkas->ktp_ayah)}}" class="btn btn-warning">Lihat</a>
+                        <button onclick="openModal('Edit KTP Ayah' , {{$datas->berkas_id}},'ktpAyah')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
                     </div>
                     <div class="d-flex justify-content-center mb-4">
                         <div class="form-outline me-3" style="width: 14rem">
                           <label class="form-label" for="form1">KTP Ibu</label>
                         </div>
-                        <button  type="button" class="btn btn-warning">Lihat</button>
-                        <button  type="button" class="btn btn-primary">Ubah</button>
+                        <a  href="{{asset('/storage/ktpIbu/'.$datas->berkas->ktp_ibu)}}" class="btn btn-warning">Lihat</a>
+                        <button onclick="openModal('Edit KTP Ibu' , {{$datas->berkas_id}},'ktpIbu')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
                     </div>
+                  
                     <div class="d-flex justify-content-center mb-4">
                         <div class="form-outline me-3" style="width: 14rem">
-                          <label class="form-label" for="form1">KTP Saksi</label>
+                          <label class="form-label" for="form1">Surat Nikah</label>
                         </div>
-                        <button  type="button" class="btn btn-warning">Lihat</button>
-                        <button  type="button" class="btn btn-primary">Ubah</button>
-                    </div>
-                    <div class="d-flex justify-content-center mb-4">
-                        <div class="form-outline me-3" style="width: 14rem">
-                          <label class="form-label" for="form1">Surat NIkah</label>
-                        </div>
-                        <button  type="button" class="btn btn-warning">Lihat</button>
-                        <button  type="button" class="btn btn-primary">Ubah</button>
+                        <a  href="{{asset('/storage/suratNikah/'.$datas->berkas->surat_nikah)}}" class="btn btn-warning">Lihat</a>
+                        <button onclick="openModal('Edit Surat Nikah' , {{$datas->berkas_id}} , 'suratNikah')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
                     </div>
                      
                     </div>
@@ -223,7 +217,16 @@
 
         </div>
     </div>
+    @include('component.modals.modalEditBerkas')
     <script>
+
+      function openModal(judul,id, ket){
+        document.getElementById('judulModalBerkas').innerHTML = judul ; 
+        document.getElementById('formEditBerkas').action = '/editBerkas/'+id +'/'+ket; 
+
+      }
+
+
       function imgChange(data){
           let file = document.forms['bibi']['fotoProfil'].files[0];
 
@@ -233,6 +236,8 @@
 
         function inputTrigger(){
           document.getElementById('fotoProfil').click();
+          document.getElementById('buttonProfil').hidden = false;
+
         }
 
         function openEdit(){

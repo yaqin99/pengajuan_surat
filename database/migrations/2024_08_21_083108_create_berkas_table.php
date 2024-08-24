@@ -15,12 +15,11 @@ class CreateBerkasTable extends Migration
     {
         Schema::create('berkas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->string('foto_profil')->nullable();
             $table->string('ktp')->nullable();
             $table->string('ktp_ayah')->nullable();
             $table->string('ktp_ibu')->nullable();
             $table->string('kk')->nullable();
-            $table->string('kk_ortu')->nullable();
             $table->string('surat_nikah')->nullable();
             $table->timestamps();
         });

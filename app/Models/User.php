@@ -56,7 +56,7 @@ class User extends Authenticatable
 
     public function berkas (){
 
-        return $this->hasMany(Berkas::class);
+        return $this->belongsTo(Berkas::class);
  
      }
 
