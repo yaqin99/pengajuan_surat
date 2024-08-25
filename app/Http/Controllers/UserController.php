@@ -100,6 +100,12 @@ class UserController extends Controller
          'alamat' => 'required|string'  , 
          'email' => 'required|string'  , 
          'no_hp' => 'required|string|min:10|max:13' , 
+         'pekerjaan' => 'required|string'  , 
+         'agama' => 'required|string'  , 
+         'status_perkawinan' => 'required|string'  , 
+         'tempat_lahir' => 'required|string'  , 
+         'tanggal_lahir' => 'required|string'  , 
+
         ]
      );
 
@@ -111,7 +117,11 @@ class UserController extends Controller
         'alamat' => request()->alamat , 
         'email' => request()->email , 
         'noHp' => request()->no_hp , 
-
+        'pekerjaan' =>request()->pekerjaan  , 
+        'agama' => request()->agama  , 
+        'status_perkawinan' =>request()->status_perkawinan  , 
+        'tempat_lahir' => request()->tempat_lahir  , 
+        'tanggal_lahir' => request()->tanggal_lahir  , 
     ]);
 
 

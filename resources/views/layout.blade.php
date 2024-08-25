@@ -82,12 +82,7 @@
     @yield('main')
   </main><!-- End #main -->
 
-  
-  {{-- @if(Session::get('berhasil'))
-  @dd('Ada')
-  @include('component.modals.modalLogin')
-	@endif --}}
-  <!-- ======= Footer ======= -->
+ 
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -186,6 +181,7 @@
   <!-- Template Main JS File -->
   <script  src="/assets/js/main.js"></script>
   <script  src="/assets/js/sktm.js"></script>
+  <script  src="/assets/js/makingElement.js"></script>
   <script >
 
   

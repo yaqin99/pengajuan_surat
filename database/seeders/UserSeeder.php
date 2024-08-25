@@ -25,6 +25,11 @@ class UserSeeder extends Seeder
                 'rt' => "02" , 
                 'rw' => "07" , 
                 'nik' => "3528040303690005" , 
+                'pekerjaan' => "Wirausaha" , 
+                'agama' => "Islam" , 
+                'status_perkawinan' => "Kawin" , 
+                'tempat_lahir' => "Pamekasan" , 
+                'tanggal_lahir' => "1970-12-12" , 
                 'email' => "sayadi@gmail.com" , 
                 'password' => bcrypt('sayadi') , 
             ]
@@ -40,6 +45,11 @@ class UserSeeder extends Seeder
                 'rw' => "08" , 
                 'nik' => "3528040303690212" , 
                 'email' => "harianto@gmail.com" , 
+                'pekerjaan' => "Wirausaha" , 
+                'agama' => "Islam" , 
+                'status_perkawinan' => "Kawin" , 
+                'tempat_lahir' => "Pamekasan" , 
+                'tanggal_lahir' => "1970-12-12" , 
                 'password' => bcrypt('harianto') , 
             ]
             );
@@ -54,6 +64,11 @@ class UserSeeder extends Seeder
                 'rw' => "09" , 
                 'nik' => "35280405568590005" , 
                 'email' => "sataji@gmail.com" , 
+                'pekerjaan' => "Wirausaha" , 
+                'agama' => "Islam" , 
+                'status_perkawinan' => "Kawin" , 
+                'tempat_lahir' => "Pamekasan" , 
+                'tanggal_lahir' => "1970-12-12" , 
                 'password' => bcrypt('sataji') , 
             ]
             );

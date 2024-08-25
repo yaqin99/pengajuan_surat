@@ -13,18 +13,13 @@
           <form method="POST" id="form_input" name="form" enctype="multipart/form-data">
             @csrf
             
-            <div class="mb-3" id="divKtp">
-              <label for="pengantar" id="ktpAyah" class="form-label">Foto Copy KTP</label>
-              <input type="file"  class="form-control" name="ktp" id="ktp" oninput="cekBatas(this.id , 'fileAlert')"  onchange="fileValidation(this.id , 'fileAlert')">
+            {{-- <div class="mb-3" id="divNama">
+              <label for="pengantar" id="nama" class="form-label">Nama Lengkap</label>
+              <input type="text"  class="form-control" name="nama" id="nama">
               <p><small id="fileAlert"></small></p>
 
-            </div>
-            <div class="mb-3" id="divKk">
-              <label for="kk" id="labelKk" class="form-label">Foto Copy KK</label>
-              <input type="file" class="form-control" name="kk" id="kk" oninput="cekBatas(this.id , 'fileKk')" onchange="fileValidation(this.id , 'fileKk')">
-              <p><small id="fileKk"></small></p>
-
-            </div>
+            </div> --}}
+            
             <div class="mb-3" id="divKeterangan">
               <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
               <textarea class="form-control" name="keterangan"  id="floatingTextarea2" ></textarea>
@@ -32,7 +27,7 @@
             {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
           </div>
           <div class="modal-footer">
-            {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+            <button type="button" onclick="preview()" class="btn btn-warning" target="blank">Preview</button>
             <button type="submit" id="confirm_button" class="btn btn-success">Konfirmasi</button>
           </div>
         </form>

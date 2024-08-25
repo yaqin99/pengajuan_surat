@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\KritikController;
 use App\Models\Pengajuan;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,14 +24,17 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
 
     $data = Pengajuan::with(['user' , 'jenis'])->where('user_id',Auth::user()->id)->paginate(10);
+    $self = User::find(Auth::user()->id)->first();
     // dd($data);
     return view('pages.dashboard' , [
-        'data' => $data
+        'data' => $data , 
+        'user' => $self
     ]);
 })->middleware('auth');
 
 
 Route::get('/profil',[UserController::class , 'profil'])->middleware('auth');
+Route::post('/pengajuan/review/',[PengajuanController::class , 'cetak']);
 
 //   AUTHENTICATION 
 Route::get('/loginAdmin',[AuthController::class , 'loginView'])->middleware('adminDoneLogin');

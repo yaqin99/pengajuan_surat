@@ -6,6 +6,7 @@ use App\Events\PengajuanSurat;
 use App\Events\SuratDone;
 use App\Models\Pengajuan;
 use App\Models\Jenis;
+use App\Models\User;
 use App\Http\Requests\StorePengajuanRequest;
 use App\Http\Requests\UpdatePengajuanRequest;
 use Illuminate\Support\Facades\DB;
@@ -553,5 +554,23 @@ class PengajuanController extends Controller
         
        }
 
+    }
+
+    public function cetak(){
+        $data = [
+            'nama' => request('nama'), 
+            'tempat' => request('tempat'), 
+            'tanggal' => request('tanggal'), 
+            'nik' => request('nik'), 
+            'pekerjaan' => request('pekerjaan'), 
+            'status' => request('status'), 
+            'agama' => request('agama'), 
+            'alamat' => request('alamat'), 
+        ];
+
+        dd($data);
+        return view('component.cetak.heartache', [
+            'datas' => $data , 
+        ]);
     }
 }

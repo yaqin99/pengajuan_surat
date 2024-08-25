@@ -1139,17 +1139,33 @@ const fileValidation = (targetId , alertId) => {
  
   }
 
-  const yoNdakMampu = () => {
-    dismissKelahiran();
-    dismissKematian();
-    dismissKehilangan();
-    dismissPindah();
-    dismissPecah();
-
+  function yoNdakMampu(data) {
+    makeNama();
+    makeTempat();
+    makeTanggal();
+    makeNik();
+    makePekerjaan(); 
+    makeStatus(); 
+    makeAgama(); 
+    makeAlamat();
+    document.getElementById('nama').value = data.name ; 
+    document.getElementById('tempat').value = data.tempat_lahir ; 
+    document.getElementById('tanggal').value = data.tanggal_lahir ; 
+    document.getElementById('nik').value = data.nik ; 
+    document.getElementById('pekerjaan').value = data.pekerjaan ; 
+    document.getElementById('status').value = data.status_perkawinan ; 
+    document.getElementById('agama').value = data.agama ; 
+    document.getElementById('alamat').value = data.alamat ; 
     let judul = document.getElementById('sktm').innerHTML ; 
     document.getElementById('judulModal').innerHTML = judul   ;
     document.getElementById("form_input").setAttribute('action' , '/suratTidakMampu/'+judul);
  
+  }
+
+  function preview(){
+    document.getElementById("form_input").setAttribute('action' , '/pengajuan/review/');
+    document.getElementById("form_input").submit();
+
   }
 
   const jomblo = () => {

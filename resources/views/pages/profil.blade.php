@@ -143,6 +143,61 @@
                   </div>
                   <hr>
                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Pekerjaan</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="pekerjaan">{{$datas->pekerjaan}}</span>
+                      <input type="text" class="form-control" value="{{$datas->pekerjaan}}" id="pekerjaan_input" name="pekerjaan" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Agama</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="agama">{{$datas->agama}}</span>
+                      <input type="text" class="form-control" value="{{$datas->agama}}" id="agama_input" name="agama" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Status Perkawinan</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="status_perkawinan">{{$datas->status_perkawinan}}</span>
+                      <input type="text" class="form-control" value="{{$datas->status_perkawinan}}" id="status_perkawinan_input" name="status_perkawinan" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Tempat Lahir</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="tempat_lahir">{{$datas->tempat_lahir}}</span>
+                      <input type="text" class="form-control" value="{{$datas->tempat_lahir}}" id="tempat_lahir_input" name="tempat_lahir" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Tanggal Lahir</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <span id="tanggal_lahir">{{$datas->tanggal_lahir}}</span>
+                      <input type="date" class="form-control" value="{{$datas->tanggal_lahir}}" id="tanggal_lahir_input" name="tanggal_lahir" hidden="true">
+
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
                     <div class="col-sm-12">
                       <a class="btn btn-primary" id="editButton" onclick="openEdit()">Edit</a>
                       <a class="btn btn-secondary" id="closeButton" hidden="true" onclick="closeEdit()">Batal</a>
@@ -217,6 +272,7 @@
 
         </div>
     </div>
+    
     @include('component.modals.modalEditBerkas')
     <script>
 
@@ -255,6 +311,16 @@
           document.getElementById('nik_input').hidden =  false;
           document.getElementById('email').hidden =  true;
           document.getElementById('email_input').hidden =  false;
+          document.getElementById('pekerjaan').hidden =  true;
+          document.getElementById('pekerjaan_input').hidden =  false;
+          document.getElementById('agama').hidden =  true;
+          document.getElementById('agama_input').hidden =  false;
+          document.getElementById('status_perkawinan').hidden =  true;
+          document.getElementById('status_perkawinan_input').hidden =  false;
+          document.getElementById('tempat_lahir').hidden =  true;
+          document.getElementById('tempat_lahir_input').hidden =  false;
+          document.getElementById('tanggal_lahir').hidden =  true;
+          document.getElementById('tanggal_lahir_input').hidden =  false;
           document.getElementById('editButton').hidden =  true;
           document.getElementById('closeButton').hidden =  false;
           document.getElementById('confirmButton').hidden =  false;
@@ -275,6 +341,16 @@
           document.getElementById('nik_input').hidden =  true;
           document.getElementById('email').hidden =  false;
           document.getElementById('email_input').hidden =  true;
+          document.getElementById('pekerjaan').hidden =  false;
+          document.getElementById('pekerjaan_input').hidden =  true;
+          document.getElementById('agama').hidden =  false;
+          document.getElementById('agama_input').hidden =  true;
+          document.getElementById('status_perkawinan').hidden =  false;
+          document.getElementById('status_perkawinan_input').hidden =  true;
+          document.getElementById('tempat_lahir').hidden =  false;
+          document.getElementById('tempat_lahir_input').hidden =  true;
+          document.getElementById('tanggal_lahir').hidden =  false;
+          document.getElementById('tanggal_lahir_input').hidden =  true;
           document.getElementById('editButton').hidden =  false;
           document.getElementById('closeButton').hidden =  true;
           document.getElementById('confirmButton').hidden =  true;
