@@ -18,6 +18,24 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PengajuanController extends Controller
 {
+    public function addPengajuan($id){
+
+        $userData = User::find($id)->first();
+        $addingData =  Pengajuan::create(
+            [
+                'nama_surat' => request('nama_surat'),
+                'user_id' => $id , 
+                'tanggal' => Carbon::now(), 
+                'keterangan' => request('keterangan'),
+            ]
+        );
+        if ($addingData) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
+          } else {
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+          }
+    }
 
     public function sktm ($judul){
 

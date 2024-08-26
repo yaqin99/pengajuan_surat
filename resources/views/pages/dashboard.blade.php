@@ -253,7 +253,7 @@
   <div id="modal">
     @include('component.modals.modalFlexib')
     @include('component.modals.modalKeterangan')
-    @include('component.modals.modalPengajuan')
+    {{-- @include('component.modals.modalPengajuan') --}}
     @include('sweetalert::alert')
     {{-- @if(Session::get('berhasil'))
     

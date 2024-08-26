@@ -28,7 +28,7 @@ Route::get('/', function () {
     // dd($data);
     return view('pages.dashboard' , [
         'data' => $data , 
-        'user' => $self
+        'datas' => $self
     ]);
 })->middleware('auth');
 
@@ -100,3 +100,4 @@ Route::post('/tambahAdmin',[AdminController::class , 'addAdmin']);
 // KRITIK DAN SARAN 
 
 Route::post('/addKritik',[KritikController::class , 'addKritik']);
+Route::post('/addPengajuan/{id}',[PengajuanController::class , 'addPengajuan']);

@@ -1139,7 +1139,7 @@ const fileValidation = (targetId , alertId) => {
  
   }
 
-  function yoNdakMampu(data) {
+  function yoNdakMampu(data , id) {
     makeNama();
     makeTempat();
     makeTanggal();
@@ -1148,6 +1148,7 @@ const fileValidation = (targetId , alertId) => {
     makeStatus(); 
     makeAgama(); 
     makeAlamat();
+    document.getElementById('nama_surat').value = 'Surat Keterangan Tidak Mampu' ; 
     document.getElementById('nama').value = data.name ; 
     document.getElementById('tempat').value = data.tempat_lahir ; 
     document.getElementById('tanggal').value = data.tanggal_lahir ; 
@@ -1157,8 +1158,8 @@ const fileValidation = (targetId , alertId) => {
     document.getElementById('agama').value = data.agama ; 
     document.getElementById('alamat').value = data.alamat ; 
     let judul = document.getElementById('sktm').innerHTML ; 
-    document.getElementById('judulModal').innerHTML = judul   ;
-    document.getElementById("form_input").setAttribute('action' , '/suratTidakMampu/'+judul);
+    document.getElementById('judulModal').innerHTML = 'Surat Keterangan Tidak Mampu'   ;
+    document.getElementById("form_input").setAttribute('action' , '/addPengajuan/'+id);
  
   }
 

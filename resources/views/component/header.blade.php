@@ -19,7 +19,7 @@
              
                 </ul>
               </li> --}}
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="yoNdakMampu({{$user}})" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="yoNdakMampu({{$datas}} , {{Auth::user()->id}})" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="umum()" id="suratUmum">Surat Keterangan Umum</a></li>
               {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li> --}}
               <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="usaha()" id="suratUsaha">Surat Keterangan Usaha</a></li>
