@@ -132,48 +132,9 @@
  
   <!-- Template Main JS File -->
   <script src="/AdminAssets/js/main.js"></script>
+  <script src="/AdminAssets/js/settingModal.js"></script>
   
   <script type="text/javascript">
-// document.querySelector('.formHapus').addEventListener('submit', function(e) {
-//       var form = this;
-      
-//       e.preventDefault();
-      
-//       swal({
-//           title: "Apakah Anda Yakin?",
-//           text: "Menghapus Akun!",
-//           icon: "info",
-//           buttons: [
-//             'Batal',
-//             'Hapus'
-//           ],
-//           dangerMode: true,
-//         }).then(function(isConfirm) {
-//           if (isConfirm) {
-//             swal({
-//               title: 'Hapus Akun!',
-//               text: 'Penghapus Berhasil, Semoga Hari Anda Menyenangkan',
-//               icon: 'success'
-//             }).then(function() {
-//               form.submit();
-//             });
-//           } else {
-//             swal("Batal", "Penghapusan Dibatalkan", "error");
-//           }
-//         });
-//     });
-  
-  
-
- 
-
-
- 
-
-  
-
- 
-
 
 function check() {
   let syifa = document.getElementById("syifa").checked ; 
@@ -213,32 +174,8 @@ function checkSemua(){
  
 }
 
-    // const buttonDis = () => {
-    //   document.getElementById('buttonEdit').style.display = 'none';
-    // }
+    
 
-
-
-    $(".user").click(function () {
-      let name =  $(this).data('name');
-      let id =  $(this).data('id');
-      let rt =  $(this).data('rt');
-      let rw =  $(this).data('rw');
-      let alamat =  $(this).data('alamat');
-      let email =  $(this).data('email');
-      let nik =  $(this).data('nik');
-      let noHp =  $(this).data('nohp');
-      
-      $("#modalUser").attr('action' , `/editUser/${id}`);
-      $("#modalNama").html(name);
-      $("#modalAlamat").val(alamat);
-      $("#modalRt").val(rt);
-      $("#modalRw").val(rw);
-      $("#modalNik").val(nik);
-      $("#modalNoHp").val(noHp);
-      $("#modalEmail").val(email);
-
-});
 
     $(".edit").click(function () {
       let name =  $(this).data('name');

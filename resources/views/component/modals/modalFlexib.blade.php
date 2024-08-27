@@ -10,8 +10,8 @@
             <button type="button" class="btn btn-outline-secondary ">Persyaratan</button>
             <button type="button" class="btn btn-outline-secondary ">Formulir</button>
           </div> --}}
-          <input type="text" name="nama_surat" id="nama_surat" hidden>
           <form method="POST" id="form_input" name="form" enctype="multipart/form-data">
+            <input type="text" name="nama_surat" id="nama_surat" hidden>
             @csrf
             
             {{-- <div class="mb-3" id="divNama">

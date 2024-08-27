@@ -22,6 +22,11 @@ class Pengajuan extends Model
         return $this->belongsTo(Jenis::class);
        
     }
+    // public function berkas(){
+
+    //     return $this->belongsTo(Berkas::class);
+       
+    // }
 
     public function scopeSearchPengajuan($query ){
         if (request('search')) {

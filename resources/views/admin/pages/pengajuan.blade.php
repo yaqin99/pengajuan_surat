@@ -48,7 +48,7 @@
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Nama Pengaju</th>
+                    <th scope="col">Nama Warga</th>
                     <th scope="col">Jenis Surat</th>
                     <th scope="col">Tanggal</th>
                     {{-- <th scope="col">Jam</th> --}}
@@ -58,48 +58,32 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($data as $syifa)
+                  @foreach($data as $bibi)
                     
                   <tr>
                     <th scope="row">{{ $loop->index + 1 }}</th>
-                    <td><a href="#" id="change"  class="user text-dark" data-bs-toggle="modal" data-bs-target="#syifaCantik" 
-                      data-name="{{ $syifa->user->name }}"
-                      data-rt="{{ $syifa->user->rt }}"
-                      data-rw="{{ $syifa->user->rw }}" 
-                      data-alamat="{{ $syifa->user->alamat }}"
-                      data-email="{{ $syifa->user->email }}" 
-                      data-nik="{{ $syifa->user->nik }}" 
-                      data-id="{{ $syifa->user->id }}" 
-                      data-noHp="{{ $syifa->user->noHp }}">
+                    <td><a href="#" id="change" onclick="userShow({{$bibi->user}} , {{$bibi->user}})"  class="user text-dark" data-bs-toggle="modal" data-bs-target="#modalUser" 
+                      data-name="{{ $bibi->user->name }}"
+                      data-rt="{{ $bibi->user->rt }}"
+                      data-rw="{{ $bibi->user->rw }}" 
+                      data-alamat="{{ $bibi->user->alamat }}"
+                      data-email="{{ $bibi->user->email }}" 
+                      data-nik="{{ $bibi->user->nik }}" 
+                      data-id="{{ $bibi->user->id }}" 
+                      data-noHp="{{ $bibi->user->noHp }}">
                       
-                      {{ $syifa->user->name }}</a></td>
-                    <td><a href="#" id="jenisSurat" class="jenis text-dark" data-bs-toggle="modal" data-bs-target="#modalJenis" 
-                      data-nama="{{ $syifa->jenis->nama_surat }}"
-                      data-ktp="{{ $syifa->jenis->ktp }}" 
-                      data-ktp2="{{ $syifa->jenis->ktp2 }}" 
-                      data-ktp_pelapor="{{ $syifa->jenis->ktp_pelapor }}" 
-                      data-ktp_saksi1="{{ $syifa->jenis->ktp_saksi1 }}" 
-                      data-ktp_saksi2="{{ $syifa->jenis->ktp_saksi2 }}" 
-                      data-kk="{{ $syifa->jenis->kk }}" 
-                      data-kk2="{{ $syifa->jenis->kk2 }}" 
-                      data-surat_nikah="{{ $syifa->jenis->surat_nikah }}" 
-                      data-surat_nikah2="{{ $syifa->jenis->surat_nikah2 }}" 
-                      data-surat_nikah3="{{ $syifa->jenis->surat_nikah3 }}" 
-                      data-surat_keterangan="{{ $syifa->jenis->surat_keterangan }}" 
-                      data-no_pelapor="{{ $syifa->jenis->no_pelapor }}" 
-                      data-keterangan="{{ $syifa->jenis->keterangan }}"
-                      
-                      >{{$syifa->jenis->nama_surat }}</a></td>
-                    <td>{{\Carbon\Carbon::parse($syifa->tanggal)->isoFormat(' dddd, D MMMM Y').' '.\Carbon\Carbon::parse($syifa->tanggal)->format('H:i:s').' WIB' }}</td>
+                      {{ $bibi->user->name }}</a></td>
+                    <td><a href="#" id="jenisSurat" class="jenis text-dark" data-bs-toggle="modal" data-bs-target="#modalJenis">{{$bibi->nama_surat }}</a></td>
+                    <td>{{\Carbon\Carbon::parse($bibi->tanggal)->isoFormat(' dddd, D MMMM Y').' '.\Carbon\Carbon::parse($bibi->tanggal)->format('H:i:s').' WIB' }}</td>
                    
-                    {{-- <td>{{\Carbon\Carbon::parse($syifa->tanggal)->format('H:i:s') }}</td> --}}
-                    {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($syifa->jenis->ktp) }}">View</a></td> --}}
-                    {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($syifa->jenis->kk) }}">View</a></td> --}}
-                    <td>{{$syifa->jenis->keterangan }}</td>
-                    <td>{{$syifa->status }}</td>
+                    {{-- <td>{{\Carbon\Carbon::parse($bibi->tanggal)->format('H:i:s') }}</td> --}}
+                    {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($bibi->jenis->ktp) }}">View</a></td> --}}
+                    {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($bibi->jenis->kk) }}">View</a></td> --}}
+                    <td>{{$bibi->keterangan }}</td>
+                    <td>Status</td>
                     <td>
                       <div class="form-check">
-                      <input class="form-check-input" id="syifa" onclick="check()" name="ids[{{ $syifa->id }}]" type="checkbox" value="{{ $syifa->id }}" id="flexCheckDefault">
+                      <input class="form-check-input" id="syifa" onclick="check()" name="ids[{{ $bibi->id }}]" type="checkbox" value="{{ $bibi->id }}" id="flexCheckDefault">
                        
                     </div>
                   </td>
