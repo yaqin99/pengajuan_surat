@@ -576,19 +576,18 @@ class PengajuanController extends Controller
 
     public function cetak(){
         $data = [
-            'nama' => request('nama'), 
-            'tempat' => request('tempat'), 
-            'tanggal' => request('tanggal'), 
-            'nik' => request('nik'), 
-            'pekerjaan' => request('pekerjaan'), 
-            'status' => request('status'), 
-            'agama' => request('agama'), 
-            'alamat' => request('alamat'), 
+            'nama' => request()->nama, 
+            'tempat' => request()->tempat, 
+            'tanggal' => request()->tanggal, 
+            'nik' => request()->nik ,
+            'pekerjaan' => request()->pekerjaan, 
+            'status' => request()->status, 
+            'agama' => request()->agama, 
+            'alamat' => request()->alamat, 
         ];
 
-        dd($data);
-        return view('component.cetak.heartache', [
-            'datas' => $data , 
+        return view('component.cetak.sktm', [
+            'data' => $data , 
         ]);
     }
 }

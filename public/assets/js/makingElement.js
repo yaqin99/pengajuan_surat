@@ -14,7 +14,6 @@ const makeAlamat = () => {
     input.setAttribute('name' , 'alamat');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'alamat');
     small.setAttribute('id' , 'fileAlamat');
@@ -46,7 +45,6 @@ const makeAgama = () => {
     input.setAttribute('name' , 'agama');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'agama');
     small.setAttribute('id' , 'fileAgama');
@@ -78,7 +76,6 @@ const makeStatus = () => {
     input.setAttribute('name' , 'status');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'status');
     small.setAttribute('id' , 'fileStatus');
@@ -112,7 +109,6 @@ const makePekerjaan = () => {
     input.setAttribute('name' , 'pekerjaan');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'pekerjaan');
     small.setAttribute('id' , 'filePekerjaan');
@@ -144,7 +140,6 @@ const makeNik = () => {
     input.setAttribute('name' , 'nik');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'nik');
     small.setAttribute('id' , 'fileNik');
@@ -178,7 +173,6 @@ const makeTanggal = () => {
     input.setAttribute('name' , 'tanggal');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'tanggal');
     small.setAttribute('id' , 'fileTanggal');
@@ -212,7 +206,6 @@ const makeTempat = () => {
     input.setAttribute('name' , 'tempat');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'tempat');
     small.setAttribute('id' , 'fileTempat');
@@ -244,7 +237,6 @@ const makeNama = () => {
     input.setAttribute('name' , 'nama');
     input.setAttribute('class' , 'form-control');
     input.setAttribute('required' , 'true');
-    input.setAttribute('disabled' , 'true');
 
     input.setAttribute('id' , 'nama');
     small.setAttribute('id' , 'fileNama');
