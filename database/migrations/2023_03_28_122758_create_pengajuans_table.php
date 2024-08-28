@@ -19,6 +19,7 @@ class CreatePengajuansTable extends Migration
             $table->foreignId('user_id');
             $table->dateTime('tanggal');
             $table->string('keterangan');
+            $table->text('masukan');
             $table->timestamps();
         });
     }

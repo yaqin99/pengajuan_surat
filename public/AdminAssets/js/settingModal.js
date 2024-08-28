@@ -25,3 +25,8 @@ function userShow (data , berkas){
     $("#viewNikah").attr("href" , `{{ asset('/storage/surat_nikah/${data.berkas.surat_nikah}') }} ` );
     
 }
+
+function settingMasukan (id){
+    $("#formMasukan").attr('action' , `/admin/editMasukan/${id}`);
+
+}

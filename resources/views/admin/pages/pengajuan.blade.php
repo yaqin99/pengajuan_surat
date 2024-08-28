@@ -73,14 +73,14 @@
                       data-noHp="{{ $bibi->user->noHp }}">
                       
                       {{ $bibi->user->name }}</a></td>
-                    <td><a href="#" id="jenisSurat" class="jenis text-dark" data-bs-toggle="modal" data-bs-target="#modalJenis">{{$bibi->nama_surat }}</a></td>
+                    <td><a href="" id="jenisSurat" class="jenis text-dark">{{$bibi->nama_surat }}</a></td>
                     <td>{{\Carbon\Carbon::parse($bibi->tanggal)->isoFormat(' dddd, D MMMM Y').' '.\Carbon\Carbon::parse($bibi->tanggal)->format('H:i:s').' WIB' }}</td>
                    
                     {{-- <td>{{\Carbon\Carbon::parse($bibi->tanggal)->format('H:i:s') }}</td> --}}
                     {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($bibi->jenis->ktp) }}">View</a></td> --}}
                     {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($bibi->jenis->kk) }}">View</a></td> --}}
                     <td>{{$bibi->keterangan }}</td>
-                    <td>Status</td>
+                    <td><a href="" class="btn btn-warning" onclick="settingMasukan({{$bibi->id}})" data-bs-toggle="modal" data-bs-target="#modalMasukan"><i class="bi bi-envelope-slash-fill"></i></a></td>
                     <td>
                       <div class="form-check">
                       <input class="form-check-input" id="syifa" onclick="check()" name="ids[{{ $bibi->id }}]" type="checkbox" value="{{ $bibi->id }}" id="flexCheckDefault">
@@ -123,8 +123,7 @@
       </div>
     </section>
    
-      
-  	@include('admin.component.modalJenis')
+    @include('admin.component.modalMasukan')    
     @include('sweetalert::alert')
 
        
@@ -138,6 +137,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 
   <script>
+
+    function openModalMasukan(){
+      $('#modalMasukan').modal('show');
+    }
+
      document.querySelector('#formPengajuan').addEventListener('submit', function(e) {
       var form = this;
       

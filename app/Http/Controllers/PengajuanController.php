@@ -18,6 +18,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PengajuanController extends Controller
 {
+    public function editMasukan(){
+        
+    }
     public function addPengajuan($id){
 
         $userData = User::find($id)->first();
@@ -27,6 +30,7 @@ class PengajuanController extends Controller
                 'user_id' => $id , 
                 'tanggal' => Carbon::now(), 
                 'keterangan' => request('keterangan'),
+                'masukan' => '',
             ]
         );
         if ($addingData) {
