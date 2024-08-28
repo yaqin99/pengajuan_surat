@@ -92,6 +92,7 @@ Route::put('/editUserProfil/{id}',[UserController::class , 'editUserProfil']);
 Route::put('/user/editPp/{id}',[UserController::class , 'editPp']);
 Route::put('/editBerkas/{id}/{ket}',[UserController::class , 'editBerkas']);
 Route::put('/admin/editMasukan/{id}',[PengajuanController::class , 'editMasukan']);
+Route::put('/admin/accPengajuan/{id}',[PengajuanController::class , 'acc']);
 
 
 //  USER 

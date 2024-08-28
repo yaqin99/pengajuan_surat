@@ -15,7 +15,8 @@ class AdminController extends Controller
    
     public function index(){
 
-        $data = Pengajuan::with(['user' , 'user.berkas'])->SearchPengajuan()->paginate(10);
+        $data = Pengajuan::with(['user' , 'user.berkas'])->SearchPengajuan()->where('status' , 'Diproses')->orWhere('status','Ditolak')->paginate(10);
+        
         return view('admin.pages.pengajuan' , [
             'data' => $data ,
         ]);

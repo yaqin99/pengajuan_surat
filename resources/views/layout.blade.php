@@ -148,7 +148,7 @@
 
     <div class="copyrights">
       <div class="container">
-        <p>&copy; Copyrights Pesona Gladak Anyar. All rights reserved.</p>
+        <p>&copy; Copyrights Pesona Pamaroh. All rights reserved.</p>
         <div class="credits">
           <!--
           All the links in the footer should remain intact.
@@ -156,7 +156,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
         -->
-          Programed by <a href="#">Moh. Ainul Yaqin</a>
+          Programed by <a href="#">Royhan Firdaus</a>
         </div>
       </div>
     </div>

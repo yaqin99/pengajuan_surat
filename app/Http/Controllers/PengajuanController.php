@@ -18,8 +18,25 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PengajuanController extends Controller
 {
-    public function editMasukan(){
-        
+
+    public function acc($id){
+        $update = Pengajuan::where('id',$id)->update([
+            'status' => 'Selesai',
+        ]);
+
+        if ($update) {
+            return redirect('/admin')->with('success', 'Update Data Berhasil');
+          } 
+    }
+    public function editMasukan($id){
+        $update = Pengajuan::where('id',$id)->update([
+            'masukan' => request('masukan'),
+            'status' => 'Ditolak',
+        ]);
+
+        if ($update) {
+            return redirect('/admin')->with('success', 'Update Data Berhasil');
+          } 
     }
     public function addPengajuan($id){
 
@@ -31,6 +48,7 @@ class PengajuanController extends Controller
                 'tanggal' => Carbon::now(), 
                 'keterangan' => request('keterangan'),
                 'masukan' => '',
+                'status' => 'Diproses'
             ]
         );
         if ($addingData) {

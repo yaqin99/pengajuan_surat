@@ -22,8 +22,8 @@
 
        
           <div class="card">
-            <form action="/updatePengajuan" method="POST" name="formTable" id="formPengajuan">
-              @csrf
+            {{-- <form action="/updatePengajuan" method="POST" name="formTable" id="formPengajuan">
+              @csrf --}}
             <div class="card-body">
                 <div class="d-flex justify-content-between">
 
@@ -80,13 +80,23 @@
                     {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($bibi->jenis->ktp) }}">View</a></td> --}}
                     {{-- <td><a target="blank" class="btn btn-primary" href="{{ asset($bibi->jenis->kk) }}">View</a></td> --}}
                     <td>{{$bibi->keterangan }}</td>
-                    <td><a href="" class="btn btn-warning" onclick="settingMasukan({{$bibi->id}})" data-bs-toggle="modal" data-bs-target="#modalMasukan"><i class="bi bi-envelope-slash-fill"></i></a></td>
+                    <td><a href="javascript:void(0)"  class=" {{$bibi->status == 'Ditolak' ? 'btn btn-danger' : 'btn btn-warning' }} ">
+                      @if ($bibi->status == 'Ditolak')
+                      <i class="bi bi-envelope-slash-fill"></i></a></td>
+                      @else
+                      <i class="bi bi-envelope-check-fill"></i>
+                      @endif
                     <td>
-                      <div class="form-check">
-                      <input class="form-check-input" id="syifa" onclick="check()" name="ids[{{ $bibi->id }}]" type="checkbox" value="{{ $bibi->id }}" id="flexCheckDefault">
-                       
-                    </div>
-                  </td>
+                      <div class="btn-group">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" onclick="settingMasukan({{$bibi->id}})" data-bs-target="#modalMasukan" class="btn btn-danger me-2"><i class="bi bi-x-circle-fill"></i></a>
+                        <form action="/admin/accPengajuan/{{$bibi->id}}" method="POST">
+                          @csrf
+                          @method('put')
+                          <button type="submit" onclick="return confirm('Konfirmasi Pembuatan Surat')" class="btn btn-success"><i class="bi bi-check-circle-fill"></i></button>
+                        </form>
+
+                      </div>
+                    </td>
 
                   </tr>
                   
@@ -102,7 +112,7 @@
 
             
              
-             <button type="submit" class="btn btn-primary" >Konfirmasi</button>
+             {{-- <button type="submit" class="btn btn-primary" >Konfirmasi</button> --}}
            
               </div>
               <div class="d-flex justify-content-start">
@@ -114,7 +124,7 @@
               
 
             </div>
-          </form>
+          {{-- </form> --}}
 
           </div>
 
@@ -135,8 +145,10 @@
   </main>
     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+  <script src="/assets/js/settingModal.js"></script>
 
   <script>
+   
 
     function openModalMasukan(){
       $('#modalMasukan').modal('show');

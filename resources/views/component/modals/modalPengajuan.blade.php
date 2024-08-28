@@ -13,6 +13,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Jenis Surat</th>
                     <th scope="col">Waktu Pengajuan</th>
+                    <th scope="col">Alasan</th>
                     <th scope="col">Keterangan</th>
                   </tr>
                 </thead>
@@ -21,9 +22,18 @@
                     
                   <tr>
                     <th scope="row">{{ $loop->index + 1 }}</th>
-                    <td>{{ $syifa->jenis->nama_surat }}</td>
+                    <td>{{ $syifa->nama_surat }}</td>
                     <td>{{\Carbon\Carbon::parse($syifa->tanggal)->isoFormat(' dddd, D MMMM Y').' '.\Carbon\Carbon::parse($syifa->tanggal)->format('H:i:s').' WIB' }}</td>
-                    <td><a class="btn {{ ($syifa->status === 'Menunggu') ? 'btn-primary' : 'btn-success' }} ">{{ $syifa->status }}</a></td>
+                    <td>{{$syifa->masukan}}</td>
+                    <td><a 
+                      @if ($syifa->status === 'Diproses')
+                      class="btn btn-warning"
+                      @elseif ($syifa->status === 'Ditolak')
+                        class="btn btn-danger"
+                      @elseif ($syifa->status === 'Selesai')
+                      class="btn btn-success"
+                      @endif
+                      >{{ $syifa->status }}</a></td>
                   </tr>
                   
                   @endforeach

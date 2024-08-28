@@ -18,8 +18,9 @@ class CreatePengajuansTable extends Migration
             $table->string('nama_surat');
             $table->foreignId('user_id');
             $table->dateTime('tanggal');
-            $table->string('keterangan');
+            $table->text('keterangan');
             $table->text('masukan');
+            $table->string('status');
             $table->timestamps();
         });
     }

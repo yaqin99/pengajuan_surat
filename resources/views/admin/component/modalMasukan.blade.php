@@ -8,13 +8,14 @@
 
         </div>
         <div class="modal-body p-4 py-5 p-md-5">
-            <h3 class="text-center mb-3">Berikan Masukan Terkait Pengajuan</h3>
-        
-            <form id="formMasukan" class="signup-form">
+            <h3 class="text-center mb-3">Berikan Keterangan Terkait Penolakan Surat</h3>
+            <form id="formMasukan" class="signup-form" method="POST">
+              @csrf
+              @method('put')
                 
                 <div class="form-group mb-2" id="divKeterangan">
-                    <label for="modalMasukan" class="text-dark">Masukan</label>
-                    <textarea name="masukan" class="form-control" id="modalMasukan" ></textarea>
+                    <label for="modalMasukanText" class="text-dark">Masukan</label>
+                    <textarea name="masukan" class="form-control" id="modalMasukanText"></textarea>
                 </div>
                 <div class="modal-footer">
                   <button type="submit" id="confirm_button" class="btn btn-success">Konfirmasi</button>
