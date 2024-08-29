@@ -9,8 +9,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
 <meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="sktm_files/filelist.xml">
-<link rel=Edit-Time-Data href="sktm_files/editdata.mso">
+<link rel=File-List href="kehilangan_files/filelist.xml">
+<link rel=Edit-Time-Data href="kehilangan_files/editdata.mso">
 <!--[if !mso]>
 <style>
 v\:* {behavior:url(#default#VML);}
@@ -24,16 +24,16 @@ w\:* {behavior:url(#default#VML);}
   <o:Template>Normal</o:Template>
   <o:LastAuthor>USER</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>3</o:TotalTime>
-  <o:LastPrinted>2024-07-12T02:35:00Z</o:LastPrinted>
-  <o:Created>2024-08-27T16:06:00Z</o:Created>
-  <o:LastSaved>2024-08-27T16:06:00Z</o:LastSaved>
+  <o:TotalTime>2865</o:TotalTime>
+  <o:LastPrinted>2024-05-21T01:29:00Z</o:LastPrinted>
+  <o:Created>2024-08-29T12:03:00Z</o:Created>
+  <o:LastSaved>2024-08-29T12:03:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>129</o:Words>
-  <o:Characters>739</o:Characters>
+  <o:Words>140</o:Words>
+  <o:Characters>803</o:Characters>
   <o:Lines>6</o:Lines>
   <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>867</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>942</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -41,8 +41,8 @@ w\:* {behavior:url(#default#VML);}
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
 </xml><![endif]-->
-<link rel=themeData href="sktm_files/themedata.thmx">
-<link rel=colorSchemeMapping href="sktm_files/colorschememapping.xml">
+<link rel=themeData href="kehilangan_files/themedata.thmx">
+<link rel=colorSchemeMapping href="kehilangan_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:SpellingState>Clean</w:SpellingState>
@@ -63,6 +63,7 @@ w\:* {behavior:url(#default#VML);}
    <w:SnapToGridInCell/>
    <w:WrapTextWithPunct/>
    <w:UseAsianBreakRules/>
+   <w:UseWord2010TableStyleRules/>
    <w:DontGrowAutofit/>
    <w:SplitPgBreakAndParaMark/>
    <w:EnableOpenTypeKerning/>
@@ -685,7 +686,7 @@ w\:* {behavior:url(#default#VML);}
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
-	mso-font-signature:-469750017 -1073683329 9 0 511 0;}
+	mso-font-signature:3 0 0 0 1 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{mso-style-unhide:no;
@@ -708,40 +709,6 @@ w\:* {behavior:url(#default#VML);}
 	mso-bidi-font-family:Arial;
 	mso-bidi-theme-font:minor-bidi;
 	mso-ansi-language:EN-GB;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-priority:99;
-	mso-style-link:"Header Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	tab-stops:center 234.0pt right 468.0pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:Arial;
-	mso-bidi-theme-font:minor-bidi;
-	mso-ansi-language:EN-GB;}
-p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-priority:99;
-	mso-style-link:"Footer Char";
-	margin:0cm;
-	mso-pagination:widow-orphan;
-	tab-stops:center 234.0pt right 468.0pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:Arial;
-	mso-bidi-theme-font:minor-bidi;
-	mso-ansi-language:EN-GB;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
@@ -752,6 +719,7 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	font-family:"Segoe UI",sans-serif;
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Segoe UI";
 	mso-ansi-language:EN-GB;}
 p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
 	{mso-style-priority:1;
@@ -764,6 +732,97 @@ p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
 	font-family:"Calibri",sans-serif;
 	mso-fareast-font-family:Calibri;
 	mso-bidi-font-family:"Times New Roman";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-GB;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
 	mso-style-noshow:yes;
@@ -777,20 +836,6 @@ span.BalloonTextChar
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
 	mso-bidi-font-family:"Segoe UI";
-	mso-ansi-language:EN-GB;}
-span.HeaderChar
-	{mso-style-name:"Header Char";
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:Header;
-	mso-ansi-language:EN-GB;}
-span.FooterChar
-	{mso-style-name:"Footer Char";
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:Footer;
 	mso-ansi-language:EN-GB;}
 span.SpellE
 	{mso-style-name:"";
@@ -815,21 +860,185 @@ span.GramE
 	{mso-style-type:export-only;
 	margin-bottom:10.0pt;
 	line-height:115%;}
- /* Page Definitions */
- @page
-	{mso-footnote-separator:url("sktm_files/header.html") fs;
-	mso-footnote-continuation-separator:url("sktm_files/header.html") fcs;
-	mso-endnote-separator:url("sktm_files/header.html") es;
-	mso-endnote-continuation-separator:url("sktm_files/header.html") ecs;}
 @page WordSection1
 	{size:595.3pt 841.9pt;
-	margin:2.0cm 72.0pt 72.0pt 72.0pt;
-	mso-header-margin:35.45pt;
-	mso-footer-margin:35.45pt;
+	margin:49.65pt 63.7pt 72.0pt 63.8pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
 	mso-paper-source:0;
 	mso-gutter-direction:rtl;}
 div.WordSection1
 	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:452599724;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1770898998 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:64.35pt;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:100.35pt;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:136.35pt;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:172.35pt;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:208.35pt;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:244.35pt;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:280.35pt;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:316.35pt;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:352.35pt;
+	text-indent:-9.0pt;}
+@list l1
+	{mso-list-id:2012484890;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-924166018 -2001019756 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:46.35pt;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:82.35pt;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:118.35pt;
+	text-indent:-9.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:154.35pt;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:190.35pt;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:226.35pt;
+	text-indent:-9.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:262.35pt;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:298.35pt;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:334.35pt;
+	text-indent:-9.0pt;}
+@list l2
+	{mso-list-id:2112043815;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-547044800 -1046290260 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:46.35pt;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:82.35pt;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:118.35pt;
+	text-indent:-9.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:154.35pt;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:190.35pt;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:226.35pt;
+	text-indent:-9.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:262.35pt;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:298.35pt;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:334.35pt;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -857,27 +1066,6 @@ div.WordSection1
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:Arial;
 	mso-bidi-theme-font:minor-bidi;}
-table.MsoTableGrid
-	{mso-style-name:"Table Grid";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-priority:59;
-	mso-style-unhide:no;
-	border:solid windowtext 1.0pt;
-	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-border-insideh:.5pt solid windowtext;
-	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0cm;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:Arial;
-	mso-bidi-theme-font:minor-bidi;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="1028"/>
@@ -885,17 +1073,18 @@ table.MsoTableGrid
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
   <o:rules v:ext="edit">
-   <o:r id="V:Rule1" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_3"/>
+   <o:r id="V:Rule1" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_5"/>
   </o:rules>
  </o:shapelayout></xml><![endif]-->
 </head>
 
 <body lang=EN-US style='tab-interval:36.0pt;word-wrap:break-word'>
+
 <div class=WordSection1 dir=RTL>
 
-<p class=MsoNoSpacing dir=LTR><v:shapetype id="_x0000_t75" coordsize="21600,21600"
- o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
- stroked="f">
+<p class=MsoNoSpacing align=center dir=LTR style='text-align:center'><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
  <v:stroke joinstyle="miter"/>
  <v:formulas>
   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
@@ -913,34 +1102,30 @@ table.MsoTableGrid
  </v:formulas>
  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
  <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="Picture_x0020_4" o:spid="_x0000_s1027" type="#_x0000_t75"
+</v:shapetype><v:shape id="Picture_x0020_7" o:spid="_x0000_s1027" type="#_x0000_t75"
  alt="Description: C:\Users\Asus\Downloads\images.jpg" style='position:absolute;
- margin-left:-9pt;margin-top:-7.95pt;width:100.5pt;height:96.5pt;z-index:-251602944;
- visibility:visible;mso-wrap-style:square;mso-width-percent:0;
- mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
- mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
- mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
- mso-position-vertical:absolute;mso-position-vertical-relative:text;
- mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;
- mso-height-relative:page'>
- <v:imagedata src="sktm_files/image001.jpg" o:title="images"/>
-</v:shape><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></b></p>
-
-<p class=MsoNoSpacing align=center dir=LTR style='text-align:center'><b><span
-style='font-size:12.0pt;font-family:"Times New Roman",serif'>PEMERINTAH
+ left:0;text-align:left;margin-left:.75pt;margin-top:-6.9pt;width:86.2pt;
+ height:82.75pt;z-index:-251654144;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:page;mso-height-relative:page'>
+ <v:imagedata src="kehilangan_files/image001.jpg" o:title="images"/>
+</v:shape><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>PEMERINTAH
 KABUPATEN PAMEKASAN<o:p></o:p></span></b></p>
 
 <p class=MsoNoSpacing align=center dir=LTR style='text-align:center'><b><span
 style='font-size:12.0pt;font-family:"Times New Roman",serif'>KECAMATAN KADUR<o:p></o:p></span></b></p>
 
-<p class=MsoNoSpacing dir=LTR style='tab-stops:26.25pt center 225.65pt'><b><span
-style='font-size:19.0pt;mso-bidi-font-size:14.0pt;font-family:"Times New Roman",serif'><span
-style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>DESA PAMAROH</span></b><b><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></b></p>
+<p class=MsoNoSpacing align=center dir=LTR style='text-align:center'><b><span
+style='font-size:19.0pt;mso-bidi-font-size:14.0pt;font-family:"Times New Roman",serif'>DESA
+PAMAROH</span></b><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></b></p>
 
 <p class=MsoNoSpacing dir=LTR style='tab-stops:41.25pt center 234.0pt'><b><span
 style='font-size:12.0pt;font-family:"Times New Roman",serif'><span
-style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></b><span
+style='mso-tab-count:2'>�������������������������� </span></span></b><span
 class=GramE><i><span style='font-family:"Times New Roman",serif'>Alamat :</span></i></span><i><span
 style='font-family:"Times New Roman",serif'> Jl. Raya <span class=SpellE>Pakong</span>
 Km. 09 <span class=SpellE>Pamaroh</span> <span class=SpellE>Kadur</span> <span
@@ -949,7 +1134,7 @@ class=SpellE>Pamekasan</span> 69355<o:p></o:p></span></i></p>
 <p class=MsoNoSpacing align=center dir=LTR style='text-align:center;tab-stops:
 41.25pt center 234.0pt'><span class=GramE><i><span style='font-family:"Times New Roman",serif'>e-mail
 :</span></i></span><i><span style='font-family:"Times New Roman",serif'>
-desapamaroh01@gmail.com</span></i><i><span style='font-size:12.0pt;font-family:
+desapamaro01@gmail.com</span></i><i><span style='font-size:12.0pt;font-family:
 "Times New Roman",serif'><o:p></o:p></span></i></p>
 
 <p class=MsoNoSpacing align=center dir=LTR style='text-align:center'><v:shapetype
@@ -957,10 +1142,10 @@ desapamaroh01@gmail.com</span></i><i><span style='font-size:12.0pt;font-family:
  filled="f">
  <v:path arrowok="t" fillok="f" o:connecttype="none"/>
  <o:lock v:ext="edit" shapetype="t"/>
-</v:shapetype><v:shape id="Straight_x0020_Arrow_x0020_Connector_x0020_3"
+</v:shapetype><v:shape id="Straight_x0020_Arrow_x0020_Connector_x0020_5"
  o:spid="_x0000_s1026" type="#_x0000_t32" style='position:absolute;left:0;
- text-align:left;margin-left:-1.4pt;margin-top:3.4pt;width:453.55pt;height:0;
- z-index:251711488;visibility:visible;mso-wrap-style:square;
+ text-align:left;margin-left:-.2pt;margin-top:3.4pt;width:467.25pt;height:0;
+ z-index:251661312;visibility:visible;mso-wrap-style:square;
  mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
  mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
  mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
@@ -976,42 +1161,38 @@ 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
-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
+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
 " strokeweight="2.25pt"/><b><u><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><o:p><span
  style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
 
 <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-center;line-height:normal'><b><u><span lang=EN-GB style='font-size:12.0pt;
+center'><b><span lang=EN-GB style='font-size:14.0pt;line-height:115%;
 font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
-major-bidi;mso-bidi-theme-font:major-bidi'><o:p><span style='text-decoration:
- none'>&nbsp;</span></o:p></span></u></b></p>
+major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></b></p>
 
 <br style='mso-ignore:vglayout' clear=ALL>
 
 <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
 center;line-height:normal'><b><u><span lang=EN-GB style='font-size:12.0pt;
 font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
-major-bidi;mso-bidi-theme-font:major-bidi'>SURAT KETERANGAN TIDAK MAMPU</span></u></b><span
-lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'><o:p></o:p></span></p>
+major-bidi;mso-bidi-theme-font:major-bidi'>SURAT KETERANGAN KEHILANGAN<o:p></o:p></span></u></b></p>
 
 <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
 center;line-height:normal'><span class=SpellE><span class=GramE><span
@@ -1022,247 +1203,209 @@ style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font
 major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'> :</span></span><span
 lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'> 401/<span class=SpellE>xxxx</span>/432.512.01/2024<o:p></o:p></span></p>
+major-bidi'> 470/ �� /432.512.01/2024<o:p></o:p></span></p>
 
-<p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-center;line-height:normal'><span lang=EN-GB style='font-size:12.0pt;font-family:
-"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
-major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify;text-indent:1.0cm'><span
-lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Yang <span class=SpellE>bertanda</span> <span class=SpellE>tangan</span>
-<span class=SpellE>dibawah</span> <span class=SpellE>ini</span>, <span
-class=SpellE>Kepala</span> Desa <span class=SpellE>Desa</span> <span
-class=SpellE>Pamaroh</span> <span class=SpellE>Kecamatan</span> <span
-class=SpellE>Kadur</span> <span class=SpellE>Kabupaten</span> <span
-class=SpellE>Pamekasan</span>, <span class=SpellE>menerangkan</span> <span
-class=SpellE><span class=GramE>bahwa</span></span><span class=GramE> :</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Nama <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:
-<span class=SpellE>{{$data->name}}</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>NIK <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:
-<span class=SpellE>{{$data->nik}}</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span class=SpellE><span
-lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Tempat</span></span><span lang=EN-GB style='font-size:12.0pt;
-line-height:115%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
-mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'>/<span
-class=SpellE>Tgl</span>. Lahir <span style='mso-tab-count:1'>&nbsp;</span>: <span
-class=SpellE>{{$data->tempat_lahir}} ,&nbsp;{{$data->tanggal_lahir}} </span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Jenis <span class=SpellE>Kelamin</span><span style='mso-tab-count:
-2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: <span class=SpellE>Laki - laki</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Kewarganegaraan<span style='mso-tab-count:1'></span>&nbsp;&nbsp;: <span
-class=SpellE>Indonesia</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Status <span class=SpellE>Perkawinan</span><span style='mso-tab-count:
-1'>&nbsp;</span>: <span class=SpellE>{{$data->status_perkawinan}}</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span class=SpellE><span
-lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Pekerjaan</span></span><span lang=EN-GB style='font-size:12.0pt;
-line-height:115%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
-mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><span
-style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: <span class=SpellE>{{$data->pekerjaan}}</span><o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Agama<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
-{{$data->agama}}<o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify'><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Alamat <span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
-{{$data->alamat}}<o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify;text-indent:1.0cm'><span
-class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
-font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
-major-bidi;mso-bidi-theme-font:major-bidi'>Bahwa</span></span><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'> <span class=SpellE>nama</span> <span class=SpellE>tersebut</span> <span
-class=SpellE>diatas</span> <span class=SpellE>adalah</span> <span class=SpellE>benar-benar</span>
-<span class=SpellE>Penduduk</span> Desa <span class=SpellE>Pamaroh</span> <span
-class=SpellE>Kecamatan</span> <span class=SpellE>Kadur</span> <span
-class=SpellE>Kabupaten</span> <span class=SpellE>Pamekasan</span> dan yang <span
-class=SpellE>bersangkutan</span> <span class=SpellE>tergolong</span> <b>Tidak Mampu</b>
-(Ekonomi <span class=SpellE>Lemah</span>).<o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify;text-indent:1.0cm'><span
-class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
-font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
-major-bidi;mso-bidi-theme-font:major-bidi'>Demikian</span></span><span
-lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'> <span class=SpellE>surat</span> <span class=SpellE>keterangan</span>
-<span class=SpellE>ini</span> <span class=SpellE>dibuat</span> <span
-class=SpellE>dengan</span> <span class=SpellE>sebenarnya</span> dan <span
-class=SpellE>untuk</span> <span class=SpellE>dipergunakan</span> <span
-class=SpellE>sebagaimana</span> <span class=SpellE>mestinya</span>.<o:p></o:p></span></p>
-
-<p class=MsoNormal dir=LTR style='text-align:justify;text-indent:1.0cm'><span
-lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+<p class=MsoNormal dir=LTR style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:72.0pt;text-align:justify;text-indent:36.0pt;line-height:normal'><span
+lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
 major-bidi'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal dir=LTR style='margin-top:0cm;margin-right:0cm;margin-bottom:
-0cm;margin-left:220.0pt;text-indent:36.0pt;line-height:normal'><span
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:normal'><span lang=EN-GB style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
+major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:150%'><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'>Yang <span
+class=SpellE>bertanda</span> <span class=SpellE>tangan</span> <span
+class=SpellE>dibawah</span> <span class=SpellE><span class=GramE>ini</span></span><span
+class=GramE><span style='mso-spacerun:yes'>� </span><span class=SpellE>Kepala</span></span>
+Desa <span class=SpellE>Pamaroh</span> <span class=SpellE>Kecamatan</span> <span
+class=SpellE>Kadur</span> <span class=SpellE>Kabupaten</span> <span
+class=SpellE>Pamekasan</span> <span class=SpellE>menerangkan</span> <span
+class=SpellE>bahwa</span>:<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:150%'><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify'><span
+lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>Nama<span style='mso-tab-count:3'>�������������������������� </span>:
+��������������������������<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify'><span
+lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>NIK<span style='mso-tab-count:3'>���������������������������� </span>:
+��������������������������<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify'><span
+class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
+font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
+major-bidi;mso-bidi-theme-font:major-bidi'>Tempat</span></span><span
+lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'> <span class=SpellE>Tgl</span>. Lahir<span style='mso-tab-count:
+1'>������ </span>: ��������������������������<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify'><span
+lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>Jenis <span class=SpellE>Kelamin</span><span style='mso-tab-count:
+2'>������������� </span>: ��������������������������<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify'><span
+lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>Status <span class=SpellE>Perkawinan</span><span style='mso-tab-count:
+1'>������ </span>: ��������������������������<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify'><span
+lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>Alamat<span style='mso-tab-count:3'>����������������������� </span>:
+��������������������������<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+line-height:150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
+major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:150%'><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'>Orang <span
+class=SpellE>tersebut</span> <span class=SpellE>diatas</span> <span
+class=SpellE>benar-benar</span> <span class=SpellE>penduduk</span> Desa <span
+class=SpellE>Pamaroh</span> <span class=SpellE>Kecamatan</span> <span
+class=SpellE>Kadur</span> <span class=SpellE>Kabupaten</span> <span
+class=SpellE>Pamekasan</span> dan <span class=SpellE>telah</span> <span
+class=SpellE>kehilangan</span> <span class=SpellE><span class=GramE>berupa</span></span><span
+class=GramE><b> :</b></span><b><o:p></o:p></b></span></p>
+
+<p class=MsoListParagraphCxSpFirst dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:46.35pt;mso-add-space:auto;text-align:justify;
+text-indent:-18.0pt;line-height:150%;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>��������������������<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:46.35pt;mso-add-space:auto;text-align:justify;
+text-indent:-18.0pt;line-height:150%;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>��������������������<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:46.35pt;mso-add-space:auto;text-align:justify;
+text-indent:-18.0pt;line-height:150%;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span lang=EN-GB
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>��������������������<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:64.35pt;mso-add-space:auto;text-align:justify;
+line-height:normal'><b><span lang=EN-GB style='font-size:12.0pt;font-family:
+"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
+major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:150%'><span class=SpellE><span lang=EN-GB
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'>Demikian</span></span><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'> <span
+class=SpellE>surat</span> <span class=SpellE>keterangan</span> <span
+class=SpellE>ini</span> <span class=SpellE>dibuat</span> <span class=SpellE>dengan</span>
+<span class=SpellE>sebenarnya</span> dan <span class=SpellE>untuk</span> <span
+class=SpellE>dapat</span> <span class=SpellE>dipergunakan</span> <span
+class=SpellE>sebagaimana</span> <span class=SpellE>mestinya</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:150%'><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+text-indent:1.0cm;line-height:150%'><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
+line-height:150%'><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
+major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:9.0cm;text-align:center;line-height:normal'><span
 class=SpellE><span lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
 major-bidi'>Pamekasan</span></span><span lang=EN-GB style='font-size:12.0pt;
 font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
-major-bidi;mso-bidi-theme-font:major-bidi'>, 30 Agustus 2024<o:p></o:p></span></p>
+major-bidi;mso-bidi-theme-font:major-bidi'>, �� - �� - 2024<o:p></o:p></span></p>
 
-<div align=left dir=ltr>
+<p class=MsoNormal align=center dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:9.0cm;text-align:center;line-height:150%'><span
+class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:
+major-bidi;mso-bidi-theme-font:major-bidi'>Kepala</span></span><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'> Desa <span class=SpellE>Pamaroh</span><o:p></o:p></span></p>
 
-<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 align=left
- style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-table-lspace:
- 9.0pt;margin-left:6.75pt;mso-table-rspace:9.0pt;margin-right:6.75pt;
- mso-table-anchor-vertical:paragraph;mso-table-anchor-horizontal:margin;
- mso-table-left:left;mso-table-top:17.0pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
- mso-border-insideh:none;mso-border-insidev:none'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
-  <td width=308 style='width:231.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><b><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></b></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><b><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></b></p>
-  <p class=MsoNormal dir=LTR style='margin-bottom:0cm;line-height:normal;
-  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
-  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:margin;
-  mso-element-top:17.0pt;mso-height-rule:exactly'><b><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></b></p>
-  <p class=MsoNormal dir=LTR style='margin-bottom:0cm;line-height:normal;
-  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
-  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:margin;
-  mso-element-top:17.0pt;mso-height-rule:exactly'><b><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></b></p>
-  <p class=MsoNormal dir=LTR style='margin-bottom:0cm;text-align:justify;
-  line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><u><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p><span
-   style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
-  </td>
-  <td width=308 style='width:231.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><span class=SpellE><span
-  lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
-  mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-  major-bidi'>Kepala</span></span><span lang=EN-GB style='font-size:12.0pt;
-  font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
-  mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'> Desa <span
-  class=SpellE>Pamaroh</span><o:p></o:p></span></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-  <p class=MsoNormal dir=LTR style='margin-bottom:0cm;line-height:normal;
-  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
-  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:margin;
-  mso-element-top:17.0pt;mso-height-rule:exactly'><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><span lang=EN-GB
-  style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-ascii-theme-font:
-  major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p>&nbsp;</o:p></span></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><b><u><span
-  lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
-  mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-  major-bidi'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></b></p>
-  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
-  center;line-height:normal;mso-element:frame;mso-element-frame-hspace:9.0pt;
-  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
-  margin;mso-element-top:17.0pt;mso-height-rule:exactly'><b><u><span
-  lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman",serif;
-  mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-  major-bidi'>H. ASYARI, <span class=SpellE><span class=GramE>S.Pd</span></span><o:p></o:p></span></u></b></p>
-  </td>
- </tr>
-</table>
+<p class=MsoNormal align=center dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:9.0cm;text-align:center;line-height:150%'><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:9.0cm;text-align:center;line-height:150%'><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:9.0cm;text-align:center;line-height:150%'><span
+lang=EN-GB style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center dir=LTR style='margin-top:0cm;margin-right:
+0cm;margin-bottom:0cm;margin-left:9.0cm;text-align:center;line-height:150%'><b
+style='mso-bidi-font-weight:normal'><u><span lang=EN-GB style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'>H. ASYARI, S.
+Pd.<o:p></o:p></span></u></b></p>
 
 </div>
-
-<p class=MsoNormal dir=LTR style='margin-bottom:0cm'><u><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi;mso-bidi-font-weight:bold'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
-
-<p class=MsoNormal dir=LTR style='margin-bottom:0cm'><u><span lang=EN-GB
-style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
-mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi;mso-bidi-font-weight:bold'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
-
 <script>
   window.print();
 
 </script>
-</div>
-
 </body>
 
 </html>

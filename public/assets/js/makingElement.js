@@ -1,3 +1,46 @@
+
+
+function sktm1 (data , id){
+  document.getElementById('nama_sktm').value = data.name ; 
+  document.getElementById('tempat_lahir_sktm').value = data.tempat_lahir ; 
+  document.getElementById('tanggal_lahir_sktm').value = data.tanggal_lahir ; 
+  document.getElementById('nik_sktm').value = data.nik ; 
+  document.getElementById('pekerjaan_sktm').value = data.pekerjaan ; 
+  document.getElementById('status_perkawinan_sktm').value = data.status_perkawinan ; 
+  document.getElementById('agama_sktm').value = data.agama ; 
+  document.getElementById('alamat_sktm').value = data.alamat ; 
+  document.getElementById('nama_surat_sktm').value = "Surat Keterangan Tidak Mampu" ; 
+  document.getElementById("form_input_sktm").setAttribute('action' , '/addPengajuan/'+id);
+
+}
+function usaha (data , id){
+  document.getElementById('nama_usaha').value = data.name ; 
+  document.getElementById('tempat_lahir_usaha').value = data.tempat_lahir ; 
+  document.getElementById('tanggal_lahir_usaha').value = data.tanggal_lahir ; 
+  document.getElementById('nik_usaha').value = data.nik ; 
+  document.getElementById('pekerjaan_usaha').value = data.pekerjaan ; 
+  document.getElementById('status_perkawinan_usaha').value = data.status_perkawinan ; 
+  document.getElementById('agama_usaha').value = data.agama ; 
+  document.getElementById('alamat_usaha').value = data.alamat ; 
+  document.getElementById('nama_surat_usaha').value = "Surat Keterangan Usaha" ; 
+  document.getElementById("form_input_usaha").setAttribute('action' , '/addUsaha/'+id);
+
+}
+
+const kehilangan = (data , id) => {
+
+  document.getElementById('nama_kehilangan').value = data.name ; 
+  document.getElementById('tempat_lahir_kehilangan').value = data.tempat_lahir ; 
+  document.getElementById('tanggal_lahir_kehilangan').value = data.tanggal_lahir ; 
+  document.getElementById('nik_kehilangan').value = data.nik ; 
+  document.getElementById('status_perkawinan_kehilangan').value = data.status_perkawinan ; 
+  document.getElementById('alamat_kehilangan').value = data.alamat ; 
+  document.getElementById('nama_surat_kehilangan').value = "Surat Keterangan Kehilangan" ; 
+  document.getElementById("form_input_kehilangan").setAttribute('action' , '/addKehilangan/'+id);
+
+
+}
+
 const makeAlamat = () => {
     
     const div = document.createElement("div");

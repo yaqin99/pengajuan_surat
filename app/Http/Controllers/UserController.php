@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Berkas;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -19,23 +20,20 @@ class UserController extends Controller
     }
 
    public function addUser (){
-    request()->validate(
+    
+    $berkas =  DB::table('berkas')->insert(
         [
-         'nama' => 'required|string' , 
-         'rt' => 'required|string'  , 
-         'rw' => 'required|string'  , 
-         'nik' => 'required|string'  , 
-         'alamat' => 'required|string'  , 
-         'email' => 'required|string'  , 
-         'noHp' => 'required|string|min:10|max:13' , 
-         'username' => 'required|string' , 
-         'password' => 'required|string' , 
+            'ktp' => 'default' , 
+            'ktp_ayah' => 'default' , 
+            'ktp_ibu' => 'default' , 
+            'kk' => 'default' , 
+            'surat_nikah' => 'default' , 
         ]
-     );
+        );
 
-   
-
+    $id = Berkas::orderBy('id','DESC')->get()->first();
     $tambah =  User::create([
+        'berkas_id' => $id->id , 
         'name' => request()->nama , 
         'username' => request()->username , 
         'alamat' => request()->alamat , 
@@ -45,9 +43,13 @@ class UserController extends Controller
         'nik' => request()->nik , 
         'email' => request()->email , 
         'password' => bcrypt(request()->password) , 
+        'pekerjaan' => "" , 
+        'agama' => "" , 
+        'status_perkawinan' => "-" , 
+        'tempat_lahir' => "" , 
+        'tanggal_lahir' => "2000-20-20" ,
         
     ]);
-
 
     if ($tambah) {
         return redirect('/user')->with('success' , 'Tambah User Berhasil');;
@@ -134,8 +136,7 @@ class UserController extends Controller
    }
 
    public function editBerkas($id , $ket){
-    $data = Berkas::find($id)->first();
-
+    $data = Berkas::where('id' , $id)->first();
     if ($ket == 'ktp') {
         if ($data->ktp == null) {
 

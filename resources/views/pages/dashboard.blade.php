@@ -70,6 +70,14 @@
             {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
           </div>
         </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <img src="/assets/img/svg/document.svg" alt="img">
+            <h4 id="umumSend">Surat Keterangan Kehilangan</h4>
+            <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="suratUmum('Surat Keterangan Umum')" id="umumButton">Selengkapnya</a>
+            {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+          </div>
+        </div>
         {{-- <div class="col-md-6 col-lg-3">
           <div class="feature-block">
             <img src="/assets/img/svg/document.svg" alt="img">
@@ -102,22 +110,22 @@
             <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
           </div>
         </div> --}}
-        <div class="col-md-6 col-lg-3">
+        {{-- <div class="col-md-6 col-lg-3">
           <div class="feature-block">
             <img src="/assets/img/svg/document.svg" alt="img">
             <h4 id="umumSend">Surat Keterangan Kelahiran</h4>
             <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="kelahiranButton('Surat Keterangan Kelahiran')" id="kelahiranButton">Selengkapnya</a>
-            {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+            <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
+        </div> --}}
+        {{-- <div class="col-md-6 col-lg-3">
           <div class="feature-block">
             <img src="/assets/img/svg/document.svg" alt="img">
             <h4 id="umumSend">Surat Keterangan Kematian</h4>
             <a data-bs-toggle="modal" data-bs-target="#modalKeterangan" class="btn btn-warning" onclick="kematianButton('Surat Keterangan Kematian')" id="kematianButton">Selengkapnya</a>
-            {{-- <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p> --}}
+            <p>Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan</p>
           </div>
-        </div>
+        </div> --}}
         {{-- <div class="col-md-6 col-lg-3">
           <div class="feature-block">
             <img src="/assets/img/svg/document.svg" alt="img">
@@ -189,7 +197,7 @@
     <div class="container" data-aos="fade-up">
       <div class="section-title text-center">
         <h2>Masukan</h2>
-        <p class="separator">Silahkan Berikan Kritik dan Saran Anda tentang Pesona Gladak Anyar</p>
+        <p class="separator">Silahkan Berikan Kritik dan Saran Anda tentang Pesona Pamaroh</p>
       </div>
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -199,17 +207,17 @@
           <div class="info">
             <div>
               <i class="bi bi-geo-alt"></i>
-              <p>Jl. KH. Amin Jakfar<br>Kel. Pamekasan Kec. Pamekasan Kab. Jawa Timur</p>
+              <p>Jl. Campaka - Rubaru<br>Sumber Bindung, Pamoroh, Kec. Kadur, Kabupaten Pamekasan, Jawa Timur 69355</p>
             </div>
 
             <div class="email">
               <i class="bi bi-envelope"></i>
-              <p>kelurahangladakanyar@gmail.com</p>
+              <p>pamaroh@gmail.com</p>
             </div>
 
             <div>
               <i class="bi bi-phone"></i>
-              <p>+62 87859979032</p>
+              <p>+62 82332382024</p>
             </div>
           </div>
 
@@ -251,9 +259,11 @@
     </div>
   </section><!-- End Contact Section -->
   <div id="modal">
-    @include('component.modals.modalFlexib')
+    @include('component.modals.modalSktm')
     @include('component.modals.modalKeterangan')
     @include('component.modals.modalPengajuan')
+    @include('component.modals.modalUsaha')
+    @include('component.modals.modalKehilangan')
     @include('sweetalert::alert')
     {{-- @if(Session::get('berhasil'))
     

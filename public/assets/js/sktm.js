@@ -1163,10 +1163,14 @@ const fileValidation = (targetId , alertId) => {
  
   }
 
-  function preview(){
-    document.getElementById("form_input").setAttribute('action' , '/pengajuan/review/');
-    document.getElementById("form_input").submit();
-
+  function moveSktm(id){
+    window.location.href = "/pengajuan/review/sktm/"+id;
+  }
+  function moveUsaha(id){
+    window.location.href = "/pengajuan/review/usaha/"+id;
+  }
+  function moveKehilangan(id){
+    window.location.href = "/pengajuan/review/kehilangan/"+id;
   }
 
   const jomblo = () => {
@@ -1180,17 +1184,7 @@ const fileValidation = (targetId , alertId) => {
     document.getElementById("form_input").setAttribute('action' , '/suratBelumNikah/' + document.getElementById('belumMenikah').innerHTML);
  
   }
-  const usaha = () => {
-    dismissKelahiran();
-    dismissKematian();
-    dismissKehilangan();
-    dismissPindah();
-    dismissPecah();
-
-    document.getElementById('judulModal').innerHTML =  document.getElementById('suratUsaha').innerHTML ;
-    document.getElementById("form_input").setAttribute('action' , '/suratUsaha/' +  document.getElementById('suratUsaha').innerHTML);
- 
-  }
+  
   const domisiliPenduduk = () => {
     dismissKelahiran();
     dismissKematian();
@@ -1235,17 +1229,7 @@ const fileValidation = (targetId , alertId) => {
   } 
 
 
-  const kehilangan = () => {
-    dismissKematian();
-    dismissKelahiran();
-    dismissPindah();
-    dismissPecah();
-    
-    makeSuratPolsek();
-    document.getElementById('judulModal').innerHTML =  document.getElementById('kehilangan').innerHTML ;
-    document.getElementById("form_input").setAttribute('action' , '/suratKehilangan/' + document.getElementById('kehilangan').innerHTML);
- 
-  }
+  
   const pindah = () => {
     dismissKematian();
     dismissKelahiran();

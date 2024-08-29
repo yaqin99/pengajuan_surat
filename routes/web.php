@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
 
     $data = Pengajuan::with(['user' , 'jenis'])->where('user_id',Auth::user()->id)->paginate(10);
-    $self = User::find(Auth::user()->id)->first();
+    $self = User::where('id',Auth::user()->id)->first();
     // dd($data);
     return view('pages.dashboard' , [
         'data' => $data , 
@@ -34,7 +34,9 @@ Route::get('/', function () {
 
 
 Route::get('/profil',[UserController::class , 'profil'])->middleware('auth');
-Route::post('/pengajuan/review/',[PengajuanController::class , 'cetak']);
+Route::get('/pengajuan/review/sktm/{id}',[PengajuanController::class , 'cetak']);
+Route::get('/pengajuan/review/usaha/{id}',[PengajuanController::class , 'cetakUsaha']);
+Route::get('/pengajuan/review/kehilangan/{id}',[PengajuanController::class , 'cetakKehilangan']);
 
 //   AUTHENTICATION 
 Route::get('/loginAdmin',[AuthController::class , 'loginView'])->middleware('adminDoneLogin');
@@ -103,3 +105,5 @@ Route::post('/tambahAdmin',[AdminController::class , 'addAdmin']);
 
 Route::post('/addKritik',[KritikController::class , 'addKritik']);
 Route::post('/addPengajuan/{id}',[PengajuanController::class , 'addPengajuan']);
+Route::post('/addUsaha/{id}',[PengajuanController::class , 'addUsaha']);
+Route::post('/addKehilangan/{id}',[PengajuanController::class , 'addKehilangan']);

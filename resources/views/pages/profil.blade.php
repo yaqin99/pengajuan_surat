@@ -219,7 +219,7 @@
                         </div>
                         
                           <a  href="{{asset('/storage/ktp/'.$datas->berkas->ktp)}}" class="btn btn-warning">Lihat</a>
-                            <button  type="button" onclick="openModal('Edit KTP' , {{$datas->berkas_id}},'ktp')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" class="btn btn-primary">Ubah</button>
+                            <button  type="button" onclick="openModal('Edit KTP' , {{$datas->berkas->id}},'ktp')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" class="btn btn-primary">Ubah</button>
                         
                     </div>
                       <div class="d-flex justify-content-center mb-4">
@@ -227,7 +227,7 @@
                           <label class="form-label" for="form1">KK</label>
                         </div>
                         <a  href="{{asset('/storage/kk/'.$datas->berkas->kk)}}" class="btn btn-warning">Lihat</a>
-                        <button  type="button" onclick="openModal('Edit KK' , {{$datas->berkas_id}} , 'kk')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" class="btn btn-primary">Ubah</button>
+                        <button  type="button" onclick="openModal('Edit KK' , {{$datas->berkas->id}} , 'kk')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" class="btn btn-primary">Ubah</button>
                     </div>
                      
                     </div>
@@ -242,14 +242,14 @@
                           <label class="form-label" for="form1">KTP Ayah</label>
                         </div>
                         <a  href="{{asset('/storage/ktpAyah/'.$datas->berkas->ktp_ayah)}}" class="btn btn-warning">Lihat</a>
-                        <button onclick="openModal('Edit KTP Ayah' , {{$datas->berkas_id}},'ktpAyah')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
+                        <button onclick="openModal('Edit KTP Ayah' , {{$datas->berkas->id}},'ktpAyah')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
                     </div>
                     <div class="d-flex justify-content-center mb-4">
                         <div class="form-outline me-3" style="width: 14rem">
                           <label class="form-label" for="form1">KTP Ibu</label>
                         </div>
                         <a  href="{{asset('/storage/ktpIbu/'.$datas->berkas->ktp_ibu)}}" class="btn btn-warning">Lihat</a>
-                        <button onclick="openModal('Edit KTP Ibu' , {{$datas->berkas_id}},'ktpIbu')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
+                        <button onclick="openModal('Edit KTP Ibu' , {{$datas->berkas->id}},'ktpIbu')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
                     </div>
                   
                     <div class="d-flex justify-content-center mb-4">
@@ -257,7 +257,7 @@
                           <label class="form-label" for="form1">Surat Nikah</label>
                         </div>
                         <a  href="{{asset('/storage/suratNikah/'.$datas->berkas->surat_nikah)}}" class="btn btn-warning">Lihat</a>
-                        <button onclick="openModal('Edit Surat Nikah' , {{$datas->berkas_id}} , 'suratNikah')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
+                        <button onclick="openModal('Edit Surat Nikah' , {{$datas->berkas->id}} , 'suratNikah')" data-bs-toggle="modal" data-bs-target="#modalEditBerkas" type="button" class="btn btn-primary">Ubah</button>
                     </div>
                      
                     </div>
@@ -276,9 +276,9 @@
     @include('component.modals.modalEditBerkas')
     <script>
 
-      function openModal(judul,id, ket){
+      function openModal(judul,id , ket){
         document.getElementById('judulModalBerkas').innerHTML = judul ; 
-        document.getElementById('formEditBerkas').action = '/editBerkas/'+id +'/'+ket; 
+        document.getElementById('formEditBerkas').action = '/editBerkas/'+id +'/' + ket ; 
 
       }
 

@@ -100,7 +100,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Pesona Gladak Anyar</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Pesona Pamaroh</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
@@ -108,7 +108,7 @@
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
       {{-- Programed by <a href="https://bootstrapmade.com/">Moh. Ainul Yaqin</a> --}}
-      Programed by <a >Moh. Ainul Yaqin</a>
+      Programed by <a >Royhan Firdaus</a>
     </div>
   </footer><!-- End Footer -->
 

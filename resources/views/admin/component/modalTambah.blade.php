@@ -8,7 +8,7 @@
 
         </div>
         <div class="modal-body p-4 py-5 p-md-5">
-            <h3 class="text-center mb-3">Tambah Akun Ketua RT</h3>
+            <h3 class="text-center mb-3">Tambah Akun Warga</h3>
         
             <form class="signup-form" id="modalUser" action="/tambahUser" method="POST">
               @csrf

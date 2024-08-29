@@ -38,15 +38,15 @@ class PengajuanController extends Controller
             return redirect('/admin')->with('success', 'Update Data Berhasil');
           } 
     }
-    public function addPengajuan($id){
+    public function addKehilangan($id){
 
         $userData = User::find($id)->first();
         $addingData =  Pengajuan::create(
             [
-                'nama_surat' => request('nama_surat'),
+                'nama_surat' => request('nama_surat_kehilangan'),
                 'user_id' => $id , 
                 'tanggal' => Carbon::now(), 
-                'keterangan' => request('keterangan'),
+                'keterangan' => request('keterangan_kehilangan'),
                 'masukan' => '',
                 'status' => 'Diproses'
             ]
@@ -58,6 +58,47 @@ class PengajuanController extends Controller
             return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
           }
     }
+    public function addUsaha($id){
+
+        $userData = User::find($id)->first();
+        $addingData =  Pengajuan::create(
+            [
+                'nama_surat' => request('nama_surat_usaha'),
+                'user_id' => $id , 
+                'tanggal' => Carbon::now(), 
+                'keterangan' => request('keterangan_usaha'),
+                'masukan' => '',
+                'status' => 'Diproses'
+            ]
+        );
+        if ($addingData) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
+          } else {
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+          }
+    }
+    public function addPengajuan($id){
+
+        $userData = User::find($id)->first();
+        $addingData =  Pengajuan::create(
+            [
+                'nama_surat' => request('nama_surat_sktm'),
+                'user_id' => $id , 
+                'tanggal' => Carbon::now(), 
+                'keterangan' => request('keterangan_sktm'),
+                'masukan' => '',
+                'status' => 'Diproses'
+            ]
+        );
+        if ($addingData) {
+            event(new PengajuanSurat('Pengajuan Surat Baru!'));
+            return redirect('/')->with('success', 'Pengajuan Anda Berhasil');
+          } else {
+            return redirect('/')->with('info', 'Pengajuan Gagal, Silahkan Periksa File Anda');
+          }
+    }
+   
 
     public function sktm ($judul){
 
@@ -596,19 +637,24 @@ class PengajuanController extends Controller
 
     }
 
-    public function cetak(){
-        $data = [
-            'nama' => request()->nama, 
-            'tempat' => request()->tempat, 
-            'tanggal' => request()->tanggal, 
-            'nik' => request()->nik ,
-            'pekerjaan' => request()->pekerjaan, 
-            'status' => request()->status, 
-            'agama' => request()->agama, 
-            'alamat' => request()->alamat, 
-        ];
+    public function cetak($id){
+        $data = User::with('berkas')->where('id' , $id)->first();
 
         return view('component.cetak.sktm', [
+            'data' => $data , 
+        ]);
+    }
+    public function cetakUsaha($id){
+        $data = User::with('berkas')->where('id' , $id)->first();
+
+        return view('component.cetak.usaha', [
+            'data' => $data , 
+        ]);
+    }
+    public function cetakKehilangan($id){
+        $data = User::with('berkas')->where('id' , $id)->first();
+
+        return view('component.cetak.kehilangan', [
             'data' => $data , 
         ]);
     }
