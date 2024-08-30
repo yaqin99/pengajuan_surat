@@ -40,7 +40,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
@@ -61,7 +60,77 @@
 <body>
 
   <!-- ======= Header ======= -->
-  @include('component.header')
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a href="/"><span>PESONA</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="/assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Pengajuan</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              {{-- <li class="dropdown"><a href="#"><span>Surat Keterangan Tidak Mampu</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Persyaratan</a></li>
+                  <li><a href="" >Form Pengajuan</a></li>
+             
+                </ul>
+              </li> --}}
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#modalSktm" onclick="sktm1({{$datas}} , {{Auth::user()->id}})" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#modalUsaha" onclick="usaha({{$datas}} , {{Auth::user()->id}})" id="suratUsaha">Surat Keterangan Usaha</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#modalKehilangan" onclick="kehilangan({{$datas}} , {{Auth::user()->id}})" id="kehilangan">Surat Keterangan Kehilangan</a></li>
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="umum()" id="suratUmum">Surat Keterangan Umum</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="skck()" id="skck">Surat Keterangan Berkelakuan Baik</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kelahiran()" id="kelahiran">Surat Keterangan Kelahiran</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kematian()" id="kematian">Surat Keterangan Kematian</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pecahKk()" id="pecah">Surat Keterangan Pecah KK</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="keluar()" id="keluar">Surat Keterangan Pindah Keluar</a></li> --}}
+              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li> --}}
+              
+              {{-- <li><a href="#">Surat </a></li> --}}
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modalPengajuan" href="#" >List Permohonan</a></li>
+          <li><a class="nav-link scrollto" href="#Panduan">Panduan</a></li>
+          <li><a class="nav-link scrollto" href="#masukan">Kritik & Saran</a></li>
+          <li class="nav-item dropdown">
+            <a  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profil <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <p class="dropdown-item" onclick="moveToProfil()" style="cursor: pointer;">
+                  {{ Auth::user()->name }}
+                </p>
+                <form action="/logout" method="post" id="logoutForm">
+                  @csrf
+                  <button class="dropdown-item" type="submit">Keluar</button>
+                </form>
+
+              </li>
+             
+
+              
+            </ul>
+          </li>
+        
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     
@@ -178,6 +247,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src=""></script>
   <!-- Template Main JS File -->
   <script  src="/assets/js/main.js"></script>
   <script  src="/assets/js/sktm.js"></script>

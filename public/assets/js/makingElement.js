@@ -1,6 +1,12 @@
+function moveToProfil(id){
+  window.location.href = "/profil/"+id;
 
+}
 
 function sktm1 (data , id){
+  $('#modalSktm').modal('show');
+
+  
   document.getElementById('nama_sktm').value = data.name ; 
   document.getElementById('tempat_lahir_sktm').value = data.tempat_lahir ; 
   document.getElementById('tanggal_lahir_sktm').value = data.tanggal_lahir ; 
@@ -13,7 +19,24 @@ function sktm1 (data , id){
   document.getElementById("form_input_sktm").setAttribute('action' , '/addPengajuan/'+id);
 
 }
+
+function permohonan(){
+  $('#modalPengajuan').modal('show');
+
+}
+function closePermohonan(){
+  $('#modalPengajuan').modal('hide');
+
+}
+function closeSktm(){
+  $('#modalSktm').modal('hide');
+
+}
+
+
 function usaha (data , id){
+  $('#modalUsaha').modal('show');
+
   document.getElementById('nama_usaha').value = data.name ; 
   document.getElementById('tempat_lahir_usaha').value = data.tempat_lahir ; 
   document.getElementById('tanggal_lahir_usaha').value = data.tanggal_lahir ; 
@@ -27,7 +50,14 @@ function usaha (data , id){
 
 }
 
+function closeUsaha(){
+  $('#modalUsaha').modal('hide');
+
+}
+
+
 const kehilangan = (data , id) => {
+  $('#modalKehilangan').modal('show');
 
   document.getElementById('nama_kehilangan').value = data.name ; 
   document.getElementById('tempat_lahir_kehilangan').value = data.tempat_lahir ; 
@@ -40,6 +70,12 @@ const kehilangan = (data , id) => {
 
 
 }
+
+function closeKehilangan(){
+  $('#modalKehilangan').modal('hide');
+
+}
+
 
 const makeAlamat = () => {
     

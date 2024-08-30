@@ -114,13 +114,13 @@
   /**
    * Mobile nav toggle
    */
-  
-  on('click', '.mobile-nav-toggle', function() {
+  $('.mobile-nav-toggle').click(function (){
+    console.log('select navbar')
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
-  })
-  
+  });
+ 
   
   on('click', '.navbar .dropdown > a', function(e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {

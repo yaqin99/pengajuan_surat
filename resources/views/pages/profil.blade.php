@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('home')
 
 @section('main')
 <div class="container">
@@ -29,7 +29,7 @@
                     <div class="mt-3">
                       <h4>{{$datas->name}}</h4>
                       <p class="text-muted font-size-sm">{{$datas->alamat}}</p>
-                      <button type="submit" id="buttonProfil" hidden class="btn btn-outline-primary">Save</button>
+                      <button type="submit" id="buttonProfil" hidden class="btn btn-primary">Save</button>
                     </div>
                   </div>
                 </form>
@@ -277,8 +277,14 @@
     <script>
 
       function openModal(judul,id , ket){
+        $('#modalEditBerkas').modal('show');
         document.getElementById('judulModalBerkas').innerHTML = judul ; 
         document.getElementById('formEditBerkas').action = '/editBerkas/'+id +'/' + ket ; 
+
+      }
+      function dismissButtpm(){
+        $('#modalEditBerkas').modal('hide');
+        
 
       }
 

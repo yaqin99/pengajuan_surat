@@ -17,10 +17,10 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert(
             [
-                'name' => "Moh. Sayadi" , 
+                'name' => "Ahmad Rifadi" , 
                 'berkas_id' => 1 , 
-                'username' => "sayadi" , 
-                'alamat' => "Jl. Sersan Mesrul Gg. 3B" , 
+                'username' => "rifadi" , 
+                'alamat' => "Jl. Pamaroh" , 
                 'noHp' => '0852365845645' , 
                 'rt' => "02" , 
                 'rw' => "07" , 
@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
                 'tempat_lahir' => "Pamekasan" , 
                 'tanggal_lahir' => "1970-12-12" , 
                 'email' => "sayadi@gmail.com" , 
-                'password' => bcrypt('sayadi') , 
+                'password' => bcrypt('ridadi') , 
             ]
             );
         DB::table('users')->insert(
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
                 'name' => "M. Harianto" , 
                 'berkas_id' => 2 , 
                 'username' => "harianto" , 
-                'alamat' => "Jl. Sersan Mesrul Gg. 2" , 
+                'alamat' => "Jl. Pamaroh" , 
                 'noHp' => '085232324578',
                 'rt' => "02" , 
                 'rw' => "08" , 
@@ -58,7 +58,7 @@ class UserSeeder extends Seeder
                 'name' => "Sataji" , 
                 'berkas_id' => 3 , 
                 'username' => "sataji" , 
-                'alamat' => "Jl. Rongkarong" , 
+                'alamat' => "Jl. Pamaroh" , 
                 'noHp' => '085232325689',
                 'rt' => "02" , 
                 'rw' => "09" , 

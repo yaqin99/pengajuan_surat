@@ -3,7 +3,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5">Formulir Pengajuan Surat Keterangan Kehilangan</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <a style="cursor: pointer;" onclick="closeSktm()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></a>
         </div>
         <form method="POST" id="form_input_kehilangan" name="form" enctype="multipart/form-data">
              <div class="modal-body">
@@ -39,7 +39,7 @@
             
             <div class="mb-3" >
               <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
-              <textarea class="form-control" name="keterangan_kehilangan"  id="floatingTextarea2" placeholder="Berikan Keterangan terkait barang yang hilang"></textarea>
+              <textarea class="form-control" required name="keterangan_kehilangan"  id="floatingTextarea2" placeholder="Berikan Keterangan terkait barang yang hilang"></textarea>
             </div>
           </div>
           <div class="modal-footer">

@@ -2,8 +2,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5">Formulir Pengajuan Surat Keterangan Tidak Mampu</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h3 class="modal-title fs-5">Formulir Pengajuan Surat Keterangan Tidak Mampu</h3>
+          <a style="cursor: pointer;" onclick="closeSktm()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></a>
         </div>
         <form method="POST" id="form_input_sktm" enctype="multipart/form-data">
         @csrf
@@ -37,11 +37,11 @@
             </div>
             <div class="mb-3" >
               <label   class="form-label">Agama</label>
-              <input type="text"  class="form-control" name="agama_sktm" id="agama_sktm">
+              <input type="text"  class="form-control" name="agama_sktm" id="agama_sktm" >
             </div>
             <div class="mb-3" >
               <label   class="form-label">Status Perkawinan</label>
-              <input type="text"  class="form-control" name="status_perkawinan_sktm" id="status_perkawinan_sktm">
+              <input type="text" required  class="form-control" name="status_perkawinan_sktm" id="status_perkawinan_sktm">
             </div>
             
             

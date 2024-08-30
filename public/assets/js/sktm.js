@@ -296,20 +296,36 @@ const fileValidation = (targetId , alertId) => {
   
   
   
-  
+  function closeKeterangan(){
+    $('#modalKeterangan').modal('hide');
+
+  }
   
  
   //          MODAL DESKRIPSI
-  const sktmButton = (judul) => {
+  function  kehilanganButton (judul) {
+    $('#modalKeterangan').modal('show');
+    document.getElementById('fcKeterangan').innerHTML =  'Persyaratan yang diperlukan adalah data diri, alasan kehilangan serta waktu kehilangan barang' ; 
+
     document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kehilangan adalah surat keterangaan  yang menerangkaan bahwa pemohon/ masyarakat kehilangan barang maupun dokumen/ surat tertentu.'
+    
+  }
+  function usahaButton (judul){
+    $('#modalKeterangan').modal('show');
+    document.getElementById('fcKeterangan').innerHTML =  'Persyaratan yang diperlukan adalah data diri, jenis usaha serta lokasi tempat usaha yang diliki' ; 
+
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Usaha (SKU) adalah surat penting yang dibuat langsung oleh aparat lokasi usaha tersebut. Pada umumnya, aparat yang mengeluarkan Surat Keterangan Usaha adalah kelurahan atau kecamatan setempat.'
+   
+  }
+  function sktmButton (judul) {
+    $('#modalKeterangan').modal('show');
+
+    document.getElementById('judul').innerHTML =  judul ; 
+    document.getElementById('fcKeterangan').innerHTML =  'Persyaratan yang diperlukan adalah data diri sesuai permintaan serta keterangan pembuatan surat' ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Tidak Mampu adalah surat yang dikeluarkan oleh pihak Kelurahan atau Desa bagi keluarga miskin untuk mendapatkan kemudahan dalam kehidupannya baik kesehatan, perekonomian, dan pendidikan'
-    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');
-    dismissPersyaratanKehilangan();     
-    dismissPersyaratanKelahiran();
-    dismissPersyaratanKematian();
-    dismissPersyaratanPecah();
-    dismissPersyaratanPindah();
-    yoNdakMampu();
+   
   }
   const suratUmum = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
@@ -347,18 +363,7 @@ const fileValidation = (targetId , alertId) => {
 
     domisiliUsaha();
   }
-  const kehilanganButton = (judul) => {
-    document.getElementById('judul').innerHTML =  judul ; 
-    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Kehilangan adalah surat keterangaan  yang menerangkaan bahwa pemohon/ masyarakat kehilangan barang maupun dokumen/ surat tertentu.'
-    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
-    kehilangan();
-    dismissPersyaratanKelahiran();
-    dismissPersyaratanKematian();
-    dismissPersyaratanPecah();
-    dismissPersyaratanPindah();
-
-    makePersyaratanKehilangan();
-  }
+  
   const belumButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Belum Pernah Menikah adalah dokumen yang fungsinya menyatakan bahwa seseorang belum pernah menikah atau berstatus masih lajang. Kalau dahulu pembuatan surat keterangan belum menikah hanya bisa dilakukan di Dinas Kependudukan dan Catatan Sipil (Disdukcapil) setempat.'
@@ -371,18 +376,7 @@ const fileValidation = (targetId , alertId) => {
 
     jomblo();
   }
-  const usahaButton = (judul) => {
-    document.getElementById('judul').innerHTML =  judul ; 
-    document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Usaha (SKU) adalah surat penting yang dibuat langsung oleh aparat lokasi usaha tersebut. Pada umumnya, aparat yang mengeluarkan Surat Keterangan Usaha adalah kelurahan atau kecamatan setempat.'
-    document.getElementById('tombolKeterangan').setAttribute('data-bs-target' , '#flexib');  
-    dismissPersyaratanKehilangan();     
-    dismissPersyaratanKelahiran();
-    dismissPersyaratanKematian();
-    dismissPersyaratanPecah();
-    dismissPersyaratanPindah();
-
-    usaha();
-  }
+  
   const skckButton = (judul) => {
     document.getElementById('judul').innerHTML =  judul ; 
     document.getElementById('keteranganSurat').innerHTML = 'Surat Keterangan Berkelakuan Baik berisikan catatan perilaku baik seseorang secara hukum.'

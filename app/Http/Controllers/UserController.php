@@ -12,8 +12,8 @@ class UserController extends Controller
 {
 
 
-    public function profil(){
-        $data = User::with('berkas')->find(auth()->user()->id);
+    public function profil($id){
+        $data = User::with('berkas')->where('id',$id)->first();
         return view('pages.profil',[
             'datas' => $data , 
         ]);
@@ -145,7 +145,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'ktp' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         } else {
             Storage::disk('public')->delete('ktp/'.$data->ktp);
@@ -155,7 +155,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'ktp' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         }
     }
@@ -167,7 +167,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'kk' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         } else {
             Storage::disk('public')->delete('kk/'.$data->kk);
@@ -177,7 +177,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'kk' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         }
     }
@@ -189,7 +189,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'ktp_ayah' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         } else {
             Storage::disk('public')->delete('ktpAyah/'.$data->ktp_ayah);
@@ -199,7 +199,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'ktp_ayah' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         }
     }
@@ -211,7 +211,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'ktp_ibu' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         } else {
             Storage::disk('public')->delete('ktpIbu/'.$data->ktp_ibu);
@@ -221,7 +221,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'ktp_ibu' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         }
     }
@@ -233,7 +233,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'surat_nikah' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         } else {
             Storage::disk('public')->delete('suratNikah/'.$data->surat_nikah);
@@ -243,7 +243,7 @@ class UserController extends Controller
             $data =  Berkas::where('id' , $data->id)->update([
                 'surat_nikah' =>  $namaPp , 
             ]);
-            return redirect('/profil')->with('success' , 'Update Berhasil');
+            return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
     
         }
     }
@@ -254,8 +254,8 @@ class UserController extends Controller
    public function editPp ($id){
    
        
-       $getting = User::find($id);
-       $gambar = Berkas::find($getting->berkas_id) ; 
+       $getting = User::where('id',$id)->first();
+       $gambar = Berkas::where('id',$getting->id)->first(); ; 
        
     if ($gambar->foto_profil != null) {
         // Storage::disk('public')->delete('cover/'.$data->cover);
@@ -265,7 +265,7 @@ class UserController extends Controller
         $gambar =  Berkas::where('id' , $gambar->id)->update([
             'foto_profil' =>  $namaPp , 
         ]);
-        return redirect('/profil')->with('success' , 'Update Berhasil');;
+        return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
 
     } else {
         Storage::disk('public')->delete('fotoProfil/'.$gambar->foto_profil);
@@ -275,7 +275,7 @@ class UserController extends Controller
         $gambar =  Berkas::where('id' , $gambar->id)->update([
             'foto_profil' =>  $namaPp , 
         ]);
-        return redirect('/profil')->with('success' , 'Update Berhasil');;
+        return redirect('/profil'.'/'.$id)->with('success' , 'Update Berhasil');
 
     }
     // else {

@@ -1,69 +1,41 @@
-<header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+<header id="header" class="header header-hide">
+  <div class="container">
 
-      <div id="logo">
-        <h1><a href="/"><span>PESONA</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="/assets/img/logo.png" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <li class="dropdown"><a href="#"><span>Pengajuan</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              {{-- <li class="dropdown"><a href="#"><span>Surat Keterangan Tidak Mampu</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Persyaratan</a></li>
-                  <li><a href="" >Form Pengajuan</a></li>
-             
-                </ul>
-              </li> --}}
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#modalSktm" onclick="sktm1({{$datas}} , {{Auth::user()->id}})" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="umum()" id="suratUmum">Surat Keterangan Umum</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="jomblo()" id="belumMenikah">Surat Keterangan Belum Pernah Menikah</a></li> --}}
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#modalUsaha" onclick="usaha({{$datas}} , {{Auth::user()->id}})" id="suratUsaha">Surat Keterangan Usaha</a></li>
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="skck()" id="skck">Surat Keterangan Berkelakuan Baik</a></li> --}}
-              <li><a href="" data-bs-toggle="modal" data-bs-target="#modalKehilangan" onclick="kehilangan({{$datas}} , {{Auth::user()->id}})" id="kehilangan">Surat Keterangan Kehilangan</a></li>
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kelahiran()" id="kelahiran">Surat Keterangan Kelahiran</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="kematian()" id="kematian">Surat Keterangan Kematian</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliPenduduk()" id="skdp">Surat Keterangan Domisili Penduduk</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="domisiliUsaha()" id="skdu">Surat Keterangan Domisili Usaha</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pecahKk()" id="pecah">Surat Keterangan Pecah KK</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="pindah()" id="pindah">Surat Keterangan Pindah Datang</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib" onclick="keluar()" id="keluar">Surat Keterangan Pindah Keluar</a></li> --}}
-              {{-- <li><a href="" data-bs-toggle="modal" data-bs-target="#flexib">Surat Keterangan Ahli Waris</a></li> --}}
-              
-              {{-- <li><a href="#">Surat </a></li> --}}
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#modalPengajuan" href="#" >List Permohonan</a></li>
-          <li><a class="nav-link scrollto" href="#Panduan">Panduan</a></li>
-          <li><a class="nav-link scrollto" href="#masukan">Kritik & Saran</a></li>
-          <li class="nav-item dropdown">
-            <a  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Profil <i class="bi bi-chevron-down"></i>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <p class="dropdown-item" onclick="moveToProfil()" style="cursor: pointer;">
-                  {{ Auth::user()->name }}
-                </p>
-                <form action="/logout" method="post" id="logoutForm">
-                  @csrf
-                  <button class="dropdown-item" type="submit">Keluar</button>
-                </form>
-
-              </li>
-             
-
-              
-            </ul>
-          </li>
-        
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </ul>
-      </nav><!-- .navbar -->
-
+    <div id="logo" class="pull-left">
+      <h1><a href="/" class="scrollto">Pesona</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="#body"></assets/img2 src="/assets/img2/logo.png" alt="" title="" /></a>-->
     </div>
-  </header><!-- End Header -->
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active"><a href="/">Home</a></li>
+        <li><a href="#panduan">Panduan</a></li>
+        <li class="menu-has-children"><a>Daftar Surat</a>
+          <ul>
+            <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalSktm" onclick="sktm1({{$datas}} , {{Auth::user()->id}})" id="sktm" >Surat Keterangan Tidak Mampu</a></li>
+            <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalUsaha" onclick="usaha({{$datas}} , {{Auth::user()->id}})" id="suratUsaha">Surat Keterangan Usaha</a></li>
+            <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modalKehilangan" onclick="kehilangan({{$datas}} , {{Auth::user()->id}})" id="kehilangan">Surat Keterangan Kehilangan</a></li>
+          </ul>
+        </li>
+        <li><a class="menu-has-children" onclick="permohonan()" data-bs-toggle="modal" data-bs-target="#modalPengajuan" href="#" >List Permohonan</a></li>
+
+        <li class="menu-has-children"><a href="javascript:void(0)">Profil</a>
+          <ul>
+            <li>
+              <p class="dropdown-item text-dark" id="ubah" onclick="moveToProfil({{Auth::user()->id}})" style="cursor: pointer; color:white;">
+                {{ Auth::user()->name }}
+              </p>
+              <form action="/logout" method="post" id="logoutForm">
+                @csrf
+                <button class="dropdown-item text-dark" id="ubah2" type="submit">Keluar</button>
+              </form>
+
+            </li>
+          </ul>
+        </li>
+       
+      </ul>
+    </nav><!-- #nav-menu-container -->
+  </div>
+</header><!-- #header -->

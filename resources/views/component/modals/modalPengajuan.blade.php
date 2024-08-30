@@ -1,9 +1,9 @@
-<div class="modal fade" id="modalPengajuan" tabindex="-1" aria-labelledby="modalPengajuan" aria-hidden="true" >
+<div class="modal fade " id="modalPengajuan" tabindex="-1" aria-labelledby="modalPengajuan" aria-hidden="true" >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5">Daftar Pengajuan Surat</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <a style="cursor: pointer;" onclick="closePermohonan()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></a>
         </div>
         <div class="modal-body">
             <div class="table-responsive">

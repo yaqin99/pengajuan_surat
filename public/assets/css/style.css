@@ -317,6 +317,12 @@ span {
 }
 
 @media (max-width: 991px) {
+  #ubah {
+    color: white;
+  }
+  #ubah2 {
+    color: white;
+  }
   .mobile-nav-toggle {
     display: block;
   }
@@ -1198,6 +1204,12 @@ section {
 }
 
 @media (max-width: 575px) {
+  #ubah {
+    color: white;
+  }
+  #ubah2 {
+    color: white;
+  }
   #newsletter .btn {
     width: 100%;
   }

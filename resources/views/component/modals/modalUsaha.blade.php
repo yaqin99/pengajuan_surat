@@ -3,7 +3,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5">Formulir Pengajuan Surat Keterangan Usaha</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <a style="cursor: pointer;" onclick="closeUsaha()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></a>
         </div>
         <form method="POST" id="form_input_usaha" enctype="multipart/form-data">
         @csrf
@@ -47,7 +47,7 @@
             
             <div class="mb-3" >
               <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
-              <textarea class="form-control" name="keterangan_usaha"  id="floatingTextarea2" placeholder="Berikan Keterangan tentang jenis usaha yang dimiliki serta alamat dari tempat usaha"></textarea>
+              <textarea class="form-control" name="keterangan_usaha"  required id="floatingTextarea2" placeholder="Berikan Keterangan tentang jenis usaha yang dimiliki serta alamat dari tempat usaha"></textarea>
             </div>
           </div>
           <div class="modal-footer">

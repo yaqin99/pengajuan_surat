@@ -33,7 +33,7 @@ Route::get('/', function () {
 })->middleware('auth');
 
 
-Route::get('/profil',[UserController::class , 'profil'])->middleware('auth');
+Route::get('/profil/{id}',[UserController::class , 'profil'])->middleware('auth');
 Route::get('/pengajuan/review/sktm/{id}',[PengajuanController::class , 'cetak']);
 Route::get('/pengajuan/review/usaha/{id}',[PengajuanController::class , 'cetakUsaha']);
 Route::get('/pengajuan/review/kehilangan/{id}',[PengajuanController::class , 'cetakKehilangan']);

@@ -3,7 +3,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="judulModalBerkas"></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="dismiss()" aria-label="Close"></button>
+          <a style="cursor: pointer;" onclick="dismissButtpm()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></a>
         </div>
         <div class="modal-body">
         <form method="POST" id="formEditBerkas" name="form" enctype="multipart/form-data">
