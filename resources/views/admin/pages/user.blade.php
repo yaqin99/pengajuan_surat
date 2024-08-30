@@ -37,7 +37,7 @@
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Nama Ketua RT</th>
+                    <th scope="col">Nama Warga</th>
                     <th scope="col">RT</th>
                     <th scope="col">RW</th>
                     

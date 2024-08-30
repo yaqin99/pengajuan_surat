@@ -884,7 +884,7 @@ PAMAROH</span></b><b><span style='font-size:14.0pt;font-family:"Times New Roman"
 
 <p class=MsoNoSpacing dir=LTR style='tab-stops:41.25pt center 234.0pt'><b><span
 style='font-size:12.0pt;font-family:"Times New Roman",serif'><span
-style='mso-tab-count:2'>�������������������������� </span></span></b><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
 class=GramE><i><span style='font-family:"Times New Roman",serif'>Alamat :</span></i></span><i><span
 style='font-family:"Times New Roman",serif'> Jl. Raya <span class=SpellE>Pakong</span>
 Km. 09 <span class=SpellE>Pamaroh</span> <span class=SpellE>Kadur</span> <span
@@ -965,7 +965,7 @@ font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-th
 major-bidi;mso-bidi-theme-font:major-bidi'> :</span></span><span lang=EN-GB
 style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'> 518/�../432.512.01/2024</span><span lang=EN-GB style='font-size:
+major-bidi'> 518/xxxx/432.512.01/2024</span><span lang=EN-GB style='font-size:
 13.0pt;line-height:115%;font-family:"Times New Roman",serif;mso-ascii-theme-font:
 major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'><o:p></o:p></span></p>
 
@@ -983,8 +983,8 @@ class=GramE> :</span><o:p></o:p></span></p>
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Nama <span style='mso-tab-count:3'>��������������������������� </span>:
-NUR HOLIK<o:p></o:p></span></p>
+major-bidi'>Nama <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:
+{{$data->name}}<o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
@@ -993,13 +993,13 @@ major-bidi;mso-bidi-theme-font:major-bidi'>Tempat</span></span><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
 major-bidi'>/<span class=SpellE>Tgl</span>. Lahir<span style='mso-tab-count:
-1'>�������� </span>: <span class=SpellE>Pamekasan</span>, 15 November 1990<o:p></o:p></span></p>
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: <span class=SpellE>{{$data->tempat_lahir}}</span>,{{$data->tanggal_lahir}}<o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>NIK <span style='mso-tab-count:3'>����������������������������� </span>:
-3528121511900002<o:p></o:p></span></p>
+major-bidi'>NIK <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:
+{{$data->nik}}<o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
@@ -1007,25 +1007,25 @@ font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-th
 major-bidi;mso-bidi-theme-font:major-bidi'>Pekerjaan</span></span><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'> <span style='mso-tab-count:2'>��������������������� </span>: <span
+major-bidi'> <span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: <span
 class=SpellE>Wiraswasta</span><o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
 major-bidi'>Status <span class=SpellE>Perkawinan</span> <span style='mso-tab-count:
-1'>������� </span>: Belum Kawin<o:p></o:p></span></p>
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>: {{$data->status_perkawinan}}<o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Agama <span style='mso-tab-count:3'>������������������������� </span>:
-Islam<o:p></o:p></span></p>
+major-bidi'>Agama <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:
+{{$data->agama}}<o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Alamat <span style='mso-tab-count:3'>������������������������� </span>:
+major-bidi'>Alamat <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:
 Dusun <span class=SpellE>Maddis</span> RT/RW 003/003 Desa <span class=SpellE>Pamaroh</span><o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
@@ -1046,9 +1046,9 @@ class=SpellE><span class=GramE>usaha</span></span><span class=GramE> :</span><o:
 <p class=MsoNormal dir=LTR style='text-align:justify;text-indent:1.0cm'><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'>Jenis Usaha <span style='mso-tab-count:1'>������ </span><span
-style='mso-tab-count:1'>����������� </span>: <span class=SpellE>Pedagang</span>
-<span class=SpellE>Minuman</span><o:p></o:p></span></p>
+major-bidi'>Jenis Usaha <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>: <span class=SpellE></span>
+<span class=SpellE></span><o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='margin-left:1.0cm;text-align:justify'><span
 class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
@@ -1056,9 +1056,9 @@ font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;mso-hansi-th
 major-bidi;mso-bidi-theme-font:major-bidi'>Tempat</span></span><span
 lang=EN-GB style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
 mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
-major-bidi'> Usaha <span style='mso-tab-count:1'>� </span><span
-style='mso-tab-count:1'>����������� </span>: Dusun <span class=SpellE>Maddis</span>
-RT/RW 003/003 Desa <span class=SpellE>Pamaroh</span><o:p></o:p></span></p>
+major-bidi'> Usaha <span style='mso-tab-count:1'></span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>:  <span class=SpellE></span>
+<span class=SpellE></span><o:p></o:p></span></p>
 
 <p class=MsoNormal dir=LTR style='text-align:justify;text-indent:1.0cm'><span
 class=SpellE><span lang=EN-GB style='font-size:12.0pt;line-height:115%;
@@ -1133,7 +1133,7 @@ class=SpellE>sebagaimana</span> <span class=SpellE>mestinya</span>.<o:p></o:p></
   <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
   center;line-height:normal'><b><u><span lang=EN-GB style='font-size:12.0pt;
   font-family:"Times New Roman",serif;mso-ascii-theme-font:major-bidi;
-  mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'>���������..<o:p></o:p></span></u></b></p>
+  mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<o:p></o:p></span></u></b></p>
   </td>
   <td width=314 style='width:235.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:97.4pt'>
   <p class=MsoNormal align=center dir=LTR style='margin-bottom:0cm;text-align:
