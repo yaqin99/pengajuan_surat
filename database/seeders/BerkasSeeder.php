@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use Faker\Factory as Faker;
+use Illuminate\Support\Facades\Hash;
 class BerkasSeeder extends Seeder
 {
     /**
@@ -23,23 +24,6 @@ class BerkasSeeder extends Seeder
                 'surat_nikah' => 'default' , 
             ]
             );
-        DB::table('berkas')->insert(
-            [
-                'ktp' => 'default' , 
-                'ktp_ayah' => 'default' , 
-                'ktp_ibu' => 'default' , 
-                'kk' => 'default' , 
-                'surat_nikah' => 'default' , 
-            ]
-            );
-        DB::table('berkas')->insert(
-            [
-                'ktp' => 'default' , 
-                'ktp_ayah' => 'default' , 
-                'ktp_ibu' => 'default' , 
-                'kk' => 'default' , 
-                'surat_nikah' => 'default' , 
-            ]
-            );
+       
     }
 }

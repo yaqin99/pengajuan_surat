@@ -46,8 +46,8 @@
             
             
             <div class="mb-3" >
-              <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
-              <textarea class="form-control" name="keterangan_usaha"  required id="floatingTextarea2" placeholder="Berikan Keterangan tentang jenis usaha yang dimiliki serta alamat dari tempat usaha"></textarea>
+              <label for="floatingTextarea2" class="form-label mb-2">Alasan Pengajuan Surat</label>
+              <textarea class="form-control" name="keterangan_usaha"  required id="floatingTextarea2" placeholder="Berikan Alasan Pengajuan Surat"></textarea>
             </div>
           </div>
           <div class="modal-footer">

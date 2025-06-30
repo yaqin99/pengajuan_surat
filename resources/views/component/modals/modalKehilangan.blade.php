@@ -38,8 +38,8 @@
             
             
             <div class="mb-3" >
-              <label for="floatingTextarea2" class="form-label mb-2">Keterangan</label>
-              <textarea class="form-control" required name="keterangan_kehilangan"  id="floatingTextarea2" placeholder="Berikan Keterangan terkait barang yang hilang"></textarea>
+              <label for="floatingTextarea2" class="form-label mb-2">Alasan Pengajuan</label>
+              <textarea class="form-control" required name="keterangan_kehilangan"  id="floatingTextarea2" placeholder="Berikan Alasan Pengajuan Surat"></textarea>
             </div>
           </div>
           <div class="modal-footer">
